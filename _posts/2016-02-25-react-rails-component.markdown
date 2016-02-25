@@ -1,10 +1,9 @@
 ---
 layout: post
 title:  "React, Rails, and ActiveModel Serializers"
-date:   2016-02-25 14:46:52 -0500
+date:   2016-02-25 12:46:52 -0500
 categories: react rails
 ---
-
 ## Rails, React, and ActiveModelSerializers
 ### Creating a modular component for React and Rails
 
