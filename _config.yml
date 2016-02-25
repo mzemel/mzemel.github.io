@@ -16,4 +16,9 @@ twitter_username: michael_zemel
 github_username:  mzemel
 
 # Build settings
-markdown: redcarpet
+markdown: redcarpet2
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
+
+gems:
+  - redcarpet
