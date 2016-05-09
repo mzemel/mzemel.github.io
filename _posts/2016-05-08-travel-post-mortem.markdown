@@ -34,21 +34,39 @@ Lived a bourgeois, Manhattan-esque life for a few days in the Bellavista neighbo
 
 ![Santiago](http://i.imgur.com/yO3OJJH.jpg "Santiago, Chile")
 
-**Santiago, Chile as seen from the top of Santa Lucia park**
+**Santiago, Chile** as seen from Santa Lucia park
 
 #### Argentina
 
 Landed in wine and steak country at the peak of the worst exchange rate for US dollars.  Spent New Years' in Buenos Aires in a deserted city, then rented a car and drove to Patagonia.  Driving day after day on the flat plane, only to be punctuated by majestic mountains that look like the Grand Tetons while listening to Now That's What I Call Music 5.  I spent a few days in the Lake District of Bariloche, which reminded me of what I imagine Switzerland to be.
 
+![Mendoza](http://i.imgur.com/sgiV3XS.jpg "Mendoza")
+
+**Mendoza, Argentina**
+
+![Bariloche](http://i.imgur.com/pDCh1HF.jpg "Bariloche")
+
+**Bariloche, Lake District, Argentinian Patagonia**
+
 After the largest glacier I've seen, we took a bus into Chile, ready to enter the Torres del Paine national park.
 
 #### Chile, again
 
-Torres del Paine.  Google it.  Be amazed.
+![Torres del Paine](http://i.imgur.com/WVBpw74.jpg "Torres del Paine")
+
+**Torres del Paine, Chile**
 
 #### Argentina, again
 
-Took a bus to the southern-most city in the world, Ushuaia, where we meditated on being and nothingness and why the British were so despised there.  Drove back to Buenos Aires where I began the solo leg of my trip, seeing Iguazu Falls and taking a boat to Uruguay.
+Took a bus to the southern-most city in the world, Ushuaia, where we meditated on being and nothingness and why they hate the British so much - turns out it wasn't for the food!  Drove back to Buenos Aires where I began the solo leg of my trip, seeing Iguazu Falls and taking a boat to Uruguay.
+
+![Ushuaia](http://i.imgur.com/JUyiwrL.jpg "Ushuaia")
+
+**Ushuaia, Argentina**
+
+![Iguazu](http://i.imgur.com/VDvmy5k.jpg "Iguazu")
+
+**Iguazu Falls, Argentina**
 
 #### Uruguay
 
@@ -57,6 +75,14 @@ Smoked legal pot, played music, and played chess with the most clever and talent
 #### Colombia
 
 Spent a month in this magical country.  I met four remarkable women who attempted to teach me to dance like a Colombian, drink like a Colombian, and speak like a Colombian.  I settled for just dressing like one.  Looked for freelance work and thought about staying down as long as I could but after a couple weeks of gym, work, party it felt like I was in a routine again, so I decided to move onwards.  Took a boat departing out of a coastal town across the Atlantic with a cadre of young travelers, passing through the most picturesque islands, and arriving in Panama.
+
+![Medellin](http://i.imgur.com/FFXwJdT.jpg "Medellin")
+
+**Medellin, Colombia**
+
+![San Blas](http://i.imgur.com/nWNohlw.jpg "San Blas")
+
+**San Blas Islands, Panama**
 
 #### Panama
 
@@ -74,8 +100,22 @@ Baked in the sun while attempting to photograph every church, mosque, temple, an
 
 I rushed here to meet a friend, where we backpacked for 3 days through the country, arriving at the most peaceful lake I've ever been.  We ditched all our plans and stayed there for 5 days before needing to catch his flight.  I continued to an ancient ruin and onwards through Belize to Mexico.
 
+![Guat](http://i.imgur.com/CqKItkx.jpg "Guat")
+
+**Lake Atitlan, Guatemala**
+
+![Tikal](http://i.imgur.com/ZBR2ZIg.jpg "Tikal")
+
+**Tikal, Guatemala**
+
 #### Mexico
 
 Arrived first at another ruin, Tulum, where I spent a few days before flying to Mexico City which I had heard was a cosmopolitan center of the largest cultural force in Latin America.  I was not disappointed.  La Condesa, wrestling, ruins, and museums; this is a city that felt like New York but without the streams of people pushing you along.  Everything moved at a manageable pace while still feeling optimistic about the future of this city.  After a week, I flew back to San Francisco.
 
-What I learned: Aside from the cliche not-all-who-wander-are-lost bullshit, it was spiritually refreshing.  I came back sad but with a desire to actually talk to strangers and a little bit of a bubble that is preventing people's problems from bringing me down.  I have literally no idea how to sustain it, but it's probably something along the lines of... be more emotional, focus on being productive, and be more intentional with how you spend your time.  I dunno.
+![Mexico](http://i.imgur.com/9SiKsXv.jpg "Mexico")
+
+**Teotihuacan, Mexico**
+
+### Conclusion
+
+Aside from the cliche not-all-who-wander-are-lost bullshit, it was spiritually refreshing.  I came back sad but with a desire to actually talk to strangers and a little bit of a bubble that is preventing people's problems from bringing me down.  I have literally no idea how to sustain it, but it's probably something along the lines of... be more emotional, focus on being productive, and be more intentional with how you spend your time.  Or eat more fiber, I dunno.
