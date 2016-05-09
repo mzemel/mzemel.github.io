@@ -6,7 +6,8 @@ categories: personal
 ---
 
 # Travel Post-Mortem
-## How I Learned to Stop Worrying and Write Cliche Subtitles
+
+Or, How I Learned to Stop Worrying and Write Cliche Subtitles
 
 ### Reason
 
