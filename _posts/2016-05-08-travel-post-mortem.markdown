@@ -20,6 +20,8 @@ Flew into Quito, the capital, and waited for the altitude sickness that never ca
 
 ![Galapagos](http://i.imgur.com/Bc3WK2S.jpg "Galapagos")
 
+**Majestic turtle** taken by [Jason Swetzoff](https://www.instagram.com/jaswetz/)
+
 The Galapagos were, as is stereotyped, absurdly lush and beautiful and after 8 days of biology hedonism, flew back to Ecuador where I parted with one of my travel partners.
 
 #### Peru
@@ -29,6 +31,10 @@ Spent a week in Cuzco, skipping Machu Picchu because my partner had been - somet
 #### Chile
 
 Lived a bourgeois, Manhattan-esque life for a few days in the Bellavista neighborhood of Santiago while my partner threw up for the better part of two days.  Took a bus over the Andes to Argentina, passing mountains more colorful than even Colorado.
+
+![Santiago](http://i.imgur.com/yO3OJJH.jpg "Santiago, Chile")
+
+**Santiago, Chile as seen from the top of Santa Lucia park**
 
 #### Argentina
 
