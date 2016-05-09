@@ -5,10 +5,6 @@ date:   2016-05-08 12:46:52 -0500
 categories: personal
 ---
 
-# Travel Post-Mortem
-
-Or, How I Learned to Stop Worrying and Write Cliche Subtitles
-
 ### Reason
 
 Spiritual decline after 3 years as a software engineer.
