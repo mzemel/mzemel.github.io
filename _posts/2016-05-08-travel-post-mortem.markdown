@@ -96,6 +96,10 @@ Drank and spent away my ennui, which gave me a wholly new set of problems.
 
 Baked in the sun while attempting to photograph every church, mosque, temple, and-- just kidding, there are only one of those.  Can you guess which?
 
+![Nicaragua](http://i.imgur.com/5ZBoIru.jpg "Nicaragua")
+
+**Leon, Nicaragua**
+
 #### Guatemala
 
 I rushed here to meet a friend, where we backpacked for 3 days through the country, arriving at the most peaceful lake I've ever been.  We ditched all our plans and stayed there for 5 days before needing to catch his flight.  I continued to an ancient ruin and onwards through Belize to Mexico.
