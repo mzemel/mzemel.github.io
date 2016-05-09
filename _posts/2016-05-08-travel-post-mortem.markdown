@@ -1,13 +1,9 @@
 ---
 layout: post
-title:  "Travel Post-Morten"
+title:  "Travel Post-Mortem"
 date:   2016-05-08 12:46:52 -0500
 categories: personal
 ---
-
-### Reason
-
-Spiritual decline after 3 years as a software engineer.
 
 ### Summary
 
@@ -64,10 +60,6 @@ Took a bus to the southern-most city in the world, Ushuaia, where we meditated o
 ![Iguazu](http://i.imgur.com/VDvmy5k.jpg "Iguazu")
 
 **Iguazu Falls, Argentina**
-
-#### Uruguay
-
-Smoked legal pot, played music, and played chess with the most clever and talented Uruguayan I met.  We did not kiss.  Flew to Colombia.
 
 #### Colombia
 

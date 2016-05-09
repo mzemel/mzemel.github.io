@@ -115,6 +115,8 @@ class JSONManifest
       dereference(attribute_types(klass).slice(*attributes))
     end
 
+    private
+
     def attribute_types(klass)
       attributes = klass.columns_hash.map(&:first)
       types = klass.columns_hash.map(&:last).map(&:sql_type)
