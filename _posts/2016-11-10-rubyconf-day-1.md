@@ -11,6 +11,7 @@ categories: ruby rails
 3. [Go Ruby Go](#ruby--go-gorb---ruby-native-extensions-for-go)
 4. [A Look at Hooks](#a-look-at-hooks)
 5. [Keyword Args](#keyword-args)
+6. [Logic Programming](#logic-programming)
 
 ## Matz's Keynote
 
@@ -229,3 +230,46 @@ You can use the splat operator (`**`) to explode hashes into keyword arguments. 
   **user.overrides
 )
 ```
+
+## Logic Programming
+
+#### Intro
+
+Logic programming is a paradigm alongside object-oriented, imperative, and functional.  Tell the computer how the world works and let it generate the solution.
+
+Generally have 3 features: declarative, relational, and inferential.
+
+**Declarative** aspect is easy in Ruby with method chaining.  You declare what functions are going to be performing the work and expose a single interface.  E.g. `has_many` -- don't care about the implementation, it "just does it".
+
+**Relational** aspect focuses on intersections of data.  SQL is a great example of a relational tool (envision a Venn diagram)
+
+```ruby
+18 + 42 = ?  # Easy
+18 + ? = 42  # Doesn't work
+```
+
+```
+sum_r(18, 24, ?) # match ? with 42
+sum_r(18, ?, 42) # match ? with 24
+```
+
+#### Logic programming in Ruby
+
+`russell` library creates a `Logic::Solver` class that allows you to assert certain constraints and then call `solve`.
+
+It seems like this talk hid all of the magic of actually solving the problem in the library and focused more on the public interface of the library.  "Look, you have to write very little code", but it would be interested to see what is going on under the hood.
+
+He created a Sudoku solver that looked like it was using a generic `Logic::Solver` class not tailored for Sudoku and, by passing in the right constraints, he could solve the Sudoku puzzle.  It would be very impressive if he can use the same class extensibly to solve other problems assuming you set the correct constraints.a
+
+#### Mechanics
+
+Unification - pattern matching of how two things are related to each other.  Example: `concat_r([m, ?, t], [?]), [m, a, t, z]) #=> [m, a, t, z]`
+
+Substitution List - Transitive property where you can point variables at each other and they keep those references.  If `q == r` and `r == 8`, then `q == 8`
+
+You devise a strategy of attempting to unify through the substitution list and backtracking/branching when you violate a constraint.
+
+#### Resources
+
+* __The Art of Prolog__, Leon Sterling & Ehud Shapiro
+* [Russell](https://gitlab.com/gavinmcg/russell) by the speaker, Gavin McGimpsey
