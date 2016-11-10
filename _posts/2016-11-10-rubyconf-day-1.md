@@ -21,9 +21,10 @@ Guilds in Ruby 2.4 allow true concurrency; objects can only belong to one Guild 
 #### Gosu 
 
 Library provides single class to inherit from; overload 3 methods:
-- `initialize()`; game then enters loop
-- `update()`; called each frame to update state
-- `draw()`; called each from to draw game
+
+- `initialize()` - game then enters loop
+- `update()` - called each frame to update state
+- `draw()` - called each from to draw game
 
 Create private functions to abstract out behaviors, while keeping the 3 necessary game functions.
 
@@ -80,10 +81,10 @@ end
 
 #### Resources
 
-`opengameart.org` - Images
-`PikoPixel` - Pixel editor
-`Tiled Map Editor` - build maps and export to JSON/XML
-`libgosu.org`
+* `opengameart.org` - Images
+* `PikoPixel` - Pixel editor
+* `Tiled Map Editor` - build maps and export to JSON/XML
+* `libgosu.org`
 
 ## Ruby & Go (gorb - Ruby native extensions for Go)
 
@@ -91,14 +92,15 @@ end
 
 Data and behavior are separated into structs and functions, respectively.  Ruby combines these in classes.
 
-#### gorb
+#### `gorb`
  
 Tool that takes Go code and generates the CRuby API wrapper code to get it loaded into the VM.
 
 Steps:
-1.  Write Go structs and functions
-2.  `gorb` creates CRuby wrapper files (.go)
-3.  `gorb` loads Go to compile them into native extensions (.so)
+
+1. Write Go structs and functions
+2. `gorb` creates CRuby wrapper files (.go)
+3. `gorb` loads Go to compile them into native extensions (.so)
 4.  Require native extensions in Ruby code and use them as Ruby classes
 
 ```go
@@ -144,8 +146,8 @@ What might some implementations be in business-driven Ruby app development?  Com
 
 #### Resources
 
-`github.com/lsegal/gorb`
-`gobyexample.com`
+* `github.com/lsegal/gorb`
+* `gobyexample.com`
 
 ## A look at hooks
 
@@ -176,28 +178,26 @@ Foo.new # never call #initialize directly
 
 Objects are implictly tried to be converted during binary operations.  Implement things to `#to_str` to add a hook when the object is converted.
 
-Coercion tells you how to coerce classes to avoid:
+Coercion tells you how to [coerce classes](https://www.mutuallyhuman.com/blog/2011/01/25/class-coercion-in-ruby) to avoid:
 
 ```ruby
 > 'foo' + 1
 TypeError: no implicit conversion of Fixnum into String
 ```
 
-https://www.mutuallyhuman.com/blog/2011/01/25/class-coercion-in-ruby
-
-Coercion seems interesting but I have absolutely no idea what the guy is talking about.
-
 ## Keyword Args
 
 #### Background
 
 **Pros**:
+
 * Behaves like hashes.
 * Tells the user what the arguments are going to be used for.
 * Position doesn't matter when you omit certain ones.
 * Dependency injection is better
 
 **Cons**:
+
 * Non-keyword arguments must be before keyword arguments
 
 #### Usage
