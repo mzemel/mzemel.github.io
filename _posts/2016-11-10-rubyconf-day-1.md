@@ -12,6 +12,7 @@ categories: ruby rails
 4. [A Look at Hooks](#a-look-at-hooks)
 5. [Keyword Args](#keyword-args)
 6. [Logic Programming](#logic-programming)
+7. [Computer Science: The Good Parts](#computer-science-the-good-parts)
 
 ## Matz's Keynote
 
@@ -273,3 +274,23 @@ You devise a strategy of attempting to unify through the substitution list and b
 
 * __The Art of Prolog__, Leon Sterling & Ehud Shapiro
 * [Russell](https://gitlab.com/gavinmcg/russell) by the speaker, Gavin McGimpsey
+
+## Computer Science: The Good Parts
+
+#### Linked Lists
+
+The very minimum amount of information you can have.  You can only start with the first element, and each element contains the first data and a reference to the next element.  In order to get the 5th element, you need to start at the first and walk the list to the 5th.
+
+#### Binary Tree
+
+Instead of having 1 connection between elements, you have 2.  If you pre-sort the data as you go, you approach log^2(n) to find a sorted element.
+
+#### Graph
+
+Generic term for connected nodes with as many connections as you want.  Implemented in maps, social networks, electrical grids, etc.
+
+#### Big-O Notation
+
+Describes complexity of an algorithm.  Using a sorted list, for example, improves search time from O(n) to O(log(n)).
+
+Nested loops are a code smell of a bad algorithm.
