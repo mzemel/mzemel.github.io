@@ -6,6 +6,7 @@ categories: ruby rails
 
 1. [Implementing Virtual Machines](#implementing-virtual-machines)
 2. [Ruby 3 Concurrency](#ruby-3-concurrency)
+3. [C Extensions](#c-extensions)
 
 ## Implementing Virtual Machines
 
@@ -127,3 +128,44 @@ Small objects can be sent as messages and copied.  Large objects can be passed b
 #### Applications
 
 Use guilds for pipelines, computational functions (like computing Fibonacci outside the main context of a program)
+
+#### Goals
+
+* How to implement object membership: `copy` and `transfer_membership`
+  * Global variables become guild variables
+  * Constant and Method tables introduce mutual exclusions
+
+## C Extensions
+
+#### Background
+
+There are many ways to hook into C extensions from MRI.  The API really just exposes the Ruby internals.  Often times, the C implementation supposes particular extensions which leaves JRuby, Rubinius, etc. unable to proceed.
+
+Methods calls in C extensions are slower than in Ruby, because Ruby invisibly caches the method.  C does not offer that.
+
+C extensions cannot be optimized since they are already compiled.
+
+FFI is simple but most people are already writing C extensions.
+
+#### Truffle
+
+From the [website](https://github.com/jruby/jruby/wiki/Truffle):
+
+> The Truffle runtime of JRuby is an experimental implementation of an interpreter for JRuby using the Truffle AST interpreting framework and the Graal compiler. It’s an alternative to the IR interpreter and bytecode compiler. The goal is to be significantly faster, simpler and to have more functionality than other implementations of Ruby.
+
+Oracle wrote a VM called Graal VM (JVM + Graal compiler) and framework Truffle on top of that.
+
+Truffle compiles AST to a single module, turns that into a graph, apply optimizations, and turns that into machine code.
+
+Author wrote a C interpreter that runs alongside the Ruby interpreter.  C code is given to LLVM interpreter and turned into simplified C code, which is interpreted and optimized at the same time as Ruby.  Truffle/Graal can take both Ruby and C files at this point and optimize them both the same way.
+
+```
+C extension -------> [ LLVM ] -------> file.ll ------- [ interpreter] \
+                                                                       --------> [ optimizer ]
+Ruby file   -------------------------> file.rb ------- [ interpreter] /
+```
+
+#### Downside
+
+* Need the source code; can't use a closed-source C extension
+* FFI still has widespread support
