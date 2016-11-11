@@ -7,6 +7,7 @@ categories: ruby rails
 1. [Implementing Virtual Machines](#implementing-virtual-machines)
 2. [Ruby 3 Concurrency](#ruby-3-concurrency)
 3. [C Extensions](#c-extensions)
+4. [The Little Server That Could](#the-little-server-that-could)
 
 ## Implementing Virtual Machines
 
@@ -169,3 +170,91 @@ Ruby file   -------------------------> file.rb ------- [ interpreter] /
 
 * Need the source code; can't use a closed-source C extension
 * FFI still has widespread support
+
+## The Little Server That Could
+
+An engineering skill is knowing when to dive into an abstraction vs. when to accept constraints and just use it.
+
+Servers communicate with outside world via OS and conform to a specific API.
+
+### The outside world
+
+Server runs in a process that gives you scope to define variables and set state without affecting other programs.
+
+1. Open a socket
+  * Everything on UNIX is a file.  Sockets are no exception.
+  * OS uses a File Descriptor for the socket but Ruby abstracts that so we don't have to pass it around.
+  * Choose address format: UNIX (`tmp/something.sock`) vs. INET (192.0.1.1:22)
+  * Something
+    - Stream sockets: bi-directional, uses TCP 3-way handshake (SYN-SYNACK-ACK).  TCP protocol sends packets with an order flag; client assembles them in order.
+    - Datagram sockets: uni-directional, uses UDP that doesn't wait for acknowledgement of receipt.  Client may or may not receive packets.
+2. Listen for requests
+3. Handle requests
+4. Reply to client
+
+```ruby
+require 'socket'
+
+def server
+  socket = create_server_socket
+  loop_and_listen_for_client_requests(socket)
+end
+
+def create_server_socket
+  Socket.new(:INET, :STREAM)
+  # ???
+end
+```
+
+### The application
+
+#### Parser
+
+Parser extracts header, body, URL, etc.  Ex. Ragel Parser
+
+#### Rack
+
+Implements `#call` which takes 1 arg, `env`, and returns `[status, headers, body]`
+
+#### Improvements
+
+Blocking network calls in the normal response means that multiple clients are blocked.  We can use UNIX forks to handle the blocking code and allow us to serve multiple concurrent requests.
+
+Forking contains references to the same socket.  If one doesn't exit, the socket will be unavaible to processes longer.  When you fork a process, the only memory copied to the new process is that which is unique to the process; otherwise it takes memory from parent process.  This copy-on-write.
+
+Pre-2.0 Ruby marked objects as different in child processes so their memory footprint would swell up to the size of parent processes.
+
+Post-2.0 Ruby does not do this, allowing C.O.W. processes to remain small.
+
+#### Threading
+
+Threads share process resources (like memory); they use less memory and die when the process dies, so no zombie processes.  Faster to communicate as you don't have to go through a UNIX socket.
+
+Downsides: non-atomic operations are not thread-safe.
+
+Example:
+
+```ruby
+def buy_toy
+  if @available_cat_toys > 0 # CPU executes this, then hops over to another thread (see below)
+    buy_cat_toy
+  else
+    dont_buy_toy
+  end
+end
+
+def buy_toy
+  if @available_cat_toys > 0 # These 3 lines
+    buy_cat_toy              # are executed on
+    @available_cat_toys -= 1 # a separate thread
+  else
+    dont_buy_toy
+  end
+end
+```
+
+By the time we get back to line 3, there are no more available toys (race condition)
+
+### You, the Developer
+
+Throw and trap signals to control flow of application.  You can shovel code into trapping an interrupt signal, for example, to exit gracefully.
