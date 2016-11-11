@@ -4,7 +4,7 @@ title:  "RubyConf: Day 1"
 categories: ruby rails
 ---
 
-# RubyConf 2016
+# RubyConf 2016: Day One
 
 1. [Matz's Keynote](#matzs-keynote)
 2. [Video Games in Ruby](#video-games-in-ruby)
