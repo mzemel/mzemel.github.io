@@ -4,6 +4,8 @@ title:  "Lessons learned from game development"
 categories: ruby
 ---
 
+![missile command](https://media.giphy.com/media/3oz8xXZGdxiYkNmNCE/giphy.gif)
+
 This weekend, I played around with [gosu](http://libgosu.org) after a talk at RubyConf, making a copy of [Missile Command](https://en.wikipedia.org/wiki/Missile_Command) in Ruby.  Without some important points from the talk, I would be up the creek, but there were some design patterns not brought up that felt emergent when writing game code.
 
 ## Use constants for "magic numbers"
