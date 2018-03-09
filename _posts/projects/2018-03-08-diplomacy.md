@@ -7,7 +7,7 @@ header:
   image: /assets/patterns/asanoha-400px.png
 repository:
   is_project_page: true
-  show_downloads: true
+  show_downloads: false
   repository_url: https://github.com/mzemel/gunboat_diplomacy
 tags: ["games"]
 keywords: games

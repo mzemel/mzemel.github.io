@@ -1,7 +1,6 @@
 ---
 layout: post
-title: "Using Google's Deep Dream"
-tagline: "And how to make neat GIFs"
+title: "Using Google's Deep Dream to make neat GIFs"
 image: /assets/patterns/paisley.png
 header:
   image: /assets/patterns/asanoha-400px.png

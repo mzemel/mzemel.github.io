@@ -1,7 +1,14 @@
 ---
 layout: post
-title:  "Dogecoin: part 2"
-categories: old
+title: "Improvements on my Dogecoin mining rig"
+image: /assets/patterns/paisley.png
+header:
+  image: /assets/patterns/asanoha-400px.png
+tags: ["ethereum"]
+keywords: ethereum
+ref: what-is-this
+lang: en
+category: projects
 ---
 
 

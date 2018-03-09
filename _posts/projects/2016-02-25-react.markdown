@@ -1,8 +1,15 @@
 ---
 layout: post
-title:  "React, Rails, and ActiveModel Serializers"
-date:   2016-02-25 12:46:52 -0500
-categories: react rails
+title: "Creating a generic, extensible React component"
+tagline: "And how to use ActiveModel to determine its behavior"
+image: /assets/patterns/paisley.png
+header:
+  image: /assets/patterns/asanoha-400px.png
+tags: ["ruby", "react", "rails"]
+keywords: react, ruby, rails
+ref: what-is-this
+lang: en
+category: projects
 ---
 
 We have several RESTful resources that could use just single, generic React component to display them.  To populate a table dynamically, we need to give some meta-data to the React component.  This will take the form of a reusable Ruby JSON-serializer.

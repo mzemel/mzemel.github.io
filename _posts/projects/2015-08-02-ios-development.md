@@ -1,7 +1,18 @@
 ---
 layout: post
-title:  "iOS development"
-categories: old
+title: "Notes on developing a simple iPhone app"
+image: /assets/patterns/paisley.png
+header:
+  image: /assets/patterns/asanoha-400px.png
+repository:
+  is_project_page: true
+  show_downloads: false
+  repository_url: https://github.com/mzemel/kpsu_iOS
+tags: ["kpsu"]
+keywords: kpsu
+ref: what-is-this
+lang: en
+category: projects
 ---
 
 It was a long day today.  I worked on the iPhone app for about 9 hours, much of it spent troubleshooting, 'How not to make audio turn off when my app goes into the background.'

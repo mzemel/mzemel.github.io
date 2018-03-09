@@ -22,7 +22,7 @@ exclude: [vendor, "Gemfile", "Gemfile.lock"]
 # permalink: /:categories/:year/:month/:day/:title.html
 # none is equivalent to /:title.html
 # https://jekyllrb.com/docs/permalinks
-permalink: /:title.html
+permalink: /:title
 
 google_analytics:
 
@@ -83,28 +83,6 @@ t:
       october: "Oct"
       november: "Nov"
       december : "Dec"
-  it:
-    latest-posts:  "Ultimi Posts"
-    read-more:  "leggi"
-    on-word: "su"
-    contact: "Contatta"
-    contact-page: "contatta.md"
-    read-time: "min di lettura"
-    comments: "commenti"
-    go-to-home-page: "Vai alla Pagina Iniziale"
-    months:
-      january: "Gen"
-      february: "Feb"
-      march: "Mar"
-      april: "Apr"
-      may: "Mag"
-      june: "Giu"
-      july: "Lug"
-      august: "Ago"
-      september: "Set"
-      october: "Ott"
-      november: "Nov"
-      december : "Dic"
 
 defaults:
   -
