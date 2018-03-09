@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Lessons learned from game development"
+title:  "Game development: retrospective"
 categories: ruby
 ---
 

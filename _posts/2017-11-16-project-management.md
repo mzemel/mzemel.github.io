@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Project management done wrong"
+title:  "Project Management: retrospective"
 categories: business
 ---
 

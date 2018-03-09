@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "JIRA project management"
+title:  "Ideal JIRA use for microservices"
 categories: business
 ---
 
