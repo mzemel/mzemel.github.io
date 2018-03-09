@@ -9,13 +9,107 @@
 title: Michael Zemel
 email: michael.zemel@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Sample projects and posts
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://masonbuilt.com" # the base hostname & protocol for your site
-twitter_username: michael_zemel
-github_username:  mzemel
+  Projects and articles related to tech, travel, and fun
+baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+url: "https://mzemel.github.io" # change this to the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
+
+# Make sure to exclude 'vendor' from the build
+exclude: [vendor, "Gemfile", "Gemfile.lock"]
+
+# permalink: /:categories/:year/:month/:day/:title.html
+# none is equivalent to /:title.html
+# https://jekyllrb.com/docs/permalinks
+permalink: /:title.html
+
+google_analytics:
+
+# jekyll-theme-simple-blog date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+jekyll-theme-simple-blog:
+  date_format: "%b %-d, %Y"
+
+theme: # leave it empty
+
+show_post_image_posts_list: false
+
+header:
+  image: /assets/patterns/symphony.png
+
+# social
+author:
+  name: "Michael Zemel"
+  short_bio:
+    en: Software Engineer
+  picture: assets/img/avatar_60.png
+
+image: /assets/img/profile-225.png
+
+twitter:
+ username: michael_zemel
+instagram_username: mzemel
+
+linkedin_username: michael-zemel
+
+# github on site
+github:
+  owner_url: https://github.com/mzemel
+
+
+# translation
+
+t:
+  en:
+    latest-posts:  "Latest Posts"
+    read-more:  "read more"
+    on-word: "on"
+    contact: "Contact"
+    contact-page: "contact.md"
+    read-time: "min read"
+    comments: "comments"
+    go-to-home-page: "Go to the Home Page"
+    months:
+      january: "Jan"
+      february: "Feb"
+      march: "Mar"
+      april: "Apr"
+      may: "May"
+      june: "Jun"
+      july: "Jul"
+      august: "Aug"
+      september: "Sep"
+      october: "Oct"
+      november: "Nov"
+      december : "Dec"
+  it:
+    latest-posts:  "Ultimi Posts"
+    read-more:  "leggi"
+    on-word: "su"
+    contact: "Contatta"
+    contact-page: "contatta.md"
+    read-time: "min di lettura"
+    comments: "commenti"
+    go-to-home-page: "Vai alla Pagina Iniziale"
+    months:
+      january: "Gen"
+      february: "Feb"
+      march: "Mar"
+      april: "Apr"
+      may: "Mag"
+      june: "Giu"
+      july: "Lug"
+      august: "Ago"
+      september: "Set"
+      october: "Ott"
+      november: "Nov"
+      december : "Dic"
+
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      lang: "en"
+      category: articles

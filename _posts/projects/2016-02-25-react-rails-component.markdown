@@ -1,0 +1,269 @@
+---
+layout: post
+title:  "React, Rails, and ActiveModel Serializers"
+date:   2016-02-25 12:46:52 -0500
+categories: react rails
+---
+
+We have several RESTful resources that could use just single, generic React component to display them.  To populate a table dynamically, we need to give some meta-data to the React component.  This will take the form of a reusable Ruby JSON-serializer.
+
+### React side
+
+##### React is rendered in Rails
+
+Feel free to skip this, as it's more background.
+
+Because of the [react-rails](https://github.com/reactjs/react-rails) gem, we were using the `react_component` method in the HTML template to render React to the DOM:
+
+```ruby
+# app/views/projects/index.html.erb
+
+<%= react_component "ProjectList", url: "/projects", pollInterval: 5000, data: @projects.to_json %>
+```
+
+##### Replaced ProjectList with a GenericResourceList
+
+The GenericResourceList React component takes a  collection of a resource from a JSON API.
+
+```javascript
+// app/assets/javascripts/components/_generic_resource_list.js.jsx
+
+var GenericResourceList = React.createClass({
+
+  getInitialState: function() {
+    return {
+      resources: [],
+      attributes: this.props.data
+    };
+  },
+
+// ...
+
+  loadResourceFromServer: function() {
+    $.ajax({
+      // ...
+    });
+  },
+
+  render: function() {
+    // ...
+  }
+});
+```
+
+Note that no resources are given to the component; it fetches those from the server.  Instead what's given are attributes about the resources it expects to receive, so it can create itss table correctly.  Column names vary by resource and it's necessary to have a modular way of supplying them to the React component.  Since the React component is still being rendered in Ruby, I wrote a generic serializer (from the ActiveModel::Serializer project) which provides an interface for that information.
+
+The serializer can serialize a Ruby object into JSON and export meta-data about the JSON.  This meta-data includes data types of the resource's attributes.
+
+```ruby
+# app/serializers/partial_project_serializer.rb
+
+class PartialProjectSerializer < GenericSerializer
+  
+  class << self
+    def json_manifest
+      super
+    end
+
+    def original_attributes
+      [:id, :status, :user, :route, :grade]
+    end
+
+    def addons
+      { 
+        "user" => "string",
+        "route" => "string",
+        "grade" => "string"
+      }
+    end
+  end
+
+  # ...
+
+  def grade
+    object.grade.name
+  end
+end
+```
+
+The internal API of the class is now a little different, but the gist is you just give extra data type information about attributes which cannot be gleamed fromm the database.  This is if you're pulling data off an association and/or renaming attributes in the generated JSON.
+
+The last method, `grade` is an example of including data not stored in the resource's database table.
+
+##### Data is pulled from the database and converted to JSON data types
+
+Here is a Ruby utility class to present data types of the resource for javascript consumption.
+
+```ruby
+# app/models/json_manifest.rb
+
+class JSONManifest
+
+  class << self
+    DEREFERENCE_TABLE = {
+      "integer" => "number",
+      "number" => "number",
+      "character varying" => "string",
+      "timestamp without time zone" => "string",
+      "text" => "string",
+      "string" => "string"
+    }
+
+    def produce(klass, *attributes)
+      dereference(attribute_types(klass).slice(*attributes))
+    end
+
+    private
+
+    def attribute_types(klass)
+      attributes = klass.columns_hash.map(&:first)
+      types = klass.columns_hash.map(&:last).map(&:sql_type)
+      HashWithIndifferentAccess[attributes.zip(types)]
+    end
+
+    def dereference(attribute_types)
+      attribute_types.inject({}) do |collector, (attr, type)|
+        collector[attr] = DEREFERENCE_TABLE[type]
+        collector
+      end
+    end
+  end
+
+end
+```
+
+Basically, you call `JSONManifest.produce` with the class to hit the database with and the attributes it cares about.  The serializer is still responsible for tacking on any additional attributes in the JSON response because that logic belongs in the presentation layer.
+
+##### Back to React
+
+The GenericResourceList component is now being rendered like so:
+
+```ruby
+# app/views/projects/index.html.erb
+
+<%= react_component "GenericResourceList", url: "/projects", pollInterval: 5000, data: PartialProjectSerializer.json_manifest %>
+```
+
+##### The GenericResourceList component
+
+The full code for the GenericResourceList component can be viewed [here](https://github.com/masonbuilt/sendero/blob/jason_react_2/app/assets/javascripts/components/_generic_resource_list.js.jsx) but the relevant part to using that meta-data in the front end is:
+
+```javascript
+// app/assets/javascripts/components/_generic_resource_list.js.jsx
+
+var GenericResourceList = React.createClass({
+
+  getInitialState: function() {
+    return {
+      resources: [],
+      attributes: this.props.data
+    };
+  },
+
+  // ...
+
+  render: function() {
+
+    var that = this;
+
+    var genericResourceListItems = this.state.resources.map(function(resource) {
+      return (
+        <GenericResourceListItem attributes={that.state} resource={resource} />
+      );
+    });
+
+    var genericResourceListHeaders = Object.keys(this.state.attributes).map(function(attribute) {
+      return (
+        <th>{attribute}</th>
+      );
+    });
+
+    return (
+      <div className="genericResourceList">
+        <table className="genericResourceListTable">
+          <tbody>
+            <tr>
+              {genericResourceListHeaders}
+            </tr>
+            {genericResourceListItems}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+});
+```
+
+The eventual DOM structure is:
+
+```html
+<table>
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    <tr>
+    <tr>
+      <td knownType="string">Joe Smith</td>
+      <td knownType="string">22</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+The `knownType` attribute is what's given to React from the Ruby code.  I'm not sure exactly how it's useful at the moment, but it may be in the future.
+
+##### Conclusion
+
+I believe this is useful for tables displaying a list of resources that:
+
+a) are ActiveRecord-based, and
+b) contain non-nested data
+
+The latter can be improved with adding "object" to `JSONManifest` in Ruby and more complex methods in the related serializer.
+
+For reference below is the GenericSerializer which keeps the interface of individual serializers neat.
+
+```ruby
+class GenericSerializer < ActiveModel::Serializer
+  class << self
+
+    def json_manifest
+      raise StandardError, "Must provide an ActiveRecord class to this method" if resource_class.nil?
+      raise StandardError, "Cannot call this method on the superclass" if self == GenericSerializer
+      JSONManifest.produce(resource_class, *original_attributes).merge(addons)
+    end
+
+    def original_attributes
+      if self != GenericSerializer
+        raise StandardError, "You must implement #{__method__} on #{self}, with all attributes to serialize. E.g., [:id, :name]"
+      end
+    end
+
+    # Tack on additional values not stored in this resource's DB table
+    # Order must match up with `attributes` method :-\
+    def addons
+      if self != GenericSerializer
+        raise StandardError, "You must implement #{__method__} on #{self}, with all attributes not on #{self}'s table, in order.  See #{__FILE__} for documentation."
+      end
+    end
+
+    private
+
+    def resource_class
+      resource_class_name = /Partial(\w+)Serializer/.match(self.to_s)[1] # this needs improvement
+      Object.const_get(resource_class_name)
+    rescue NameError => e
+      puts e.message
+      puts e.backtrace
+      raise StandardError, "Could not properly infer resource class name from the serializer's class.  Please rename this class accordingly."
+    end
+  end
+  
+  attributes *self.attributes
+end
+```
+
+The code above has several areas for improvements, but for now it is supported by a robust set of tests for `GenericSerializer`, `PartialProjectSerializer`, and `JSONFormatter`.
+
+Thanks for reading!
