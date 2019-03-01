@@ -69,7 +69,7 @@ Took a bus to the southern-most city in the world, Ushuaia, where we meditated o
 
 #### Colombia
 
-Spent a month in this magical country.  I met four remarkable women who attempted to teach me to dance like a Colombian, drink like a Colombian, and speak like a Colombian.  I settled for just dressing like one.  Looked for freelance work and thought about staying down as long as I could but after a couple weeks of gym, work, party it felt like I was in a routine again, so I decided to move onwards.  Took a boat departing out of a coastal town across the Atlantic with a cadre of young travelers, passing through the most picturesque islands, and arriving in Panama.
+Spent a month in this magical country.  I met people who attempted to teach me to dance like a Colombian, drink like a Colombian, and speak like a Colombian.  I settled for just dressing like one.  Looked for freelance work and thought about staying down as long as I could but after a couple weeks of gym, work, party it felt like I was in a routine again, so I decided to move onwards.  Took a boat departing out of a coastal town across the Atlantic with a cadre of young travelers, passing through the most picturesque islands, and arriving in Panama.
 
 ![Medellin](http://i.imgur.com/FFXwJdT.jpg "Medellin")
 
