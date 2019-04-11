@@ -39,8 +39,8 @@ author:
     en: Software Engineer
   picture: assets/img/face.png
   avatar: "/assets/img/face.png"
-  bio: "Tagline Enthusiast"
-  location: "Connecticut"
+  bio: "Public figure 💎"
+  location: "StitchFix"
   uri: "https://thebackend.dev"
   email: "michael.zemel@gmail.com"
   linkedin: "michaelzemel"
@@ -54,4 +54,10 @@ defaults:
     values:
       lang: "en"
       category: articles
+      author_profile: true
+  -
+    scope:
+      type: "category"
+    values:
+      lang: "en"
       author_profile: true

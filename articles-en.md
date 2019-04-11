@@ -3,12 +3,9 @@ layout: category
 title: Articles
 permalink: /articles
 header:
-  image: /assets/patterns/new_year_background.png
+  image: /assets/img/home-header.jpg
 ref: articles
 lang: en
-order: 1
-category: articles
+taxonomy: articles
+author_profile: true
 ---
-
-<div>&nbsp;</div>
-
