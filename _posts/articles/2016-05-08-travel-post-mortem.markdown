@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Six months in South America"
 tagline: "Photos and reflections on traveling"
 image: /assets/patterns/paisley.png

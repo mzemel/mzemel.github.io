@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Creating a generic, extensible React component"
 tagline: "And how to use ActiveModel to determine its behavior"
 image: /assets/patterns/paisley.png

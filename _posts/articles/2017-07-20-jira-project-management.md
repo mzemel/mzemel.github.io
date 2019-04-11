@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  "Ideal JIRA use for microservices"
 categories: business
 ---

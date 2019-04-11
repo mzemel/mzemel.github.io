@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Towards better mailing address management"
 image: https://static.makeuseof.com/wp-content/uploads/2017/07/Mail-Merge-Featured-670x335.png
 header:

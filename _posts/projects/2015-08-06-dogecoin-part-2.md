@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Improvements on my Dogecoin mining rig"
 image: /assets/patterns/paisley.png
 header:

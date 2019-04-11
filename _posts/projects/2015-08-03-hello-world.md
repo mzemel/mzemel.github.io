@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "My first program: image processing with C++"
 tagline: "How it works"
 image: /assets/patterns/paisley.png

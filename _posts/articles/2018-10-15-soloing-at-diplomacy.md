@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Diplomacy: To stab or not to stab?"
 image: /assets/patterns/paisley.png
 header:

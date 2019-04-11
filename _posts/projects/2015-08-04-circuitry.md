@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Creating a computer-controlled transistor system"
 tagline: "And using to to control the speed of an onboard motor"
 image: /assets/patterns/paisley.png

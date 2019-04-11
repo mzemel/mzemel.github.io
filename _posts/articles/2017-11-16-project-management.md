@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "The importance of good estimations"
 tagline: "Using context around delivery dates to convey risk"
 image: /assets/patterns/paisley.png

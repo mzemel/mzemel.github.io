@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  "RubyConf: Day One"
 categories: ruby rails
 ---

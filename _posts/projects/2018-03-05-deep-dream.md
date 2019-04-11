@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Using Google's Deep Dream to make neat GIFs"
 image: /assets/patterns/paisley.png
 header:

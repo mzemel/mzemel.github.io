@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "That time I ETL'd half a TB"
 image: /assets/patterns/paisley.png
 header:

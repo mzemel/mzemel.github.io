@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Playing anonymous Diplomacy in person"
 tagline: "How to lose friends and influence people"
 image: /assets/patterns/paisley.png

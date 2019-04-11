@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Lessons learned from building games in Ruby"
 tagline: "Implementing a classic arcade game"
 image: /assets/patterns/paisley.png

@@ -1,12 +1,9 @@
 ---
-layout: page
+layout: posts
 title: About
 permalink: /about
-header:
-  image: /assets/patterns/upfeathers.png
 ref: about
 lang: en  
-order: 2
 ---
 
 ![me]({{site.base_url}}/assets/img/face.png)

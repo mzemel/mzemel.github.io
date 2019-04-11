@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: "Notes on developing a simple iPhone app"
 image: /assets/patterns/paisley.png
 header:
