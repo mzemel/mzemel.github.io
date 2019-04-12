@@ -1,23 +1,23 @@
 ---
-layout: posts
-title: "Notes on developing a simple iPhone app"
-image: /assets/patterns/paisley.png
+layout: single
+title: "KPSU iOS app"
 header:
-  image: /assets/patterns/asanoha-400px.png
-repository:
-  is_project_page: true
-  show_downloads: false
-  repository_url: https://github.com/mzemel/kpsu_iOS
-tags: ["kpsu"]
-keywords: kpsu
-ref: what-is-this
+  overlay_image: /assets/img/kpsu-banner.png
+  overlay_filter: 0.5
+  caption: "KPSU"
+  actions:
+    - label: "GitHub"
+      url: https://github.com/mzemel/kpsu_iOS
+tags: ["ios"]
+keywords: ios
 lang: en
 category: projects
+excerpt: Notes on development
 ---
 
 It was a long day today.  I worked on the iPhone app for about 9 hours, much of it spent troubleshooting, 'How not to make audio turn off when my app goes into the background.'
 
-![iOS](http://i.imgur.com/ibAwIOI.png)
+<img src="assets/img/kpsu_app.png" />
 
 Interestingly, iOS has what is called an audio session - what I take to be the 'scope' of the audio.  Why they have sessions for individual aspects of an app seems odd at first, but makes sense given the large scale of what apps can do on the iOS architecture.
 

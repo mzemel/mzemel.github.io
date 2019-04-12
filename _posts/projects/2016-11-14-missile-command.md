@@ -1,19 +1,18 @@
 ---
-layout: posts
-title: "Lessons learned from building games in Ruby"
-tagline: "Implementing a classic arcade game"
-image: /assets/patterns/paisley.png
+layout: single
+title: "Missile Command in Ruby"
 header:
-  image: /assets/patterns/asanoha-400px.png
-repository:
-  is_project_page: true
-  show_downloads: false
-  repository_url: https://github.com/mzemel/missile_command
-tags: ["ruby", "games"]
-keywords: ruby, games
-ref: what-is-this
+  overlay_image: /assets/img/missile_command.png
+  caption: "The Verge"
+  actions:
+    - label: "GitHub"
+      url: https://github.com/mzemel/missile_command
+tags: ["games"]
+keywords: games
 lang: en
 category: projects
+toc: true
+excerpt: A Star Wars version of the Atari game
 ---
 
 This weekend, I played around with [gosu](http://libgosu.org) after a talk at RubyConf, making a copy of [Missile Command](https://en.wikipedia.org/wiki/Missile_Command) in Ruby.  Without some important points from the talk, I would be up the creek, but there were some design patterns not brought up that felt emergent when writing game code.

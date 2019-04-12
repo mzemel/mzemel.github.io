@@ -8,6 +8,8 @@ lang: en
 
 Hi, welcome to my website.
 
+<img src="assets/img/me-talking.png" />
+
 I've been programming professionally for about 6 years, coming from a nontraditional background (biology).  I started off using a LAMP stack to build a document management site for my PI while in grad school.  Shortly after, I used Bash and C++ to automate data collection and analysis for my research.  At the same time, I started a side job at the university's radio station as the maintainer of their website, a Ruby on Rails application.
 
 A dropped out after 3 years of grad school to pursue web development professionally at a startup called Househappy (Backbone.js and Rails).  I also gained exposure to devops/infrastructure, QA, deployment, and the development process.
