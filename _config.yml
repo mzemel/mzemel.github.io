@@ -55,6 +55,7 @@ defaults:
       lang: "en"
       category: articles
       author_profile: true
+      share: true
   -
     scope:
       type: "category"
