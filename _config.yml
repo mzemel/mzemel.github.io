@@ -19,12 +19,15 @@ markdown: kramdown
 # Make sure to exclude 'vendor' from the build
 exclude: [vendor, "Gemfile", "Gemfile.lock"]
 
+plugins:
+  - jekyll-include-cache
+remote_theme: "mmistakes/minimal-mistakes@4.15.2"
+
 # permalink: /:categories/:year/:month/:day/:title.html
 # none is equivalent to /:title.html
 # https://jekyllrb.com/docs/permalinks
 permalink: /:title
 
-theme: minimal-mistakes-jekyll
 minimal-mistakes-skin: dirt
 
 paginate: 10 # amount of posts to show
