@@ -1,14 +1,15 @@
 ---
-layout: posts
+layout: single
 title: "The importance of good estimations"
-tagline: "Using context around delivery dates to convey risk"
-image: /assets/patterns/paisley.png
 header:
-  image: /assets/patterns/asanoha-400px.png
+  overlay_image: assets/img/data.jpg 
+  overlay_filter: 0.5
+  caption: "Rathenau Instituut"
 tags: ["business"]
 keywords: business
-ref: post-example-in-english
 lang: en
+category: articles
+excerpt: "Conveying risk, not just dates"
 ---
 
 At my company, I was given the awesome career opportunity to take over as “technical product owner” of a medium-large software project.  I’d been the original… architect, for lack of a better word.  I’d taken mockups and user stories and translated them into work tickets with an opinion on how the work would be organized, worked, and delivered.  Thankfully, I was standing on the shoulders of giants: the last architect had left me with a document of recommended technologies, so it was a matter of connecting the dots.
