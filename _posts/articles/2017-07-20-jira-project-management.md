@@ -1,7 +1,15 @@
 ---
-layout: post
-title:  "Ideal JIRA use for microservices"
-categories: business
+layout: single
+title: "Using JIRA with microservices"
+header:
+  overlay_image: assets/img/data.jpg 
+  overlay_filter: 0.5
+  caption: "Rathenau Instituut"
+tags: ["business"]
+keywords: business
+lang: en
+category: articles
+excerpt: "Planning work across teams"
 ---
 
 JIRA is a great tool for project management, but drawing the lines between JIRA projects correctly leads to painful collaboration across teams.

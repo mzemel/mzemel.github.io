@@ -1,13 +1,14 @@
 ---
-layout: post
-title: "Towards better mailing address management"
-image: https://static.makeuseof.com/wp-content/uploads/2017/07/Mail-Merge-Featured-670x335.png
+layout: single
+title: "Better mailing address management" 
 header:
-  image: /assets/patterns/asanoha-400px.png
+  overlay_image: https://static.makeuseof.com/wp-content/uploads/2017/07/Mail-Merge-Featured-670x335.png
+  overlay_filter: 0.5
 tags: ["business"]
 keywords: business
-ref: post-example-in-english
 lang: en
+category: articles
+excerpt: People move a lot.
 ---
 
 People move a lot.  Since leaving college, I've moved 8 or 9 times; each time, I'd have a different mailing address and update banks, healthcare, and other interested parties.  It's a hassle to constantly update your address, and if you forget you risk important mail being sent into the void.

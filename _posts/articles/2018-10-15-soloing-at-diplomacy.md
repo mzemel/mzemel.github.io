@@ -1,13 +1,14 @@
 ---
-layout: post
-title: "Diplomacy: To stab or not to stab?"
-image: /assets/patterns/paisley.png
+layout: single
+title: "Diplomacy: is it a good idea to stab?"
 header:
-  image: /assets/patterns/asanoha-400px.png
+  overlay_image: "assets/img/diplomacy_header.jpg"
+  overlay_filter: 0.5
 tags: ["games"]
 keywords: games
-ref: post-example-in-english
 lang: en
+category: articles
+excerpt: Should you try to solo or share the win? 
 ---
 
 I like winning, but I'm discovering that the ethics of winning at Diplomacy are not very cut and dry.

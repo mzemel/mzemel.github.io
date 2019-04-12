@@ -1,40 +1,52 @@
 ---
-layout: post
-title: "Playing anonymous Diplomacy in person"
-tagline: "How to lose friends and influence people"
-image: /assets/patterns/paisley.png
+layout: single
+title: "Gunboat Diplomacy"
 header:
-  image: /assets/patterns/asanoha-400px.png
-repository:
-  is_project_page: true
-  show_downloads: false
-  repository_url: https://github.com/mzemel/gunboat_diplomacy
+  overlay_image: /assets/img/diplomacy_header.jpg
+  caption: "HistoryGamerDotCom"
+  actions:
+    - label: "GitHub"
+      url: https://github.com/mzemel/gunboat_diplomacy
 tags: ["games"]
 keywords: games
-ref: cayman-blog-project
 lang: en
 category: projects
+toc: true
+excerpt: Who just stabbed me?
 ---
 
-I love board games.  Diplomacy is an especially good one where there is absolutely no luck involved.  It is similar to Risk but instead of rolling dice to evaluate the success of an invasion, you must negotiate with your fellow players for support.  If France wants to invade Germany, he's not going to have much luck unless England is willing to lend the support of their fleets and armies.
+## What is Diplomacy?
 
-![diplo](https://i.imgur.com/NvFeesa.png)
+I love board games, especially ones where little to no luck is involved.  Diplomacy, similar to Risk, situates you as a superpower bent on world domination.  The key difference is, instead of rolling dice, all of your moves succeed or fail depending on support from your allies (other players).
 
-What makes this even more appealing: what you agree to is non-binding.  So if you _claim_ to help France in his quest, your written instructions may even be the opposite: help Germany remain in place or even move into France.  Alliances are formed and broken; your skill as a player depends on your ability to encourage teamwork and trust, then betray your allies at the right time to claim sole victory.
+Players will have a brief "diplomacy phase" where they quibble and meet in secret, then write down their moves secretly on a sheet of paper.  All moves are resolved at the same time, meaning some will conflict, and may vary from what you'd told someone you would do.
 
-### Gunboat
+Alliances are constantly forming and breaking, and your skill as a player is entirely based on your ability to inspire cooperation and betray your allies at the right time for sole victory.
 
-Diplomacy can take upwards of six or seven hours to complete a game.  Much of the time is spent in a "colluding" phase before moves are entered and resolved, where players discuss their alliances with each other.  A quicker variant, called Gunboat, speeds up the game to about an hour by eliminating this colluding phase.  In this version, players remain anonymous and do not communicate with each other while entering their moves.
+<img src="assets/img/diplomacy.png" />
 
-In order to play this version, it's helpful to have a way to ensure anonymity.  To achieve this, I created a simple database and API (via SMS) to record moves.  When all players have entered their moves, everyone receives an SMS with all moves so they can be resolved while the players remain anonymous.
+## What is Gunboat?
 
-### Commands
+The "diplomacy phase" I mentioned earlier represents the majority of the time spent on a game, and the average game lasts about five or six hours.  One popular variant, Gunboat, eliminates the negotiating phase and boils the game down to an anonymous, orders-only game.  This can condense a game of diplomacy into about 30 or 45 minutes.
 
-* `Commands` - List commands
-* `End Round` - Tabulate all responses and send them to all players
-* `Germany F Kie-Den A Ber-Kie A Mun-Ruh` (example) - enter moves as Germany
+How do you ensure anonymity in person, when people are turning in their sheets of paper, flipping them over, recognizing handwriting, and seeing reactions to orders being read?
 
-### Last notes
+Well, I created an API that allows you to submit your orders via SMS.  All players simply text their moves to a phone number (provided by Twilio) and they are forwarded on as HTTP requests to a Ruby application hosted on Heroku.
+
+This application exposes an API around a simple state with some logic on when to consider a round "ready" for resolving moves.
+
+## Installation and usage
+
+After getting the application deployed and an account on Twilio set up (see GitHub), players can use the following commands:
+
+```
+Commands    # List all commands
+End Round   # Tabulate all responses and send them to all players
+Germany
+  F Kie-Den
+  A Ber-Kie
+  A Mun-Ruh # Example moves for Germany
+```
 
 This was a fun project to play around with Twilio, which lets you send and receive SMSs as part of your application's business logic.
 

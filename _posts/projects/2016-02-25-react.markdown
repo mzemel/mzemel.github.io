@@ -1,22 +1,27 @@
 ---
-layout: post
-title: "Creating a generic, extensible React component"
-tagline: "And how to use ActiveModel to determine its behavior"
-image: /assets/patterns/paisley.png
+layout: single
+title: "Creating a dynamic React component"
 header:
-  image: /assets/patterns/asanoha-400px.png
-tags: ["ruby", "react", "rails"]
-keywords: react, ruby, rails
-ref: what-is-this
+  overlay_image: /assets/img/react-header.png
+  caption: "HackerNoon"
+  actions:
+    - label: "GitHub"
+      url: https://github.com/masonbuilt/sendero"
+tags: ["react"]
+keywords: react
 lang: en
 category: projects
+toc: true
+excerpt: Using ActiveRecord to determine the behavior of JavaScript
 ---
+
+## Background
+
+In 2016, I was working with a friend on a rock climbing application called Sendero, where you could create routes, projects, and be connected to your friends.  For this project, I wanted to use React.  As I worked through the application, I realized that there was an opportunity to create an abstract base class for our components.
 
 We have several RESTful resources that could use just single, generic React component to display them.  To populate a table dynamically, we need to give some meta-data to the React component.  This will take the form of a reusable Ruby JSON-serializer.
 
-### React side
-
-##### React is rendered in Rails
+## React with Rails
 
 Feel free to skip this, as it's more background.
 
@@ -28,7 +33,7 @@ Because of the [react-rails](https://github.com/reactjs/react-rails) gem, we wer
 <%= react_component "ProjectList", url: "/projects", pollInterval: 5000, data: @projects.to_json %>
 ```
 
-##### Replaced ProjectList with a GenericResourceList
+## Replaced ProjectList with a GenericResourceList
 
 The GenericResourceList React component takes a  collection of a resource from a JSON API.
 
@@ -97,7 +102,7 @@ The internal API of the class is now a little different, but the gist is you jus
 
 The last method, `grade` is an example of including data not stored in the resource's database table.
 
-##### Data is pulled from the database and converted to JSON data types
+## Data is pulled from the database and converted to JSON data types
 
 Here is a Ruby utility class to present data types of the resource for javascript consumption.
 
@@ -141,7 +146,7 @@ end
 
 Basically, you call `JSONManifest.produce` with the class to hit the database with and the attributes it cares about.  The serializer is still responsible for tacking on any additional attributes in the JSON response because that logic belongs in the presentation layer.
 
-##### Back to React
+## Back to React
 
 The GenericResourceList component is now being rendered like so:
 
@@ -151,7 +156,7 @@ The GenericResourceList component is now being rendered like so:
 <%= react_component "GenericResourceList", url: "/projects", pollInterval: 5000, data: PartialProjectSerializer.json_manifest %>
 ```
 
-##### The GenericResourceList component
+## The GenericResourceList component
 
 The full code for the GenericResourceList component can be viewed [here](https://github.com/masonbuilt/sendero/blob/jason_react_2/app/assets/javascripts/components/_generic_resource_list.js.jsx) but the relevant part to using that meta-data in the front end is:
 
@@ -220,7 +225,7 @@ The eventual DOM structure is:
 
 The `knownType` attribute is what's given to React from the Ruby code.  I'm not sure exactly how it's useful at the moment, but it may be in the future.
 
-##### Conclusion
+## Conclusion
 
 I believe this is useful for tables displaying a list of resources that:
 

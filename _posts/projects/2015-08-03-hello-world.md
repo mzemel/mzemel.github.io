@@ -1,19 +1,19 @@
 ---
-layout: post
-title: "My first program: image processing with C++"
-tagline: "How it works"
-image: /assets/patterns/paisley.png
+layout: single
+title: "Image processing with C++"
 header:
-  image: /assets/patterns/asanoha-400px.png
-repository:
-  is_project_page: true
-  show_downloads: false
-  repository_url: https://github.com/mzemel/imager
-tags: ["phd"]
-keywords: phd
-ref: what-is-this
+  overlay_image: /assets/img/image-processing.jpg
+  overlay_filter: 0.5
+  caption: "E2matrix"
+  actions:
+    - label: "GitHub"
+      url: https://github.com/mzemel/imager
+tags: ["research"]
+keywords: research
 lang: en
 category: projects
+toc: true
+excerpt: My first program
 ---
 
 This is a write-up of my first program, a C++ executable to analyze video footage and extract a histogram of a fish's position over time.
@@ -62,7 +62,7 @@ This will turn on a parallel port pin, which tells a [custom piece of hardware I
 
 The fish sits in a square-like container in the middle of a long tube.  The video camera is positioned from above, looking down, and it includes some of the container.  Thus, to ensure that my image processing was as effective as possible, I wanted to eliminate the boundaries from the video.
 
-![container](https://i.imgur.com/jQ5lTTC.jpg)
+<img src="assets/img/imager/4.jpg" />
 
 The [script](https://github.com/mzemel/imager/blob/master/src/crop.cpp) would use `ffmpeg` to take a quick snapshot and let the user, via X11, mark with their mouse the bounds of the white background.  The bounds were noted in a text file and given to `ffmpeg` as it begins its video collection, producing images that have the background cropped out.
 
@@ -86,11 +86,11 @@ Fishes are longer than they are wide.  In order to determine the orientation of 
 
 The histogram became a collection of long angles (orientation) and how much time until they were in a new orientation.  Surprisingly, we were getting consistent findings: high speed resulted in fish spending more time oriented into the flow of the water.
 
-![fish1](http://i.imgur.com/A22lQhN.gif)
+<img src="assets/img/imager/5.gif" />
 
 Final result, in GIF form.
 
-![fish2](http://i.imgur.com/u92b2Z6.png)
+<img src="assets/img/imager/6.png" />
 
 Data and methodology were presented at a conference at Portland State.
 

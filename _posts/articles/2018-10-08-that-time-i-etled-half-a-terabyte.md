@@ -1,13 +1,15 @@
 ---
-layout: post
-title: "That time I ETL'd half a TB"
-image: /assets/patterns/paisley.png
+layout: single
+title: "Lessons from a large ETL"
 header:
-  image: /assets/patterns/asanoha-400px.png
+  overlay_image: assets/img/data.jpg 
+  overlay_filter: 0.5
+  caption: "Rathenau Instituut"
 tags: ["business"]
 keywords: business
-ref: post-example-in-english
 lang: en
+category: articles
+excerpt: Moving 500GB over HTTP
 ---
 
 Over the last year and a half, I worked on a team delivering a microservice that split off responsibility around managing email recipients and recipient lists from our monolithic application.  While there were challenges during development, we were able to push through them and communicate important decisions and deadlines to the rest of the team.  Largely, we were able to make our deadlines for delivering this new system.

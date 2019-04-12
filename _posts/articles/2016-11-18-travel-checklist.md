@@ -1,7 +1,14 @@
 ---
-layout: post
-title:  "Travel Checklist"
-categories: personal
+layout: single
+title: "Travel checklist"
+header:
+  overlay_image: assets/img/travel_pano.JPG
+  overlay_filter: 0.5
+tags: ["travel"]
+keywords: travel
+lang: en
+category: articles
+toc: true
 ---
 
 After six months backpacking, this is what I found useful to have in my pack.
