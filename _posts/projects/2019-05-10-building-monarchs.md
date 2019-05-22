@@ -56,21 +56,22 @@ As I did a little preliminary thinking, I started with some questions that had b
 
 # Building it
 
-A couple months ago, I'd watched Wolf Hall, a miniseries about Henry VIII and Anne Boleyn.  His difficulty in acquiring a divorce and wars with France made me confused: why was he not on good terms with the Pope?  Was his sister not married to the king of France, discouraging war?
+A couple months ago I'd watched Wolf Hall, a miniseries about Henry VIII and Anne Boleyn.  His wars difficulty in acquiring a divorce made me confused: why were some Christian rulers on poor terms with the Pope?
 
-I'd been building a list of similar questions for a while:
+I'd been collecting similar questions for a while:
 
 * What was the Diet of Worms, and why have we never heard of Worms since?
-* Who were the Jacobites, Orleanists, Bonapartists?  Do you stop being a Pretender if the nation dissolves?
-* What is a dauphine, infanta, stadtholder, or archduke?
+* Who were the Jacobites, Orleanists, and Bonapartists?  
+* What happened to all of these powerful houses - are they a relic of the past, or are they still active today?
+* What are dauphines, infantas, stadtholders, and archdukes?
 
 <img src="assets/img/monarchs/europe_500.png" />
 
-What happened to these tribes?  Where is Mercia today?  Are "Anglo-Saxons" still the dominant heritage of England?
+What happened to these tribes?  What is Mercia or Northumbria today?  How were Normans different from Anglo-Saxons?
 
 ## Design
 
-First, I wanted to show each **monarch**: their image, name, and years in power.  I also wanted to cover their house, wars, and religion.  Last, I wanted to show themes that came from them, such as Henry VIII's promulgation of the 'Divine right of kings'.  This was important, because it directly led to the separation of the Church of England from Rome.  If I could show events taking place concurrently in _other_ countries as well, that would tell a great story.
+First, I wanted to show info about each monarch: their image, name, and years in power.  I also wanted to cover their house, wars, and religion.  Last, I wanted to show themes that came from them, such as Henry VIII's notion of 'Divine right of kings'.  This was important because it led to the separation of the church from Rome.  If I could show events taking place concurrently in _other_ countries as well, that would tell a great story.
 
 <!-- Speaking of houses, I noticed some similarities across countries.  There were Habsburgs in the Holy Roman Empire, Austria, and Spain.  There were Bourbons in France and, interestingly, also Spain.  Therefore, something interesting must have happened in Spain, I thought.
 
@@ -106,13 +107,13 @@ d3 works by matching data to HTML elements, specifically SVGs.  Elements are cre
 
 These animations are tied to javascript event handlers, such as mouse hovers and clicks.  The syntax for d3 is very intuitive and pleasant to work with.
 
+### Dates
+
+Let's step through it, or feel free to [skip ahead](#representation-decisions).
+
 The following code sets up filters, allowing the user to focus on events of a particular type.
 
 <img src="assets/img/monarchs/date_controls.gif" style="display:block; margin-left: auto; margin-right: auto; width: 50%;" />
-
-Let's step through it, or feel free to [skip ahead](#challenges).
-
-### Dates
 
 ```javascript
 dateControlContainer.selectAll("circle")
@@ -131,9 +132,9 @@ dateControlContainer.selectAll("circle")
   .append("title").text(function(d) { return d.key; });
 ```
 
-We start with a previously-created d3 object, a `<g>` container that we've created an assigned to `dateControlContainer`.  This will hold all of the filter elements.
+We start with a previously-created d3 object, a `<g>` container that we've assigned to `dateControlContainer`.  This will hold all of the filters.
 
-We select all SVG `<circle>` elements in the container (currently zero) and pass in an array of filter values, `dateControlData`, as our data source:
+We select all SVG `<circle>` elements in the container (currently zero) and pass in an array of JSON objects, `dateControlData`, as our data source:
 
 ```
 [
@@ -145,9 +146,11 @@ We select all SVG `<circle>` elements in the container (currently zero) and pass
 
 `enter()` and `append()` are directives for what to do with each data element.
 
-`attr()` will set a particular HTML attribute - in this case, SVG attributes like `x` and `y`.  You can set attributes dynamically by giving a callback, which takes the element as an argument, such as `.attr("fill", function(d) { return d.color })`.  You could write it using ES6 arrow functions for a cleaner interface, but I'm not using Babel or any javascript transpiler, so I'm not sure that my code would run on IE or any less modern browsers, so I opted to write in pure javascript.  Still, though, it would be nice to write `.attr("fill", d => d.color)`
+`attr()` will set an HTML attribute - in this case, SVG attributes like `x` and `y`.  You can set attributes dynamically by passing a function, which is given the data, such as `.attr("fill", function(d) { return d.color })`.
 
-The `.on()` function is used to apply event handlers - in this case, `click`, `mouseover`, and `mouseout`.  Order doesn't matter since each line returns the d3 object it operates on, making method chaining very easy.
+I thought about using ES6 arrow functions, `.attr("fill", d => d.color)` for readability, but I'm not using a transpiler so I wanted to have it work on less modern browsers like IE10.
+
+The `.on()` function is used to apply event handlers - in this case, `click`, `mouseover`, and `mouseout`.  Order doesn't matter since each line returns the d3 object, making method chaining easy.
 
 The event handlers themselves look like:
 
@@ -178,22 +181,23 @@ function reduceCircle(el) {
 
 `enlargeCircle` will transition the circle to be 25% larger and more opaque, while `reduceCircle` (on `mouseout`) will return the circle back to its original size and opacity.
 
-### Details
+### Modal
 
 I used two principles for designing the monarch modal.
 
 1) Every dimension ultimately inherits from the height (or width) of the browser, and
+
 2) all elements are laid out according to a grid.
 
 The inheritance is nice because the entire website will automagically scale depending on what device you're using.
+
+My grid system was this: the modal height, divided by 8, is a block.  The width would be 5 blocks across, and each element's `width`, `height`, `x`, and `y` would be some fraction or multiple of a block.
 
 I sketched it out on paper first because I hate myself.
 
 <img src="assets/img/monarchs/modal_draft.jpg" />
 
-My grid system was this: the modal height, divided by 8, is a block.  The width would be 5 blocks across, and each element's `width`, `height`, `x`, and `y` would be some fraction or multiple of a block.
-
-That allowed me to easily reason about layout, shift elements around, and quickly go from mockup to code.
+Using a grid allowed me to easily reason about layout, move elements around, and go from mockup to code.
 
 ```javascript
 // House image
@@ -212,7 +216,7 @@ The full [source code](https://github.com/mzemel/monarchs/blob/master/src.js) is
 
 ## Challenges
 
-There were several challenges, first and foremost the amount of time it took to compile all of the data.
+There were several challenges, first and foremost the sheer amount of time it took to [compile all of the data](https://thebackend.dev/monarchs/dataset.json).
 
 On average, I'd spend about 20 minutes on a single monarch: pull all the relevant info from Wikipedia, find a good picture, create the map, and edit the info to fit into the frame and tell a compelling, accurate story.
 
@@ -222,15 +226,13 @@ The breakdown of time spent looked something like this
 
 <img src="assets/img/monarchs/chart.png" />
 
-If I do something like this again, I'd probably look for an existing dataset.
+If I do this again, I'll look for an existing dataset and scratch my creative itch by just building out functionality.
 
-The other challenges were more technical.  Doing the whole website in SVG made scaling to fit the window easy: every element gets its dimensions from the window's width/height.  This means images, padding, and even font size scale correctly on most devices.  Also, SVGs are supported by all modern browsers - at least the features I used - so the site looks the same on Chrome, Firefox, and IE without any changes needed.
-
-On the other hand, text handling in SVG leaves a lot to be desired.  There is zero support for paragraphs, so I had to use single-line text for everything.  I wrote two functions: one that fits text to a rectangle and one that fits a rectangle to text.  That allowed me, mostly, to reliably prevent text from bleeding over into other elements.  In some cases, I had to use monospace font to get higher accuracy (the date circles at the bottom).
+It's worth mentioning that text handling in SVG leaves a lot to be desired.  There is zero support for paragraphs, so I had to use single-line text for everything.  I wrote two functions: one that fits text to a container and one that fits a container to text.  That allowed me somewhat to prevent text from bleeding over into other elements.  In some cases, I had to use monospace font to get a clean fit. 
 
 ## Credits
 
-Thanks to my wonderful wife for designing the details modal.
+Thanks to my [talented wife](https://amyfernalddesign.com/) for [re-designing the details modal](assets/img/monarchs/amy.jpg).
 
 Thanks to Paul Hayslett for UI feedback and Chris Barthell for the idea of showing borders over time.
 
@@ -238,11 +240,13 @@ Icons made by [FreePik](https://www.flaticon.com/authors/freepik) and [Smashicon
 
 Fonts from [dafont.com](https://www.dafont.com/stonehenge.font) and [Google Fonts](https://fonts.googleapis.com/css?family=Lato)
 
+I took a lot of images from the internet and didn't keep track of credits, but this is a free educational site so...
+
 # Representation choices
 
 As I mentioned, sacrifices had to be made to show as much data as possible without overloading the user.
 
-Not every country is present: Greece, Norway, Poland, and others have dynastic monarchies but had to be excluded iin the interest of focusing attention on the larger players.
+Not every country is present: Greece, Norway, and Poland, for example, have dynastic monarchies but had to be excluded in the interest of focusing attention on the larger players.
 
 When a country was a vassal to a more powerful one, for example northern Italy to the Holy Roman Empire, the sovereignty of the vassal would not be displayed.  Put another way, even though there was a King of Italy, the throne was occupied by the Holy Roman Emperor and thus I considered Italy part of the Empire.
 
@@ -276,11 +280,11 @@ Originally, I had France not starting with Charles the Bald, since he is crowned
 
 The boundaries of France change perhaps the most dramatically over time, from a low-point during the Angevin empire
 
-<img src="assets/img/monarchs/europe_1154.png" style="display:block; margin-left:auto; margin-right:auto; width:50%;" />
+<img src="assets/img/monarchs/1180.jpg" style="display:block; margin-left:auto; margin-right:auto; width:50%;" />
 
 to a high-point during the Napoleonic wars:
 
-<img src="assets/img/monarchs/europe_1812.png" style="display:block; margin-left:auto; margin-right:auto; width: 50%;" />
+<img src="assets/img/monarchs/1812.jpg" style="display:block; margin-left:auto; margin-right:auto; width: 50%;" />
 
 ## Holy Roman Empire
 
@@ -296,13 +300,13 @@ Representing this as a single timeline is difficult.  For example, the leaders o
 Thus, to truly represent "Germany", you need to encompass the Holy Roman Empire, German Confederation, North German Confederation, German Empire, and Germany.  In the interest of getitng this project done in a timely fashion, I opted to skip Germany for now.
 -->
 
-Germany, to the astute observer, is not Germany as we recognize it today.  Between the fall of the Holy Roman Empire and today, it was the Confederation of the Rhine, the German Confederation, the North German Confederation, the German Empire, and finally modern Germany.  Throughout this period, the most powerful player besides Austria (who is represented separately) is Prussia.  Therefore, in my timeline the "monarchy of Germany" is a sequential line of the Hohenzollern rulers of Prussia, North German Confederation, and the German Empire.
+My Germany, to the astute observer, is not Germany as we recognize it today.  Between the fall of the Holy Roman Empire and today, it was the Confederation of the Rhine, the German Confederation, the North German Confederation, the German Empire, and finally modern Germany.  Throughout this period, the most powerful player besides Austria (who is represented separately) is Prussia.  Therefore, in my timeline the "monarchy of Germany" is a sequential line of the Hohenzollern rulers of Prussia, North German Confederation, and the German Empire.
 
 ## Russia
 
 Russia starts with the first Christian ruler, the Grand Prince of Kiev Vladimir the Great.
 
-It stops with the breakup of Kievan Rus' and, ya know, Genghis Khan.
+It stops with the breakup of Kievan Rus' into a collection of principalities and, oh yeah, Genghis Khan.
 
 It picks back up with the first Tsar of Russia, Ivan the Terrible.
 
@@ -318,21 +322,13 @@ As I mentioned, Italy did not exist as a unified country that it is today until 
 
 ## Scandinavia
 
-Scandinavia is another area that I had to make some cuts.  Norway in particular is tricky, since it has existed in a union with either Denmark, Sweden, or Denmark _and_ Sweden on and off for the past 1,000 years.  In a tragic oversimplification, I decided that Denmark was the most stable and powerful, and decided to just show them for now.  During the period of the union between Denmark, Norway, and Sweden (the Kalmar Union), I opted to show that as "Denmark" even though the king, Erik III, was proclaimed King of Norway first.
-
-## Others
-
-Other countries not currently included are Greece, Austria, Wales, Ireland, the Netherlands, and the popes.
-
-Not because they're not cool, but because having more than 7 countries seems to be information overload.
+Scandinavia is another area that I had to make some cuts.  Norway in particular is tricky, since it has existed in a union with either Denmark, Sweden, or Denmark _and_ Sweden on and off for the past 1,000 years.  In an oversimplification, I decided that Denmark was the most stable and powerful, and decided to just show them for now.  During the period of the union between Denmark, Norway, and Sweden (the Kalmar Union), I opted to show that as "Denmark" even though the king, Erik III, was proclaimed King of Norway first.
 
 # Terminology
 
-Royalty use a lot of terms.  For example, there are a lot of dukes in England, but when someone is called the Duke of Wales, that means they're next in line for succession.  And in the interest of making things as confusing as possible, each country has their own set of terms, so I've attempted to compile many of them here.
+There are a lot of terms involved, some specific to each country.  For example, there are a lot of dukes in England, but when someone is called the Duke of York, that means they're second in line for succession.
 
-There are a lot of overloaded or non-obvious terms in medieval history.  For example, how is the Duke of Wales different than the Duke of Norfolk?  What is a Stadtholder or Prince-Elector?
-
-As I went through Wikipedia, I pulled out a lot of terms that I felt needed clarification:
+As I collected data, I kept a list of terms worth defining.
 
 | Term | Meaning | Notes | Example |
 |:-----|:--------|:------|:--------|
@@ -342,12 +338,12 @@ As I went through Wikipedia, I pulled out a lot of terms that I felt needed clar
 |Infanta|Princess|Spanish, especially eldest daughter who was not heir||
 |Dauphin|Heir apparent|French, used after France acquired the territory of Dauphiné||
 |Archduke|Heir apparent|Holy Roman Empire|Archduke Franz Ferdinand|
-|Prince-Elector|Council that elects the Holy Roman Empire|||
-|Stadtholder|Duke/head of state|Dutch Republic|William of Orange, before becoming King of England|
-|Doge|Chief magistrate of Venice or Genoa|Italian|[Doge](https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Original_Doge_meme.jpg/300px-Original_Doge_meme.jpg)|
-|Cadet house|Hereditary line through a younger sibling||Valois is traced back to Capet through second son of Philip III|
-|Primogeniture|Hereditary line through the oldest sibling||Salic law|
 |Junior King|Crowned heir apparent|Sporadic practice; French, English, Hungarian||
+|Prince-Elector|Council that elects the Holy Roman Emperor||George I, King of England and Elector of Hanover|
+|Stadtholder|Somewhere between a duke and head of state|Dutch Republic|William of Orange, before becoming King of England|
+|[Doge](assets/img/monarchs/doge.png)|Chief magistrate of Venice or Genoa|Italian||
+|Primogeniture|Hereditary line through the oldest sibling||Salic law|
+|Cadet house|Hereditary line through a younger sibling||Valois is traced back to Capet through second son of Philip III|
 
 # Anecdotes
 
@@ -424,6 +420,20 @@ Frederick I (and earlier emperors) having their body parts buried in different l
 ## Smartest
 
 ## Dumbest
+
+<img src="assets/img/monarchs/charles_ii.jpg" style="display:block; margin-left: auto; margin-right: auto; width: 50%;" />
+
+Charles II of Spain didn't have a great starting hand.
+
+Through centuries of political intermarrying he was completely bald, senile, and sterile by his death at 38.  The physician wrote, "his heart was the size of a peppercorn, his lungs corroded, and he had a single testicle, black as coal."
+
+Here is his family tree:
+
+<img src="assets/img/monarchs/charles_ii.png" />
+
+Circles are bad.  You want to avoid circles.
+
+With no heirs and tired of Austrian Habsburg influence in his court, he named the French Bourbon Philip V as his heir, sparking off the War of Spanish Succession.  This war would result in the end of Habsburg rule over the Netherlands and the elevation of Prussia to a kingdom.
 
 ## Worst Death
 
