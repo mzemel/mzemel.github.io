@@ -35,38 +35,48 @@ I hope that you're able to have fun with this website (and blog post), finding t
 
 <!--
 
+
+The first step was identifying what I did and did not know.
+
 <img src="assets/img/monarchs/europe_500.png" />
 
-Above, we can see some tribes from the year 500 AD.  You'll recognize the Franks and Danes, from which modern France and Denmark are derived, as well as the Angles and Saxons.  You may recognize the region of Mercia, yet you won't find it on any map today - in fact, Mercia ceased to exist before the Normans conquest of England.  How did we get from that picture to this one?
+Above, we can see some tribes from the year 500 AD.  You'll recognize the Franks and Danes, from which modern France and Denmark are derived, as well as the Angles and Saxons.  You may recognize the region of Mercia, yet you won't find it on a map today - in fact, Mercia ceased to exist about a thousands years ago.  How did we get from that picture to this one?
 
 <img src="assets/img/monarchs/europe_2019.gif" />
 
-If you're anything like me, you know it involves some diplomacy, some battles, some religion, and some scientific achievements.  Also, if you're like me, you've reached the limit of your at-hand knowledge, which is exactly where this project aims to pick up.
-
 When I look at pictures like this, I'm confronted with the boundary between what I do and do not know: enough to know there's a story, not enough to see the whole picture.
 
-As I did a little preliminary thinking, I gathered up some questions that had been in my mind for some time:
+As I did a little preliminary thinking, I started with some questions that had been in my mind for some time:
 
-* What was Prussia - was it a German state?  A country?  When did that change?
-* What was the Diet of Worms, besides a terrible meal plan? 
+* Why was Henry VIII unable to get a divorce?
+* What was the Diet of Worms, besides a terrible meal? 
 * What is a Pretender?
 * What's the difference between a baron, a duke, an earl, and a count?
-
-If you've had these questions, or similar ones, continue reading!
-
 -->
 
 # Building it
 
-The first question was what to display.
+A couple months ago, I'd watched Wolf Hall, a miniseries about Henry VIII and Anne Boleyn.  His difficulty in acquiring a divorce and wars with France made me confused: why was he not on good terms with the Pope?  Was his sister not married to the king of France, discouraging war?
 
-I had a loose goal: show something, make it look good, and make it interesting.  If anything catches your eye, and you go down a rabbit hole, I'll consider it a success.
+I'd been building a list of similar questions for a while:
 
-First, I wanted to show each **monarch** and what years they were in power.  That would at least help me put a century to a name.  No longer would I assume Henry VIII ruled at some point between Caesar and Kennedy.
+* What was the Diet of Worms, and why have we never heard of Worms since?
+* Who were the Jacobites, Orleanists, Bonapartists?  Do you stop being a Pretender if the nation dissolves?
+* What is a dauphine, infanta, stadtholder, or archduke?
 
-Next, I wanted to show each **house**.  Knowing dynasties is a useful heuristic for estimating when someone was in power.  The Tudors came before the Stuarts who came before the Saxe-Coburg & Gothas.
+<img src="assets/img/monarchs/europe_500.png" />
 
-As I did some preliminary research, I kept a list of what seemed to be the most important houses.  Like the picture of early medieval tribes, I knew enough to feel engaged but not enough to feel knowledgable. 
+What happened to these tribes?  Where is Mercia today?  Are "Anglo-Saxons" still the dominant heritage of England?
+
+## Design
+
+First, I wanted to show each **monarch**: their image, name, and years in power.  I also wanted to cover their house, wars, and religion.  Last, I wanted to show themes that came from them, such as Henry VIII's promulgation of the 'Divine right of kings'.  This was important, because it directly led to the separation of the Church of England from Rome.  If I could show events taking place concurrently in _other_ countries as well, that would tell a great story.
+
+<!-- Speaking of houses, I noticed some similarities across countries.  There were Habsburgs in the Holy Roman Empire, Austria, and Spain.  There were Bourbons in France and, interestingly, also Spain.  Therefore, something interesting must have happened in Spain, I thought.
+
+Next, I wanted to show their **house**.  Knowing dynasties is a useful heuristic for estimating when someone was in power.  The Tudors came before the Stuarts who came before the Saxe-Coburg & Gothas.  As I did some preliminary research, I kept a list of what seemed to be the most important houses.
+
+Next, I wanted to show their **house**.  
 
 England seemed to focus on the Plantagenets, Lancasters, Yorks, Tudors, Stuarts, Hanovers, and the Windsors.
 
@@ -79,9 +89,7 @@ But Spain also had (and currently has) Bourbons.  That's interesting.  And befor
 Speaking of **wars**, I wanted to show how these empires related to each other via wars.  For example, the Hundred Years War ought to show that for a period from 1337-1453 England and France were engaged in an on-and-off-again war that characterized their near-millenium rivalry.
 
 And for good measure, let's show some information to make the monarch more compelling, like **events**, **religion**, and major events in other parts of the world.
-
-## Design
-
+-->
 From here, I drafted my earliest mockup
 
 <img src="assets/img/monarchs/mockup.png" />
@@ -90,17 +98,21 @@ There would be a modal containing the above information, a timeline for each cou
 
 ## Technology
 
-I decided to go with [d3.js](d3js.org), which you might recognize from the [New York Times](https://www.nytimes.com/interactive/2014/09/19/nyregion/stop-and-frisk-map.html).  D3 manipulates HTML SVGs as data enters and exits the page, usually after user interaction.  You can set up transitions, which gives the site a very responsive feel.
+I decided to go with [d3.js](d3js.org), which you might recognize from the [New York Times](https://www.nytimes.com/interactive/2014/09/19/nyregion/stop-and-frisk-map.html).
+
+d3 works by matching data to HTML elements, specifically SVGs.  Elements are created dynamically from data and in response to user actions.  You can also apply animations, giving your site a responsive feel.
 
 <img src="https://media3.giphy.com/media/BLX7DZmgkT31K/giphy.gif" />
 
-These transitions are often paired with javascript event handlers, such as hovers and clicks.  In the above example, a hover will reduce the opacity of non-selected elements, helping to bring focus to a smaller subset of data.
+These animations are tied to javascript event handlers, such as mouse hovers and clicks.  The syntax for d3 is very intuitive and pleasant to work with.
 
-The API for d3 is very intuitive and pleasant to work with.  The following code populates and provides user interaction for the "important date" circles above the x-axis:
+The following code sets up filters, allowing the user to focus on events of a particular type.
 
-<img src="assets/img/monarchs/dates.gif" style="display:block; margin-left: auto; margin-right: auto; width: 50%;" />
+<img src="assets/img/monarchs/date_controls.gif" style="display:block; margin-left: auto; margin-right: auto; width: 50%;" />
 
-Let's step through it, or feel free to skip ahead if reading code is not your thing.
+Let's step through it, or feel free to [skip ahead](#challenges).
+
+### Dates
 
 ```javascript
 dateControlContainer.selectAll("circle")
@@ -119,11 +131,23 @@ dateControlContainer.selectAll("circle")
   .append("title").text(function(d) { return d.key; });
 ```
 
-This code will select an SVG `<g>` container element, `dateControlContainer`, and some data: an array of dates, `dateControlData`.
+We start with a previously-created d3 object, a `<g>` container that we've created an assigned to `dateControlContainer`.  This will hold all of the filter elements.
 
-`enter()` and `append()` are directives for what to do with each data element.  `attr()` will set a particular HTML attribute - in this case, SVG attributes like `x` and `y`.  You can return dynamic values by passing in a callback which takes the element as an argument, such as `.attr("fill", function(d) { return d.color })`.   You could write it using ES6 arrow functions for a cleaner interface, but I'm not using Babel or any javascript transpiler, so I'm not sure that my code would run on IE or any less modern browsers, so I opted to write in pure javascript.  Still, though, it would be nice to write `.attr("fill", d => d.color)`
+We select all SVG `<circle>` elements in the container (currently zero) and pass in an array of filter values, `dateControlData`, as our data source:
 
-The `.on()` function is used to apply event handlers - in this case, `click`, `mouseover`, and `mouseout`.  What's very pleasing is that order is not very important for these functions since each one returns the d3 object (same as returning `self`), which makes method chaining very easy.
+```
+[
+  { key: 'philosophy', color: '#FFFFFF' },
+  { key: 'science', color: '#000000' },
+  // ...
+]
+```
+
+`enter()` and `append()` are directives for what to do with each data element.
+
+`attr()` will set a particular HTML attribute - in this case, SVG attributes like `x` and `y`.  You can set attributes dynamically by giving a callback, which takes the element as an argument, such as `.attr("fill", function(d) { return d.color })`.  You could write it using ES6 arrow functions for a cleaner interface, but I'm not using Babel or any javascript transpiler, so I'm not sure that my code would run on IE or any less modern browsers, so I opted to write in pure javascript.  Still, though, it would be nice to write `.attr("fill", d => d.color)`
+
+The `.on()` function is used to apply event handlers - in this case, `click`, `mouseover`, and `mouseout`.  Order doesn't matter since each line returns the d3 object it operates on, making method chaining very easy.
 
 The event handlers themselves look like:
 
@@ -154,17 +178,37 @@ function reduceCircle(el) {
 
 `enlargeCircle` will transition the circle to be 25% larger and more opaque, while `reduceCircle` (on `mouseout`) will return the circle back to its original size and opacity.
 
-The full [source code](https://github.com/mzemel/monarchs/blob/master/src.js) is visible on GitHub and comes in around 1,000 lines of code, most of which is d3 (with a little jQuery and Lodash).
+### Details
 
-## Credits
+I used two principles for designing the monarch modal.
 
-Icons made by [FreePik](https://www.flaticon.com/authors/freepik) and [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](www.flaticon.com)
+1) Every dimension ultimately inherits from the height (or width) of the browser, and
+2) all elements are laid out according to a grid.
 
-Fonts from [dafont.com](https://www.dafont.com/stonehenge.font) and [Google Fonts](https://fonts.googleapis.com/css?family=Lato)
+The inheritance is nice because the entire website will automagically scale depending on what device you're using.
 
-Thanks to my wonderful wife for designing the details modal.
+I sketched it out on paper first because I hate myself.
 
-Thanks to Paul Hayslett for UI feedback and Chris Barthell for the idea of borders over time.
+<img src="assets/img/monarchs/modal_draft.jpg" />
+
+My grid system was this: the modal height, divided by 8, is a block.  The width would be 5 blocks across, and each element's `width`, `height`, `x`, and `y` would be some fraction or multiple of a block.
+
+That allowed me to easily reason about layout, shift elements around, and quickly go from mockup to code.
+
+```javascript
+// House image
+timeline.append("image")
+  .attr("x", detailsX + detailsBlock * 2 - detailsBlockEighth)
+  .attr("y", detailsY + detailsBlockQuarter + detailsBlockEighth)
+  .attr("width", detailsBlock / 2)
+  .attr("height", detailsBlock / 2)
+  .attr("xlink:href", data.houseImage)
+  .attr("class", "detail")
+```
+
+<img src="assets/img/monarchs/modal.png" />
+
+The full [source code](https://github.com/mzemel/monarchs/blob/master/src.js) is available on GitHub and comes in around just 1,000 lines of code, most of which is d3 (with a little jQuery and Lodash).
 
 ## Challenges
 
@@ -176,7 +220,7 @@ Sacrifices had to be made: leaving out dates of wars when the text bled into the
 
 The breakdown of time spent looked something like this
 
-INSERT PIE CHART HERE
+<img src="assets/img/monarchs/chart.png" />
 
 If I do something like this again, I'd probably look for an existing dataset.
 
@@ -184,6 +228,15 @@ The other challenges were more technical.  Doing the whole website in SVG made s
 
 On the other hand, text handling in SVG leaves a lot to be desired.  There is zero support for paragraphs, so I had to use single-line text for everything.  I wrote two functions: one that fits text to a rectangle and one that fits a rectangle to text.  That allowed me, mostly, to reliably prevent text from bleeding over into other elements.  In some cases, I had to use monospace font to get higher accuracy (the date circles at the bottom).
 
+## Credits
+
+Thanks to my wonderful wife for designing the details modal.
+
+Thanks to Paul Hayslett for UI feedback and Chris Barthell for the idea of showing borders over time.
+
+Icons made by [FreePik](https://www.flaticon.com/authors/freepik) and [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](www.flaticon.com)
+
+Fonts from [dafont.com](https://www.dafont.com/stonehenge.font) and [Google Fonts](https://fonts.googleapis.com/css?family=Lato)
 
 # Representation choices
 
