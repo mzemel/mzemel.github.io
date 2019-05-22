@@ -195,6 +195,8 @@ When a country was a vassal to a more powerful one, for example northern Italy t
 
 Speaking of Italy, there was no recognition of a nation of Italy before the 19th century.  To represent the Italy column, I'd have to choose between the kings of Northern Italy, Sicily, Sardinia, and Two Sicilies - all of which existed at different points. Germany and Spain have similar issues, which I'll address below.
 
+The map for each monarch represents the extent of their domain as their reign ends; it does _not_ account for succession crises that immediately followed, such as Francia splitting three ways upon the death of Louis the Pious.
+
 ## England
 
 ## Scotland
@@ -242,6 +244,14 @@ Thus, to truly represent "Germany", you need to encompass the Holy Roman Empire,
 -->
 
 Germany, to the astute observer, is not Germany as we recognize it today.  Between the fall of the Holy Roman Empire and today, it was the Confederation of the Rhine, the German Confederation, the North German Confederation, the German Empire, and finally modern Germany.  Throughout this period, the most powerful player besides Austria (who is represented separately) is Prussia.  Therefore, in my timeline the "monarchy of Germany" is a sequential line of the Hohenzollern rulers of Prussia, North German Confederation, and the German Empire.
+
+## Russia
+
+Russia starts with the first Christian ruler, the Grand Prince of Kiev Vladimir the Great.
+
+It stops with the breakup of Kievan Rus' and, ya know, Genghis Khan.
+
+It picks back up with the first Tsar of Russia, Ivan the Terrible.
 
 ## Italy
 <!--
