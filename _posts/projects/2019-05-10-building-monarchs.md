@@ -19,51 +19,24 @@ excerpt: An interactive, visual timeline of European's sovereigns
 
 # Background
 
-<!--
-A while back, I was watching PBS' Wolf Hall, a miniseries about the marraige of Henry VIII to Anne Boleyn.  As I watched the series, I thought to myself that it would be great to understand who else was in power.  As I learned more about Henry VIII, I realized there was a whole world of fantastic stories, all true, that relate him back to rulers across Europe.  Through his first wife, Catherine of Aragon, he was related to the Holy Roman Emperor, Charles V.  Through his sister, he was related to the house of Stuart in Scotland.  Why did he go to war against France?  What was the pope doing this whole time, and why was it so hard for him to acquire a divorce?
-
-As a visual learner, history has always been a series of disconnected dates.  1492, Columbus sailed the ocean blue.  Some time in the 13th century, the Magna Carta was signed.  Waterloo was, for some reason, very important.  Putting these events together has never been easy for me, but each time someone was able to tell a story that slotted in tidbits I already knew, I was fascinated.
--->
-
 To me, history has always seemed like a scatterplot of disconnected dots.  I'd learn about one narrow lane of history at a time, like the American Revolution, and feel frustrated that I couldn't recall specific enough dates to correlate what was happening in other parts of the world.  For example, while America was fighting Britain in the War of 1812, Napoleon had swept across Europe and dismantled one of the largest, most powerful institutions: The Holy Roman Empire.
 
-Not only did I have trouble understanding synchronicity, I also had gaps in my education about any nation or boundary that existed before I was born.  For example, I always had this flash of, "What was Prussia again" when I'd encounter it in Wikipedia.  And I'd go down the rabbit hole but, again, the way I approached learning was always too focused to retain that information in a larger context.
+Not only did I have trouble understanding synchronicity, I also had gaps in my education about any nation or boundary that existed before I was born.  For example, I always had this flash of, "What was Prussia again" when I'd encounter it in Wikipedia.  And I'd go down the rabbit hole but, the way I approached learning was always too focused to retain that information in a larger context.
 
 My goal here is to create a feeling of *synchronicity* and *flow*.  Synchronicity in that the user can see who was in power at the same time and what world events were unfolding.  Flow in that you can click through a nation's history and sense the changing borders, alliances, and dynasties as you move from one ruler to the next.
 
 I hope that you're able to have fun with this website (and blog post), finding them informative and perhaps even a reference you can come back to later.
 
-<!--
-
-
-The first step was identifying what I did and did not know.
-
-<img src="assets/img/monarchs/europe_500.png" />
-
-Above, we can see some tribes from the year 500 AD.  You'll recognize the Franks and Danes, from which modern France and Denmark are derived, as well as the Angles and Saxons.  You may recognize the region of Mercia, yet you won't find it on a map today - in fact, Mercia ceased to exist about a thousands years ago.  How did we get from that picture to this one?
-
-<img src="assets/img/monarchs/europe_2019.gif" />
-
-When I look at pictures like this, I'm confronted with the boundary between what I do and do not know: enough to know there's a story, not enough to see the whole picture.
-
-As I did a little preliminary thinking, I started with some questions that had been in my mind for some time:
-
-* Why was Henry VIII unable to get a divorce?
-* What was the Diet of Worms, besides a terrible meal? 
-* What is a Pretender?
-* What's the difference between a baron, a duke, an earl, and a count?
--->
-
 # Building it
 
-A couple months ago I'd watched Wolf Hall, a miniseries about Henry VIII and Anne Boleyn.  His wars difficulty in acquiring a divorce made me confused: why were some Christian rulers on poor terms with the Pope?
+A couple months ago I'd watched Wolf Hall, a miniseries about Henry VIII and Anne Boleyn.  His difficulty in acquiring a divorce made me wonder, why were some Christian rulers on the outs with the Pope?
 
 I'd been collecting similar questions for a while:
 
-* What was the Diet of Worms, and why have we never heard of Worms since?
+* What was the Diet of Worms, and what role has Worms played since?
 * Who were the Jacobites, Orleanists, and Bonapartists?  
-* What happened to all of these powerful houses - are they a relic of the past, or are they still active today?
-* What are dauphines, infantas, stadtholders, and archdukes?
+* Did these houses disappear, or are they still active today?
+* What are dauphines, infantas, stadtholders, or prince-electors?
 
 <img src="assets/img/monarchs/europe_500.png" />
 
@@ -71,7 +44,7 @@ What happened to these tribes?  What is Mercia or Northumbria today?  How were N
 
 ## Design
 
-First, I wanted to show info about each monarch: their image, name, and years in power.  I also wanted to cover their house, wars, and religion.  Last, I wanted to show themes that came from them, such as Henry VIII's notion of 'Divine right of kings'.  This was important because it led to the separation of the church from Rome.  If I could show events taking place concurrently in _other_ countries as well, that would tell a great story.
+First, I wanted to show info about each monarch: their image, name, and years in power.  I also wanted to cover their house, wars, and religion.  Last, I wanted to show themes associated with them, such as chivalry or Henry VIII's 'divine right of kings'.  If I could show events taking place concurrently in _other_ countries as well, that would tell a great story.
 
 <!-- Speaking of houses, I noticed some similarities across countries.  There were Habsburgs in the Holy Roman Empire, Austria, and Spain.  There were Bourbons in France and, interestingly, also Spain.  Therefore, something interesting must have happened in Spain, I thought.
 
@@ -99,9 +72,9 @@ There would be a modal containing the above information, a timeline for each cou
 
 ## Technology
 
-I decided to go with [d3.js](d3js.org), which you might recognize from the [New York Times](https://www.nytimes.com/interactive/2014/09/19/nyregion/stop-and-frisk-map.html).
+I decided to go with [d3.js](d3js.org), which you might recognize from the New York Times.
 
-d3 works by matching data to HTML elements, specifically SVGs.  Elements are created dynamically from data and in response to user actions.  You can also apply animations, giving your site a responsive feel.
+d3 matches data to SVGs.  Elements are created dynamically from data and in response to user actions.  You can also apply animations, giving your site a responsive feel.
 
 <img src="https://media3.giphy.com/media/BLX7DZmgkT31K/giphy.gif" />
 
@@ -109,7 +82,7 @@ These animations are tied to javascript event handlers, such as mouse hovers and
 
 ### Dates
 
-Let's step through it, or feel free to [skip ahead](#representation-decisions).
+Feel free to [skip ahead](#representation-decisions) if you don't want to read code.
 
 The following code sets up filters, allowing the user to focus on events of a particular type.
 
@@ -218,7 +191,12 @@ The full [source code](https://github.com/mzemel/monarchs/blob/master/src.js) is
 
 There were several challenges, first and foremost the sheer amount of time it took to [compile all of the data](https://thebackend.dev/monarchs/dataset.json).
 
-On average, I'd spend about 20 minutes on a single monarch: pull all the relevant info from Wikipedia, find a good picture, create the map, and edit the info to fit into the frame and tell a compelling, accurate story.
+On average, each monarch took about 20 minutes:
+
+* pull all relevant details from Wikipedia and Encyclopedia Brittanica
+* find a good picture and edit it
+* create the map
+* edit the info to fit into the frame and tell a compelling, accurate story
 
 Sacrifices had to be made: leaving out dates of wars when the text bled into the map, only including the 3 "most important" events, explaining complex intrigue in 100 characters or less...  My goal was to be about 95% accurate, leaving Wikipedia for a more accurate detailed view should anything pique the reader's interest.
 
@@ -228,35 +206,31 @@ The breakdown of time spent looked something like this
 
 If I do this again, I'll look for an existing dataset and scratch my creative itch by just building out functionality.
 
-It's worth mentioning that text handling in SVG leaves a lot to be desired.  There is zero support for paragraphs, so I had to use single-line text for everything.  I wrote two functions: one that fits text to a container and one that fits a container to text.  That allowed me somewhat to prevent text from bleeding over into other elements.  In some cases, I had to use monospace font to get a clean fit. 
-
 ## Credits
 
-Thanks to my [talented wife](https://amyfernalddesign.com/) for [re-designing the details modal](assets/img/monarchs/amy.jpg).
+Thanks to my [wife](https://amyfernalddesign.com/) for re-designing the details modal.  Hire her.
 
-Thanks to Paul Hayslett for UI feedback and Chris Barthell for the idea of showing borders over time.
+Thanks to Chris Barthell, Paul Hayslett, and Eddie Daniels for ideas and creative feedback.
 
-Icons made by [FreePik](https://www.flaticon.com/authors/freepik) and [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](www.flaticon.com)
+I didn't keep track of image credits, but they were mostly drawn from Wikipedia.
 
-Fonts from [dafont.com](https://www.dafont.com/stonehenge.font) and [Google Fonts](https://fonts.googleapis.com/css?family=Lato)
-
-I took a lot of images from the internet and didn't keep track of credits, but this is a free educational site so...
+Map by [eddsworldbatboy1](https://www.deviantart.com/eddsworldbatboy1/art/europe-s-provinces-map-301741322), icons by [FreePik](https://www.flaticon.com/authors/freepik) and [Smashicons](https://www.flaticon.com/authors/smashicons), and fonts from [dafont.com](https://www.dafont.com/stonehenge.font) and [Google Fonts](https://fonts.googleapis.com/css?family=Lato)
 
 # Representation choices
 
 As I mentioned, sacrifices had to be made to show as much data as possible without overloading the user.
 
-Not every country is present: Greece, Norway, and Poland, for example, have dynastic monarchies but had to be excluded in the interest of focusing attention on the larger players.
+Not every country is present: Greece, Norway, and Poland, for example, were excluded in the interest of focusing attention on the larger players. 9 seemed to be the magic number of countries to display.
 
-When a country was a vassal to a more powerful one, for example northern Italy to the Holy Roman Empire, the sovereignty of the vassal would not be displayed.  Put another way, even though there was a King of Italy, the throne was occupied by the Holy Roman Emperor and thus I considered Italy part of the Empire.
-
-Speaking of Italy, there was no recognition of a nation of Italy before the 19th century.  To represent the Italy column, I'd have to choose between the kings of Northern Italy, Sicily, Sardinia, and Two Sicilies - all of which existed at different points. Germany and Spain have similar issues, which I'll address below.
+Vassals are usually represented as sovereigns, unless the overlord held the throne like Charles V, Holy Roman Emperor and the throne of Spain.  Though England was a vassal to France, and Scotland to England, I showed them as sovereign nations.
 
 The map for each monarch represents the extent of their domain as their reign ends; it does _not_ account for succession crises that immediately followed, such as Francia splitting three ways upon the death of Louis the Pious.
 
-## England
-
 ## Scotland
+
+I started Scotland with the first Dunkeld.  There's a pretty interesting history before that though, including MacBeth, the Picts, and like 20 kings over a couple centuries.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8iusUq4-f5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Spain
 
@@ -264,21 +238,23 @@ Starting with Ferdinand and Isabella, Spain was a union of the crowns of Castile
 
 To make things more complicated, after the deaths of Ferdinand and Isabella, the unified crowns of Castile, Aragon, and Leon passed to their grandson, the Holy Roman Emperor Charles V.  In keeping with the ethos of not representing vassal states independently, I decided to start with Charles V passing the Spanish throne to his son Philip II, who did not have any direct involvement with the Holy Roman Empire.
 
-I was on the fence about including Franco who, besides being a monster, was not technically a monarch.  He re-established the monarchy, though, and played a critical role in how we understand Spain today.  Much moreso than other interregnum leaders, such as Oliver Cromwell.
+I was on the fence about including Franco who, besides being a douche, was not technically a monarch.  He re-established the monarchy, though, and played a critical role in how we understand Spain today.  Much moreso than other interregnum leaders, such as Oliver Cromwell.
 
 ## France
 
-When does France start?
-
-There were Kings of the Franks before Charlemagne (the Merovingian line, for example) but the nation-state of France evolved much later.  Charlemagne, at the height of his power, controlled what is now considered Germany, Northern Italy, and the low countries (Belgium and the Netherlands).  His son, Louis the Pious, struggled to keep that land together and, when he died, the land was split into three large kingdoms:
+There were kings of the Franks before Charlemagne (the Merovingian line) but French national identity and a "King of France" didn't come about until much later.  Charlemagne, at the height of his power, controlled what would later be the Holy Roman Empire, Italy, and the low countries.  After the death of his son, the land was split three ways.
 
 <img src="assets/img/monarchs/europe_843.png" style="display:block; margin-left: auto; margin-right: auto; width: 50%;" />
 
-The western kingdom, West Francia, goes to Charles the Bald (and eventually becomes France); East Francia goes to Louis the German (and eventually becomes Germany); Lotharingia, the middle kingdom, goes to Lothair.  A couple generations later, Charles the Fat inherits East Francia, Lotharingia, and West Francia giving him control over as much land as Charlemagne.  When he dies, however, the land is split 5 ways.
+The western kingdom, West Francia, went to Charles the Bald and closely aligns with modern France.  East Francia goes to Louis the German, becoming Germany.  Lotharingia, the middle slice which includes Italy, goes to Lothair.
 
-Originally, I had France not starting with Charles the Bald, since he is crowned Emperor of the Romans.  Instead, I started with his son, Louis the Stammerer, even though his descendant Charles III is also crowned King of the Romans.  However, for simplicity, I decided to start with the founder of the Carolingian dynasty, Pepin the Short.
+A couple generations later, East Francian king Charles the Fat inherits Lotharingia and West Francia, but things are split 5 ways upon his death.
 
-The boundaries of France change perhaps the most dramatically over time, from a low-point during the Angevin empire
+Obviously, it's not easy to say what is and is not "France". 
+
+Originally, I wanted to skip Charles the Bald, since he was crowned Emperor of the Romans, instead starting with his son who was not.  However that son's descendant, Charles III, was also crowned Emperor and, for simplicity, I simply opted to start with the founder of the Carolingian dynasty, Pepin the Short.
+
+Arguably the most interesting of modern states, the boundaries of France change perhaps the most dramatically over time from a low-point during the English Angevin Empire
 
 <img src="assets/img/monarchs/1180.jpg" style="display:block; margin-left:auto; margin-right:auto; width:50%;" />
 
@@ -288,41 +264,35 @@ to a high-point during the Napoleonic wars:
 
 ## Holy Roman Empire
 
-While Charlemagne is the first to be crowned Emperor of the Romans, I decided to start the Holy Roman Empire with Otto I, founder of the Ottonian dynasty.  This is largely because there would be overlap with France, as several King of the Franks were also crowned Emperor of the Romans, whereas Otto is the first to be crowned while also holding the lands that will make up the Holy Roman Empire for centuries: modern-day Germany and Northern Italy.
+While Charlemagne is the first to be crowned Emperor of the Romans, I decided to start the Holy Roman Empire with Otto I, founder of the Ottonian dynasty.  This is largely because there would be overlap with France, as several King of the Franks were also crowned Emperor of the Romans, whereas Otto is the first to be crowned while only holding the lands that will make up the Holy Roman Empire for centuries: modern-day Germany and Northern Italy.
 
 ## Germany
 
-<!--
-After the dissolution of the Holy Roman Empire in 1805 the German territories, spurred by pan-German nationalism, organized themselves into the German Confederation after the fall of Napoleon, at the Congress of Vienna.  The most powerful of the 39 member states, Prussia, pushed for their king to lead this confederation.  After a war with Austria in 1866, the states reorganized themselves under Prussian leadership as the North German Confederation in 1867 and again as the German Empire in 1871.  This lasted until Germany's defeat in 1918, when the country became known simply as Germany.
+Germany on my timeline is not the Germany we recognize today.  Since the fall of the Holy Roman Empire, it went from a collection of states to the Confederation of the Rhine, the German Confederation, the North German Confederation, the German Empire, and finally modern Germany.
 
-Representing this as a single timeline is difficult.  For example, the leaders of Prussia were styled as "King in Prussia" (1701-1772) and then "King of Prussia" (1772-1871) when the German Empire was founded, and the king became an Emperor in his own right.  However, for much of the time that the King in/of Prussia existed, so did the Holy Roman Empire, making the King not an absolute sovereign.
-
-Thus, to truly represent "Germany", you need to encompass the Holy Roman Empire, German Confederation, North German Confederation, German Empire, and Germany.  In the interest of getitng this project done in a timely fashion, I opted to skip Germany for now.
--->
-
-My Germany, to the astute observer, is not Germany as we recognize it today.  Between the fall of the Holy Roman Empire and today, it was the Confederation of the Rhine, the German Confederation, the North German Confederation, the German Empire, and finally modern Germany.  Throughout this period, the most powerful player besides Austria (who is represented separately) is Prussia.  Therefore, in my timeline the "monarchy of Germany" is a sequential line of the Hohenzollern rulers of Prussia, North German Confederation, and the German Empire.
+Throughout this period, Prussia was the most powerful player besides Austria (who is represented separately.)  Therefore, in my timeline, "Germany" is a line of the Hohenzollern rulers of Prussia, the North German Confederation, and the German Empire.
 
 ## Russia
 
 Russia starts with the first Christian ruler, the Grand Prince of Kiev Vladimir the Great.
 
-It stops with the breakup of Kievan Rus' into a collection of principalities and, oh yeah, Genghis Khan.
+It stops with the breakup of Kievan Rus' into a collection of principalities, quickly overrun and occupied by Genghis Khan.
 
 It picks back up with the first Tsar of Russia, Ivan the Terrible.
 
 ## Italy
-<!--
-Italy is another country whose fascinating history had to be cut for simplicity.
 
-Northern Italy, for many centuries, had been ruled by the Holy Roman Emperor.  The Papal States, while always controlled by the papacy, grew and shrunk dramatically.  The rest of Italy was either the Kingdom of Sicily or the handful of semi-autonomous states, such as Venice, Genoa, and Florence (depending on what year you choose).
+Italy did not exist as we know it until 1871, the product of post-Napoleonic visions of Europe and Austrian losses in the Austro-Prussian war.
 
-Italy as we know it today was not fully unified until 1861, and its monarchy lasted 85 short years before being abolished after World War II.  Because an independent, unified Italy would appear to be so short compared to other countries, I left it off for now.
--->
-As I mentioned, Italy did not exist as a unified country that it is today until 1861(?).  Before that, the land was host to a plurality of kingdoms and independent nation-states.  To display Italy in earnest, it would be four monarchs starting with unification and ending with the abdication of Umberto II after the second world war.  Leaving out Italy also means leaving out the kingdoms of Sicily, Sardinia, Two Sicilies, and Northern Italy.
+Before that, the land played host to a plurality of kingdoms and semi-autonomous city-states.  Northern Italy was held for a long period by the Holy Roman Empire.  A turnstyle of Normans, Angevins, and Habsburgs controlled Sicily.  At one point, Sardinia and a kingdom called Two Sicilies held power.
+
+To display a modern Italy would only be four monarchs, starting in 1871 and ending in 1946 after losing World War II.  Since it would add a lot of negative space to the timeline, I left Italy out.
 
 ## Scandinavia
 
-Scandinavia is another area that I had to make some cuts.  Norway in particular is tricky, since it has existed in a union with either Denmark, Sweden, or Denmark _and_ Sweden on and off for the past 1,000 years.  In an oversimplification, I decided that Denmark was the most stable and powerful, and decided to just show them for now.  During the period of the union between Denmark, Norway, and Sweden (the Kalmar Union), I opted to show that as "Denmark" even though the king, Erik III, was proclaimed King of Norway first.
+I left out Norway and Sweden in favor of Denmark.  Norway has existed on and off in a union with either Denmark, Sweden, or Denmark and Sweden.
+
+In an oversimplification, I decided that Denmark was the most stable and powerful, and decided to just show them for now.  During the period of the union between Denmark, Norway, and Sweden (the Kalmar Union), I opted to show that as "Denmark" even though the king, Erik III, was proclaimed King of Norway first.
 
 # Terminology
 
@@ -347,41 +317,77 @@ As I collected data, I kept a list of terms worth defining.
 
 # Anecdotes
 
-There are so many cool standalone stories that don't fit into this visualization, but I want to tell them anyway.
+There were so many cool stories that didn't fit into my timeline, so I wanted to share a few.
 
-## The [Black Dinner](https://en.wikipedia.org/wiki/Clan_Douglas#Black_Dinner), Scotland 1440
+## The Black Dinner
 
-By the 15th century, clan Douglas was seen as a powerful threat to the ruling family, Stuart.  The Earl of Douglas and his younger brother, both under the age of 17, were invited to dine with the ten-year-old king of Scotland, James II.
+By the 15th century in Scotland, clan Douglas was seen as a powerful threat to the ruling family, Stuart.  The Earl of Douglas and his younger brother, both under the age of 17, were invited to dine with the ten-year-old king of Scotland, James II.
 
 While they ate, a black bull's head, a symbol of death, was brought in and placed before the Earl.  The two brothers were then dragged out to Castle Hill, given a mock trial and beheaded.
 
-Game of Thrones, anyone?
+I think they stole the idea from Game of Thrones, but still pretty baller.
 
-## King James V and demonology
+## The Pope
 
-## Legendary Danish and Norwegian kings
+In the years since Charlemagne, the relationship between French kings and Holy Roman Emperors and the Popes was mixed.  At certain points, the Emperors saw themselves as defenders of Christianity with the Pope subservient to them, while France was seen as the defender of the papacy against the greedy Empire. Go forward or backwards a hundred years and you could probably switch those around.
 
-## Avignon Papacy / Antipopes 
+Vying for influence in Rome, both the Empire and France supported various competitors, known as antipopes.  Often, these were German or French bishops or just friendly to their side of the rivalry.
 
-## Who was king of France between 1422 and 1453?
+In 1309, France forced the election of a French pope, Clement V.  Refusing to return to Rome, he moved his court to the fortress of Avignon.  After seven popes in Avignon, the See was moved back to Rome where the Western Schism broke out between French and Pisan factions.
 
-From 1422 to 1453, Henry VI was crowned King of the French in Paris (whilst Charles VII was only crowned in 1429 after Joan of Arc freeded Reims from English dominion)
+The French faction was supported by France, Spain, and Scotland.  The Pisan faction was supported by just about everyone else.  And, to make things more complicated, by 1410 a third claimant had been put forth.
 
-## History painters
+All three excommunicated each other but, being popes, they were immune.
 
-## Favorites
+<img src="assets/img/monarchs/popes.png" />
 
-## To convert, or not convert
+The French line was declared invalid, the Pisans claimed victory, and enough people were left angry at the papacy that the groundwork was laid for the Protestant Reformation.
 
-Some would-be monarchs refused to convert (50+ Catholics who passed up English crown); some did convert (Henry IV converting to Catholicism to get the French throne)
+## Disputed Kings of France
 
-## Epithets
+The first Norman king of England, William the Conquerer, was a vassal to the King of France through his status as Duke of Normandy.  Through continental holdings (Normandy, Aquitaine, Maine, Anjou) his descendants remained French vassals for the next 300 years.
 
-Some of the epithets that kings were given were flattering: Charles the Great (Charlemagne) and Louis the Pious. 
+In 1294, France invaded Gascony, held by England, and then Aquitaine.  When the last French Capetian king died without heir, the English king Edward III had a claim to the throne and pressed it on the urging of dissatisfied French nobles, causing the start of the Hundred Years' War.
 
-Some were questionable, like William the Silent and Aethelred the Unready.
+France, now ruled by the house of Valois, suffered disastrous early defeats and signed the Treaty of Calais, giving all of southwestern France to England.  Within 10 years, France under Charles V had recovered and through military victories reclaimed the land it had lost.
 
-Some were downright rude:
+Charles VI took power but, at the age of 24, went insane and the power of the throne weakened.  Power in France was thus split between the dukes of Burgundy and Orleans, the latter of whom sided with English Henry V, prompting a renewed invasion.
+
+After an English victory at Agincourt, Charles VI signed the Treaty of Troyes, marrying his daughter to Henry V and giving the English king succession to the French throne over his son, the dauphin.  France was split, with the northern half supporting England and the southern half remaining loyal to the dauphin, Charles VII.
+
+Henry V died a month before the French throne went vacant, whereupon Henry VI, a minor, was crowned at Paris in 1422.  In the south of France, inheriting a desperate cause, Charles VII rallied support with Joan of Arc, lifting the English seige of Orleans and crowning himself king in Reims in 1429.
+
+By the time Henry VI came of age, Charles VII had made peace with Burgundy and gained momentum, retaking Paris, then Normandy and finally Bordeaux in 1453, ending the Hundred Years' War.
+
+## Religion
+
+As a non-Christian, I'll be the first to say I don't fully appreciate the difference between Catholics and Protestants.  But Europeans of the 16th and 17th century sure did.
+
+Spain felt so strongly about it that they sent an armada to England.  France killed 3,000 Protestants in Paris in a single day.  The Holy Roman Empire lost over 7 million citizens fighting the Thirty Years' War over it.
+
+England, after two Catholic regressions in the form of Mary I and James II, passed a law excluding Catholics from ever holding the crown again.  After Anne died, there were 57 people passed over in the line of succession, giving the crown to a Protestant elector in a very Catholic, but very neutered, Empire.
+
+I can't personally imagine turning down a chance to rule one of the most powerful countries on Earth because I thought the Pope speaks to God, but I also live in the future where you don't get burned at the stake for saying Jesus was crucified with three nails instead of four.
+
+But some people felt like I do, like the Good King Henry of France.  A Protestant by birth, as King of Navarre he led the French Huguenot cause against the Holy League, a papal alliance formed because the Catholic King of France, who just finished killing 3,000 Huguenots, wasn't taking this whole Protestant thing seriously enough.
+
+In order to inherit the French crown, ever the pragmatist, Henry converted and that was that.  Of course he was later assassinated, but that's France for you.
+
+## Names
+
+Whether it was Denmark alternating back and forth between Frederick and Christian for 459 years, or Prussia just unaware that names exist outside of William and Frederick, there seemed to be a paucity of original names.
+
+Here are 8 sequential French kings, starting with Charlemagne (Charles the Great):
+
+<img src="assets/img/monarchs/louis.png" />
+
+Come on, Lothair.  Get with the program.
+
+To circumvent this, leaders were usually given an epithet.  Some were pretty nice, like Charles the Great and Louis the Pious.
+
+Some were okay, like William the Silent or Aethelred the Unready.
+
+But honestly, some were pretty rude.
 
 <table>
   <tr>
@@ -404,16 +410,35 @@ Some were downright rude:
         <option>Stammerer</option>
         <option>Bald</option>
         <option>One-Eyed</option>
+        <option>Mad</option>
       </select>
     </td>
   </tr>
 </table>
 
-## The Orkney Islands
+## Fashion
 
-## Where to bury the body?
+While testing my website, I noticed something.  Even though they were continually at war, every Western European monarch followed the same fashion trends.
 
-Frederick I (and earlier emperors) having their body parts buried in different locations: "his flesh was interred in the Church of St Peter in Antioch, his bones in the cathedral of Tyre, and his heart and inner organs in Tarsus."
+Around the year 1500, everyone was really into hats.
+
+<img src="assets/img/monarchs/hats.gif" />
+
+100 years later, frills were big.
+
+<img src="assets/img/monarchs/frills.gif" />
+
+And finally, 100 years after that, it was wigs.
+
+<img src="assets/img/monarchs/wigs.gif" />
+
+Toss in a pair of stilletos and you've reached peak male virility.  It's been all downhill since.
+
+## Burial
+
+For a period of time, Holy Roman Emperors had their body parts scattered to different parts of their empire after they died as holy relics.  Frederick I, for example, had his heart and organs interred at Tarsus, his bones in the cathedral of Tyre, and his flesh in the Church of St. Peter in Antioch.
+
+On the other hand, Maximilian I, for penitential reasons had his body desecrated.  He had his hair cut, teeth knocked out, body whipped, and publicly displayed to show the perishableness of all earthly glory.
 
 # Superlatives
 
@@ -444,12 +469,6 @@ With no heirs and tired of Austrian Habsburg influence in his court, he named th
 Many of the early kings were not [winning any beauty pageants](https://thebackend.dev/monarchs/img/england/stephen.jpg).  Perhaps it was the [limited painting materials](https://thebackend.dev/monarchs/img/england/john.png), or the [medieval standards of beauty](https://thebackend.dev/monarchs/img/france/louis_xi.jpg), but of the kings, Lothair III of France wins best-looking:
 
 <img src="https://thebackend.dev/monarchs/img/france/lothair_iii.jpg" style="display:block; margin-left:auto; margin-right:auto; width:50%;" />
-
-## Notable mentions
-
-### Hugh the Great
-
-### Henry the Fowler
 
 # Cool paintings
 
