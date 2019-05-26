@@ -13,7 +13,7 @@ tags: ["history"]
 keywords: history
 lang: en
 category: projects
-toc: true
+toc: false
 excerpt: A visual timeline of Europe
 ---
 
@@ -21,9 +21,9 @@ excerpt: A visual timeline of Europe
 
 To me, history has always seemed like a scatterplot of disconnected dots.  I'd learn about one narrow lane of history at a time, like the American Revolution, and feel frustrated that I couldn't recall specific enough dates to correlate what was happening in other parts of the world.
 
-For example, while America was fighting Britain in the War of 1812, Napoleon had swept across Europe and dismantled one of Europe's most powerful institutions, The Holy Roman Empire.  Or in 1648, the same year that the Thirty Years' War ended, England was busy decapitating its king.
+For example, while America was fighting Britain in the War of 1812, Napoleon had swept across Europe and dismantled one of Europe's most powerful institutions, The Holy Roman Empire.
 
-Not only did I have trouble understanding synchronicity, I also had gaps in my education about any nation or boundary that existed before I was born.  For example, I always had this thought, "What was Prussia again" when I'd encounter it in Wikipedia.  And I'd go down the rabbit hole but the way I approached learning was always too focused to retain that information in a larger context.
+Not only did I have trouble understanding synchronicity, I also had gaps in my education about any nation or boundary that existed before I was born.  For example, I always had this thought, "What was Prussia again?" when I'd encounter it in Wikipedia.  And I'd go down the rabbit hole but the way I approached learning was always too focused to retain that information in a larger context.
 
 My goal here is to create a feeling of *synchronicity* and *flow*.  Synchronicity in that the user can see who was in power at the same time and what world events were unfolding.  Flow in that you can click through a nation's history and see the changing borders, alliances, and dynasties as you move from one ruler to the next.
 
@@ -35,7 +35,7 @@ A couple months ago I'd watched Wolf Hall, a miniseries about Henry VIII and Ann
 
 I'd been collecting similar questions for a while:
 
-* What was the Diet of Worms, and what role has Worms played since?
+* What was the Diet of Worms?
 * Who were the Jacobites, Orleanists, and Bonapartists?  
 * What was the relationship between the Gauls and the Celts?
 * What is a dauphine, an infanta, a stadtholder, or a prince-elector?
@@ -46,9 +46,9 @@ I'd been collecting similar questions for a while:
 
 ## Design
 
-Starting off, I wanted to show a monarch's basic facts like their name, years active, and house.  It should include wars and match up on the enemy side.
+Starting off, I wanted to show a monarch's basic facts like their name, years active, and house.  It should include wars and look the same from the enemy side.
 
-Next, I wanted to show their religion and religious themes, like Protestant Reformation; also, just themes in general, like chivalry.  Finally, I wanted to show events that were transpiring in other parts of the world.
+Next, I wanted to show their religion and religious themes, like the Protestant Reformation; also, just themes in general, like chivalry.  Finally, I wanted to show events that were transpiring in other parts of the world.
 
 From here, I drafted my earliest mockup:
 
@@ -187,25 +187,21 @@ Sacrifices had to be made: leaving out dates of wars when the text bled into the
 
 The breakdown of time spent looked something like this.
 
-<img src="assets/img/monarchs/chart.png" />
+<img src="assets/img/monarchs/chart.png" style="display:block; margin-left: auto; margin-right: auto; width: 50%;" />
 
 If I do this again, I'd probably look for an existing dataset and scratch my creative itch by just building out functionality.
 
 ## Credits
 
-Thanks to my [wife](https://amyfernalddesign.com/) for re-designing the details modal.  Hire her.
+Thanks to my [wife](https://amyfernalddesign.com/) for re-designing the details modal.  (Hire her.)
 
-Thanks to Chris Barthell, Paul Hayslett, and Edmund Daniels for ideas and creative feedback.
+Thanks to Chris Barthell, Paul Hayslett, and Eddie Daniels for ideas and creative feedback.
 
 I didn't keep track of image credits, but they were mostly drawn from Wikimedia Commons.
 
 Map by [eddsworldbatboy1](https://www.deviantart.com/eddsworldbatboy1/art/europe-s-provinces-map-301741322), icons by [FreePik](https://www.flaticon.com/authors/freepik) and [Smashicons](https://www.flaticon.com/authors/smashicons), and fonts from [dafont.com](https://www.dafont.com/stonehenge.font) and [Google Fonts](https://fonts.googleapis.com/css?family=Lato)
 
 # Countries 
-
-As I mentioned, sacrifices had to be made to show as much data as possible without overloading the user.
-
-Not every country is present: Greece, Norway, and Poland, for example, were excluded in the interest of focusing attention on the larger players. 9 seemed to be the magic number of countries to display.
 
 Vassals are usually represented as sovereigns, unless the overlord held the throne like Charles V, Holy Roman Emperor and the throne of Spain.  Though England was a vassal to France, and Scotland to England, I showed them as sovereign nations.
 
@@ -264,14 +260,6 @@ Germany on my timeline is not the Germany we recognize today.  Since the fall of
 
 Throughout this period, Prussia was the most powerful player besides Austria (who is represented separately.)  Therefore, in my timeline, "Germany" is a line of the Hohenzollern rulers of Prussia, the North German Confederation, and the German Empire.
 
-## Russia
-
-Russia starts with the first Christian ruler, the Grand Prince of Kiev Vladimir the Great.
-
-It stops with the breakup of Kievan Rus' into a collection of principalities, quickly overrun and occupied by Genghis Khan.
-
-It picks back up with the first Tsar of Russia, Ivan the Terrible.
-
 ## Italy
 
 Italy did not exist as we think of it today until 1871, the product of post-Napoleonic visions of Europe and Austrian losses in the Austro-Prussian war.
@@ -279,12 +267,6 @@ Italy did not exist as we think of it today until 1871, the product of post-Napo
 Before that, the land played host to a plurality of kingdoms and semi-autonomous city-states.  Northern Italy was held for a long period by the Holy Roman Empire.  A turnstyle of Normans, Angevins, and Habsburgs controlled Sicily.  At one point, Sardinia and a kingdom called Two Sicilies held power.
 
 To display a unified Italy would only be four monarchs, starting in 1871 and ending in 1946 after World War II.  Since it would add a lot of negative space to the timeline, I left it out.
-
-## Scandinavia
-
-I left out Norway and Sweden in favor of Denmark.  Norway for the last thousand years has existed on and off in a union with either Denmark, Sweden, or Denmark and Sweden.
-
-In an oversimplification, I decided that Denmark was the most stable and powerful, and decided to just show them for now.  During the period of the union between Denmark, Norway, and Sweden (the Kalmar Union), I opted to show that as "Denmark" even though the king, Erik III, was proclaimed King of Norway first.
 
 # Terminology
 
@@ -425,13 +407,7 @@ And finally, 100 years after that, it was wigs.
 
 <img src="assets/img/monarchs/wigs.gif" style="display:block; margin-left:auto; margin-right:auto; width:50%;" />
 
-Toss in a pair of stilletos and you've reached peak male virility.  It's been all downhill since.
-
-## Burial
-
-For a period of time, Holy Roman Emperors had their body parts scattered to different parts of their empire after they died as holy relics.  Frederick I, for example, had his heart and organs interred at Tarsus, his bones in the cathedral of Tyre, and his flesh in the Church of St. Peter in Antioch.
-
-On the other hand, Maximilian I, for penitential reasons had his body desecrated.  He had his hair cut, teeth knocked out, body whipped, and publicly displayed to show the perishableness of all earthly glory.
+Toss in a pair of stilletos and you've reached peak masculinity.  It's been all downhill since.
 
 ## Inbreeding
 
