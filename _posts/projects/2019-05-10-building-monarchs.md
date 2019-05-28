@@ -195,7 +195,7 @@ If I do this again, I'd probably look for an existing dataset and scratch my cre
 
 Thanks to my [wife](https://amyfernalddesign.com/) for re-designing the details modal.  (Hire her.)
 
-Thanks to Chris Barthell, Paul Hayslett, and Eddie Daniels for ideas and creative feedback.
+Thanks to Chris Barthel, Paul Hayslett, and Eddie Daniels for ideas and creative feedback.
 
 I didn't keep track of image credits, but they were mostly drawn from Wikimedia Commons.
 
