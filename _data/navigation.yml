@@ -1,7 +1,11 @@
 main:
-  - title: "About"
-    url: /about
+  - title: "Monarchs"
+    url: /monarchs
   - title: "Articles"
     url: /articles
   - title: "Projects"
     url: /projects
+  - title: "Talks"
+    url: /talks
+  - title: "About"
+    url: /about
