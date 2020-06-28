@@ -18,6 +18,8 @@ Recently, I started following somebody, so now after I tweet something, I see ra
 
 I've also been trying to be a better critical thinker about what I let myself believe from what I read on social media: screenshots can be fake, quotes can be fake, and commenters can be Russian bots.
 
+# Anatomy of a tweet
+
 This is the first tweet I saw after I posted something.
 
 There's nothing exceptional about the tweet itself, but I was very self-conscious of the way that I parsed it, and thought it would make an interesting blog post.
@@ -87,7 +89,7 @@ I hope this isn't that.
 
 ### Full tweet
 
-No idea what it means but it SOUNDS URGENT.
+Don't know what he means but it SOUNDS URGENT.
 
 <br />
 <br />
@@ -101,7 +103,7 @@ More hyperbole.
 
 More culture war.
 
-Still no idea what they mean.
+Still don't know what they mean.
 
 <br />
 <br />
