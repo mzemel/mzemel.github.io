@@ -175,8 +175,8 @@ In this set of beliefs, Goodness is both a concept *and* an intrinsic property o
 
 In this set, Goodness is a *special* element among a set of degraded peers; it has the following properties:
 
-Goodness can be used as an analytical tool to ‘detect’ goodness as a property.
-Goodness itself cannot be “analyzed” -- only used to analyze other elements in this set.
+- Goodness can be used as an analytical tool to ‘detect’ goodness as a property.
+- Goodness itself cannot be “analyzed” -- only used to analyze other elements in this set.
 
 (2) is proven via negation of its opposite.
 
