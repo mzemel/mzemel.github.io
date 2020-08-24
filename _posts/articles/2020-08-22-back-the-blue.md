@@ -82,15 +82,15 @@ The phenomenon of QAnon, Proud Boys, and Red Hats all following the same talking
 
 I do not mean "left" and "right" in the sense of the economy, but instead "higher" and "lower" on a scale of *authoritarianism*.
 
-Authoritarianism is not an ideology; it is a personality trait.  It’s a channeling of cruelty through socially acceptable means.  It is the person who yanks their dog by the leash.  The bully who grew up to be a cop.  The veteran who has himself been abused by fellow soldiers.
+Authoritarianism itself is not an ideology; it is a personality trait.  It’s a channeling of cruelty through socially acceptable means.  It is the person who yanks their dog by the leash.  The bully who grew up to be a cop.  The veteran who has himself been abused by fellow soldiers.
 
-All of these people have been caught and held accountable for their abuse before.  Now, they look for a *"legitimate"* means to express it -- one in which they can sate their appetite for inflicting pain, free from the fear of being held to task.
+What do all of these people have in common?  They have been caught and held accountable for their abuse before.  Now, they look for a *"legitimate"* means to express it -- one in which they can sate their appetite for inflicting pain, free from the fear of being held to task.
 
 These sadists seek existing pillars of ideology they can hide behind.  Existing pockets of power which will come to their defense.  "Law and order?  Yes, *of course* that’s what I meant.."  But in reality, these people are not principled in any meaningful sense of the word -- only cruel.
 
 Here, though, these people enter into a Faustian bargain. The strength they draw from these "legitimizing" pillars creates a need to *maintain* those pillars.  If we defund and de-proliferate the police, these people lose a familiar vehicle for their daily cruelty.
 
-The most insecure among those power-havers will be driven by anxiety.  This is the **MAGA** crowd.  They retain a "legitimizing pillar" of being the President’s fan club, which they hide behind as they approach their embattled "law and order."
+Thus, the most insecure among those power-havers will be driven by anxiety.  This is the **MAGA** crowd.  They retain a "legitimizing pillar" of being the President’s fan club, which they hide behind as they approach their embattled "law and order."
 
 The most cruel will come in with no presumption of legitimacy, other than "might makes right".  These are the **Proud Boys** and **Patriot Prayer** -- the have-nots of the most powerful caste, white men.  You can tell Gavin McInnes had at least one deeply formative rejection where a woman understood him in his vapid entirety, and laughed that his fantasy stretched so far as to include her in it.
 
@@ -102,9 +102,7 @@ To them, QAnon is a way of having a smarter person lead them.  Of course, they a
 
 It is unfortunate that **classical liberals** get swept up into the right, but these people are morally bankrupt if they betray their libertarian values to collaborate with the Red Hats (the Commander in Chief of the Federal Gummit) just so their taxes don’t go up.  But fear not - they were already bankrupt: if they truly cared about natural rights, they would be protesting police brutality as much as any leftist.
 
-The **Blue Lives Matter** crowd is a mixture of family of police officers, and sadists too proud to join the Red Hats.  Men and women too weak to use force, but not so insecure about their intelligence that they shroud themselves in conspiracy theory.
-
-Ultimately, these groups commit an unforgivable offence (beyond the daily cruelty they sponsor).  While the left is fighting against authority, the right is using authority as a *tool* to punish the left.
+Ultimately, these groups commit an unforgivable offence (beyond the daily cruelty they sponsor).  While the left is fighting against authority, the right is using authority as a *tool* to punish the left.  In other words, the left is fighting against ideas and the right is *using* those ideas to fight against people.
 
 The right has living heroes (cops), whereas the left has martyrs.  This creates for the left a more symbolic fight.
 
@@ -132,7 +130,7 @@ This brings me to a larger point: why *should* we value the beautiful?  Why did 
 
 To "legitimize" something (e.g. Aryan supremacy) by virtue of its aesthetic appeal is ridiculous if you’re claiming to be representing some universal truth.  If your only reason that life should be a certain way is because it’s aesthetically pleasing, you do not deserve any response beyond "your opinion is noted."  There is quite literally nothing to debate - everyone has their own personal taste.
 
-Nobody’s taste is better or worse because taste is quite literally devoid of moral value, since there is no choice involved.  Aesthetics are the product of the society you grew up in.  It’s what people around you found appealing, like the cute girl whose favorite band you started listening to.
+Nobody’s taste is better or worse because taste is devoid of moral value, since there is no choice involved.  Aesthetics are the product of the society you grew up in.  It’s what people around you found appealing, like the cute girl whose favorite band you started listening to.
 
 Let me illustrate that "there is no choice involved".  As much as one might try to stop being racist, we will always have racist instincts that we must actively suppress.  We do not rewrite our aesthetics so that we magically find new people attractive, or new environments safe.  Instead, we selectively display ideals based on rational (moral) value to the next generation, so that they grow up surrounded by them, thus *turning* them into aesthetic values.
 
