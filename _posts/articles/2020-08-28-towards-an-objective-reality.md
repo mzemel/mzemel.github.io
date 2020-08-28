@@ -61,7 +61,7 @@ And since the activist is *not* in the context which uses historical materialism
 
 We also treat our beliefs as if they are *fixed*.  We do not give them space to move and evolve.  But the framework for our beliefs, our mind, is constantly changing!
 
-When I was young, I could not visualize one billion.  Now that I am older, I can.  Take ten cubes along the *x*-axis, then ten cubes along the *y*-axis, and then ten along the *z*-axis.  Here, you have a cube containing one thousand.  Simply repeat the same exercise and you have one billion.
+When I was young, I could not visualize one trillion.  Now that I am older, I can.  Take ten cubes along the *x*-axis, then ten cubes along the *y*-axis, and then ten along the *z*-axis.  Here, you have a cube containing one thousand.  Simply repeat the same exercise and you have one trillion.
 
 The limit of our comprehension is constantly changing (growing in some places, shrinking in others...)  Why should we try to keep our beliefs stationary?
 
