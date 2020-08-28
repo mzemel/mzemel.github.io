@@ -103,7 +103,7 @@ Feelings enable us to practice self-deception.  We can <u>make</u> ourselves fee
 
 ## Reclaiming objectivity
 
-At any rate, we’re stuck with the subjective.  But are we stuck in its basement chained to the radiator with its step-child moral relativism?
+At any rate, we’re stuck with the subjective.  But are we stuck in its basement chained to the radiator with moral relativism?
 
 There is no shortage of self-help gurus who say no.  (Unfortunately, I am one of them.)  They are a creepy bunch, who withhold their ideas from academia where they would face certain death under the microscope of peer review.
 
