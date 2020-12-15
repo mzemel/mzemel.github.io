@@ -18,7 +18,7 @@ category: articles
 
 About 2 weeks ago, a protest event began in my city of Portland, Oregon.  One of the last Black families on Mississippi Street, a gentrifying neighborhood, was facing eviction and foreclosure and around 30 protestors had camped in front of the house to organize a resistance.  A GoFundMe had been set up, which had raised about $120,000 to help the Kinneys, the family at the center of it all.
 
-Slowly, however, stories about the Kinneys came to light. Their son, 35-year old William X. Nietzche, had been responsible for a vehicular homicide in 2002, in which an elderly man was killed.  Since then, he had been repeatedly arrested for driving with a suspended license and possession of cocaine. The house itself, which had been paid off, was mortgaged in 2002 to help pay for Nietzche’s legal fees.  Clearly, this is turning into a complicated case.
+Slowly, stories about the Kinneys came to light. Their son, 35-year old William X. Nietzche, had been responsible for a vehicular homicide in 2002, in which an elderly man was killed.  Since then, he had been repeatedly arrested for driving with a suspended license and possession of cocaine. The house itself, which had been paid off, was mortgaged in 2002 to help pay for Nietzche’s legal fees.  Clearly, this was turning into a complicated case.
 
 At the same time, the protests seemed to amp up.  The police were chased out of the area in a spectacular confrontation.  A barricade was erected at a large intersection, preventing traffic and police presence in what is now being called the “Red House Autonomous Zone”, or RHAZ -- similar to the CHAZ in Seattle earlier this year.
 
@@ -28,7 +28,7 @@ At the same time, the protests seemed to amp up.  The police were chased out of 
 
 &nbsp;
 
-A day or two later, it came out that William X. Nietzche is a “sovereign citizen”, someone who believes that they are not subject to the laws of the United States (think Wesley Snipes, or the [recent Bundy standoff](https://en.wikipedia.org/wiki/Bundy_standoff))  Earlier this year, Nietzche had trespassed in a federal courtroom, attempting to execute a “citizen’s arrest” on four judges, and installed a [Moorish flag](https://www.splcenter.org/fighting-hate/extremist-files/group/moorish-sovereign-citizens) before being apprehended.
+A day or two later, it came out that William X. Nietzche is a “sovereign citizen”, who believes he is not subject to the laws of the United States (think Wesley Snipes, or the [recent Bundy standoff](https://en.wikipedia.org/wiki/Bundy_standoff).)  Earlier this year, Nietzche had trespassed in a federal courtroom attempting to execute a “citizen’s arrest” on four judges, installing a [Moorish flag](https://www.splcenter.org/fighting-hate/extremist-files/group/moorish-sovereign-citizens) before being apprehended.
 
 &nbsp;
 
@@ -42,33 +42,35 @@ As the GoFundMe surpassed $250,000, it was reported that the Kinneys even [own a
 
 ## A challenge to Marxist orthodoxy
 
+&nbsp;
 What makes this event so interesting?
 
 To me, it shows where Marxism as the dominant social model, or <i>orthodoxy</i>, breaks down.
 
 In the case of The Red House, for most of us, our intuition <i>simply will not allow us</i> to view it through a Marxist lens; preferring instead an individual, psychological one. <i>Who</i> is William X. Nietzche?  <i>Why</i> does he believe he is a sovereign citizen? These are the questions we ought to be asking if we want to understand the situation.
 
-For many years now, Marxism (in the form of <i>identity politics</i>) has been the near-constant orthodoxy of the left.
+For years now, Marxism (in the form of <i>identity politics</i>) has been the near-constant orthodoxy of the left.
 
 Occasionally, in moments during the George Floyd protests, the Trump administration, LGBTQ+ issues, Hollywood transforming, etc., we have sometimes (or often) found our own intuition <i>clashing</i> with the orthodox perspective, which tells us everything is about race and class.
 
 When this clash happens, it creates an <i>uncomfortable feeling</i> -- we’re wired to dislike going against public opinion.
 
-If we decide 'not to rock the boat’ and hold our tongues, we <i>repress</i> this uneasy feeling.  The feeling remains in our subconscious, waiting to be expressed. Eventually, it comes out forcefully the next time that we do feel empowered to challenge orthodoxy, when we have enough popular support.
+If we decide 'not to rock the boat’ and hold our tongues, we <i>repress</i> this uneasy feeling.  The feeling remains in our subconscious, waiting to be expressed. Eventually, it comes out forcefully the next time that we <i>do</i> feel empowered to challenge orthodoxy, when we have enough popular support.
 
-Eventually, after enough public support, criticizing the Kinneys and RHAZ protestors has now [become the new orthodox](https://www.reddit.com/r/Portland/comments/ka6umz/lack_of_critical_thinking_and_individual_opinions/gf8xnvq/).
+After gathering enough public support, criticizing the Kinneys and RHAZ protestors has [become the new orthodox](https://www.reddit.com/r/Portland/comments/ka6umz/lack_of_critical_thinking_and_individual_opinions/gf8xnvq/).
 
 In summary, the RHAZ is more <i>intuitively</i> viewed as a psychological issue about individuals than a socio-economic issue about class and race.
 
 ## The neurotic class
 
+&nbsp;
 Controversy acts like a sieve.
 
-Only a small percentage of overall protestors are still defending the RHAZ -- we might ask: what is special about this subset in particular? As it turns out, these are the most <i>neurotic</i> of all the protestors.
+Only a small percentage of overall protestors are left defending the RHAZ -- we might ask: what is special about this subset in particular? As it turns out, these are the most <i>neurotic</i> of all the protestors.
 
-Neurosis, by my definition, is the willingness to challenge orthodoxy (and accept pain) as a <i>means of self-expression.</i>
+Neurosis, to me, is the willingness to challenge orthodoxy (and accept pain) as a <i>means of self-expression.</i>
 
-To these protestors, it is <i>more important</i> that they express themselves as revolutionaries than it is to follow the new orthodoxy, one which would make defending William X. Nietzche difficult. They continue to defend him, against intuition, even though it turns them into pariahs.
+For these protestors, it is <i>more important</i> that they express themselves as revolutionaries than it is to follow the new orthodoxy, one which would make defending William X. Nietzche difficult. They continue to defend him, against intuition, even though it turns them into pariahs.
 
 This is a fairly common practice: people will often tolerate pain because it communicates something about how they imagine themselves -- for example, a “starving artist.”
 
@@ -93,6 +95,8 @@ Using such a psychological model in a critical examination of history - asking w
 I think we will find this psychological model more useful when examining the actions of individuals, like William X. Nietzche and the RHAZ protestors.
 
 ## The ironic class
+
+&nbsp;
 
 While the neurotic finds catharsis in self-expression, the ironic finds catharsis in validating their intuition: in <i>connecting</i> to reality which, due to its alienated nature, requires <i>sublimation</i> to accept. In other words, the ironic individual must be able to swallow the “un-reality” of capitalism, and is able to do so most effectively through a steady diet of <i>irony.</i>
 
@@ -124,6 +128,8 @@ When we look at the RHAZ protestors and deride them, we are not doing so as neut
 
 ## Weaponized irony
 
+&nbsp;
+
 In 2016, a popular club song and masterpiece of irony called “Bad and Boujee” was released. In the music video, the idea of the bourgeoisie itself becomes ironic.
 
 Reduced to a tasteless aesthetic of over-indulgence -- Chanel takeout containers, KFC and champagne, streetwear, jewelry, sipping lean -- and with over <i>a billion views</i> on YouTube, the use of irony has meticulously obscured and defanged the very idea of the bourgeoisie.
@@ -140,6 +146,6 @@ Capitalism has evolved.  It is no longer the proletariat vs. the bourgeoisie; it
 
 This ironic acceptance of un-reality and desire for ironic experiences prevents the ironic class from revolutionary action. In order to dismantle capitalism, <u>we must stop consuming irony.</u>
 
-We must stop being sarcastic or reductive, stop making meta-jokes and, for the love of God, stop turning everything into a fucking meme.
+We must stop being sarcastic or reductive, stop making meta-jokes and, for the love of God, stop turning everything into a meme.
 
 Until we’re able to do this, capitalism will never be overthrown.
