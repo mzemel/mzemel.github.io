@@ -1,0 +1,120 @@
+---
+layout: single
+title: "The Red House on Mississippi: neurosis and irony under capitalism"
+tags: ["philosophy"]
+header:
+  overlay_image: /assets/img/stop.png
+keywords: philosophy
+lang: en
+category: articles
+---
+
+&nbsp;
+
+# The Red House on Mississippi: neurosis and irony under capitalism
+
+About 2 weeks ago, a protest event began in my city of Portland, Oregon.  One of the last Black families on Mississippi Street, a gentrifying neighborhood, was facing eviction and foreclosure and around 30 protestors had camped in front of the house to organize a resistance.  A GoFundMe had been set up, which had raised about $120,000 to help the Kinneys, the family at the center of it all.
+
+Slowly, however, stories about the Kinneys came to light. Their son, 35-year old William X. Nietzche, had been responsible for a vehicular homicide in 2002, in which an elderly man was killed.  Since then, he had been repeatedly arrested for driving with a suspended license and possession of cocaine. The house itself, which had been paid off, was mortgaged in 2002 to help pay for Nietzche’s legal fees.  Clearly, this is turning into a complicated case.
+
+At the same time, the protests seemed to amp up.  The police were chased out of the area in a spectacular confrontation.  A barricade was erected at a large intersection, preventing traffic and police presence in what is now being called the “Red House Autonomous Zone”, or RHAZ -- similar to the CHAZ in Seattle earlier this year.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B7fUMiWyfEY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+A day or two later, it came out that William X. Nietzche is a “sovereign citizen”, someone who believes that they are not subject to the laws of the United States (think Wesley Snipes, or the [recent Bundy standoff](https://en.wikipedia.org/wiki/Bundy_standoff))  Earlier this year, Nietzche had trespassed in a federal courtroom, attempting to execute a “citizen’s arrest” on four judges, and installed a [Moorish flag](https://www.splcenter.org/fighting-hate/extremist-files/group/moorish-sovereign-citizens) before being apprehended.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dec3G56dMBc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+In fact, the family had stopped making payments <i>due to their belief</i> that they are sovereign citizens.  And yet, while public opinion has [become increasingly negative](https://www.reddit.com/r/Portland/comments/ka6umz/lack_of_critical_thinking_and_individual_opinions) against the Kinneys, there still remains a holdout of protestors who continue to defend them, refusing to bow to social pressure or look at this foreclosure outside of race and class lines.
+
+As the GoFundMe surpassed $250,000, it was reported that the Kinneys even own a second home nearby.
+
+## A challenge to Marxist orthodoxy
+
+What makes this event so interesting?
+
+To me, it shows where Marxism as the dominant social model, or <i>orthodoxy</i>, breaks down.
+
+In the case of The Red House, for most of us, our intuition <i>simply will not allow us</i> to view it through a Marxist lens; preferring instead an individual, psychological one. <i>Who</i> is William X. Nietzche?  <i>Why</i> does he believe he is a sovereign citizen? These are the questions we ought to be asking if we want to understand the situation.
+
+For many years now, Marxism (in the form of <i>identity politics</i>) has been the near-constant orthodoxy of the left.
+
+Occasionally, during the George Floyd protests, the Trump administration, LGBTQ+ issues, Hollywood, etc., we have sometimes (or often) found our own intuition <i>clashing</i> with the orthodox perspective, which tells us everything is about race and class.
+
+When this clash happens, it creates an <i>uncomfortable feeling</i> -- we’re wired to dislike going against public opinion.
+
+If we decide to ‘not rock the boat’ and hold our tongues, we repress this uneasy feeling.  The feeling remains in our subconscious, waiting to be expressed. Eventually, it comes out forcefully the next time that we do feel empowered to challenge orthodoxy, when we have enough popular support.
+
+Eventually, after enough public support, criticizing the Kinneys and RHAZ protestors has become the new orthodox.
+
+In summary, the RHAZ is more intuitively viewed as a psychological issue about individuals than a socio-economic issue about class and race.
+
+## The neurotic class
+
+Controversy acts as a sieve.
+
+Only a small percentage of overall protestors are still defending the RHAZ -- we might ask: what is special about this subset in particular? As it turns out, these are the most <i>neurotic</i> of all the protestors.
+
+Neurosis, by my definition, is the willingness to challenge orthodoxy (and accept pain) as a <i>means of self-expression.</i>
+
+To these protestors, it is <i>more important</i> that they express themselves as revolutionaries than it is that they follow the new orthodoxy, one which would make defending William X. Nietzche difficult. They continue to defend him even though it turns them into pariahs.
+
+This is a fairly common practice: people will often tolerate pain because it communicates something about how they imagine themselves -- for example, a “starving artist.”
+
+In addition to the pain of challenging orthodoxy, everyone under capitalism experiences a daily pain known as <i>alienation</i>.
+
+<i>Alienation under capitalism</i> is when workers feel disconnected from their final product, or when they feel emotionally detached from the problematic actions of their company (example: Amazon.)  Since none feel <i>directly</i> responsible, the company’s momentum becomes harder to stop. The workers <i>know</i> they are part of the problem, but feel powerless to do anything about it. Each worker knows that this irony <i>should</i> bother him more than it actually does, making him feel alienated because his intentions and actions do not line up, making him lose self-confidence.
+
+Capitalism offers an <i>alienated reality</i>, known as “the Spectacle”, in lieu of actual reality.  We can just barely detect that something is amiss, that things are unintuitive, creating a <i>pervasive</i> feeling of alienation: that this is not our home, that something better exists, that we are being sold something.
+
+In order for neurotic individuals to tolerate this alienation, every so often they must <u>explode</u> with self-expression. The neurotic’s need for self-expression, this cathartic release, is so strong that it counteracts the pain of challenging orthodoxy.
+
+Now, imagine there was an <i>entire class</i> of people like this.  People whose <i>primary response</i> to alienation is to seek self-expression, stamping one’s self <i>upon</i> the alienated reality, instead of seeking to internalize it.
+
+(There is another class of people, the <i>ironic class</i>, who respond to alienated reality by seeking to <i>internalize</i> the alienated reality… and a third class, the <i>schizoid class</i>, which neither needs to internalize reality nor demonstrate self-expression.)
+
+I propose that as an alternative to a Marxist model using economic classes like bourgeoisie and proletariat, that we develop a <i>psychological model</i> using psychological classes like the <i>neurotic</i> and <i>ironic</i>.
+
+We can look at capitalism and communism as <i>different psychologies</i> instead of different economic systems.  We could seek to explain the cause of capitalism by examining psychological classes in partnership and opposition to each other, instead of the forces of labor and material value.
+
+Using such a psychological model in a critical examination of history - asking which events and institutions were a result of the neurotic class, for instance - would be an interesting exercise: an alternative to historical materialism.
+
+I think we will find this psychological model more useful when examining the actions of individuals, like William X. Nietzche and the RHAZ protestors.
+
+## The ironic class
+
+While the neurotic finds catharsis in self-expression, the ironic finds catharsis in validating their intuition: in <i>connecting</i> to reality which, due to its alienated nature, requires <i>sublimation</i> to internalize it. In other words, the ironic individual must be able to swallow the “un-reality” of capitalism, and is able to do so most efficiently through a steady diet of <i>irony.</i>
+
+<img src="assets/img/type_c.png" />
+
+This is the top post of all time on [r/comedyheaven](https://www.reddit.com/r/comedyheaven/), a gold mine of Gen Z humor. On a basic level, the joke is the comment. But on a deeper level, the joke is <i>how dumb the joke is</i>.  We enjoy the joke <i>ironically.</i>
+
+David Foster Wallace believed that irony was [killing his generation](https://en.wikipedia.org/wiki/New_Sincerity) -- the same holds true today. From American Psycho to Daria, Reality Bites, Nirvana, and Fight Club: the <i>ironic experience</i> has been commodified and sold. We <i>pay</i> to experience irony, so that we can tolerate the constant alienation of capitalism. We develop an appetite for irony, a market for it; there are certain products out there that are <i>only</i> meant to be purchased ironically!
+
+Commodified irony is Pop Art, horror films, sweaters for pets, vaporwave, cottagecore, and just about all of fashion at this point.
+
+<img src="assets/img/ironic_fashion.jpg" />
+
+Constant exposure to irony helps us sublimate our alienated reality by simulating the inexplicable change from one thing into another. We experience the sublimation of bad into good, the way a joke works, and use it on our own experiences, turning a bad day at work into a punchline: sarcasm, a wry remark, or a meme.
+
+Through constant consumption of irony, like memes, we keep primed our ability to accept the ultimate source of irony: capitalism itself.
+
+We are willing to work ourselves to death, <i>as long as we do it ironically.</i>
+
+When we look at the RHAZ protestors and deride them, we are not doing so as neutral observers: we are doing it as members of the ironic class. We feel stress from the “un-reality” the protestors create from their actions not matching our expectations. In order to internalize this new reality, to sublimate it, we look for irony -- for example, that the protestors are all white.
+
+## Weaponized irony
+
+In 2016, a popular club song and masterpiece of irony called “Bad and Boujee” was released. In the music video, the idea of the bourgeoisie itself becomes ironic. Reduced to a tasteless aesthetic of over-indulgence -- Chanel takeout containers, KFC and champagne, streetwear, jewelry, sipping lean -- and with over <i>a billion views</i> on YouTube, the use of irony has meticulously obscured and defanged the very idea of the bourgeoisie.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S-sJp1FfG7Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+All of this is completely intentional, by the way.  The bourgeoisie has <i>purposely</i> hidden itself behind a shroud of irony, making it harder to spot and destroy.
+
+Capitalism has evolved.  It is no longer the proletariat vs. the bourgeoisie; it has split the proletariat psychologically and pitted the neurotic against the ironic for control of an empty orthodoxy. While we are fighting about bathroom laws, the bourgeoisie continue to extract as much wealth as they can. Literally a captain of industry, Elon Musk, spoon-feeds us irony from his Twitter page. Bread and circuses!
+
+This ironic acceptance of un-reality and desire for ironic experiences prevents the ironic class from revolutionary action. In order to dismantle capitalism, <u>we must stop consuming irony.</u>
+
+We must stop being sarcastic, reductive, making meta-jokes and, for the love of God, we must stop turning everything into a fucking meme.
+
+Until we’re able to do this, capitalism will never be overthrown.
