@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "The Red House on Mississippi:<br/><br/>Neurosis and irony under capitalism"
+title: "The Red House on Mississippi:<br/><br/>Narcissism and irony under capitalism"
 tags: ["philosophy"]
 header:
   overlay_image: /assets/img/stop.png
@@ -16,7 +16,9 @@ category: articles
 
 &nbsp;
 
-About 2 weeks ago, a protest event began in my city of Portland, Oregon.  One of the last Black families on Mississippi Street, a gentrifying neighborhood, was facing eviction and foreclosure and around 30 protestors had camped in front of the house to organize a resistance.  A GoFundMe had been set up, which had raised about $120,000 to help the Kinneys, the family at the center of it all.
+About 2 weeks ago, a protest event began in my city of Portland, Oregon.
+
+One of the last Black families on Mississippi Street, a gentrifying neighborhood, was facing eviction and foreclosure and around 30 protestors had camped in front of the house to organize a resistance.  A GoFundMe had been set up, which had raised about $120,000 to help the Kinneys, the family at the center of it all.
 
 Slowly, stories about the Kinneys came to light. Their son, 35-year old William X. Nietzche, had been responsible for a vehicular homicide in 2002, in which an elderly man was killed.  Since then, he had been repeatedly arrested for driving with a suspended license and possession of cocaine. The house itself, which had been paid off, was mortgaged in 2002 to help pay for Nietzche’s legal fees.  Clearly, this was turning into a complicated case.
 
@@ -38,7 +40,7 @@ A day or two later, it came out that William X. Nietzche is a “sovereign citiz
 
 In fact, the family had stopped making payments <i>due to their belief</i> that they are sovereign citizens.  And yet, while public opinion has [become increasingly negative](https://www.reddit.com/r/Portland/comments/ka6umz/lack_of_critical_thinking_and_individual_opinions) against the Kinneys, there still remains a holdout of protestors who continue to defend them, [fighting social pressure](https://mobile.twitter.com/RPeavyhouse/status/1336433147009925122), and refusing to look at this foreclosure outside of race and class lines.
 
-As the GoFundMe surpassed $250,000, it was reported that the Kinneys even [own a second home nearby](https://www.opb.org/article/2020/12/11/oregon-portland-red-house-protest-kinney-family/).
+<span style="text-decoration:line-through;">As the GoFundMe surpassed $250,000, it was reported that the Kinneys even [own a second home nearby](https://www.opb.org/article/2020/12/11/oregon-portland-red-house-protest-kinney-family/).</span>  Errata: this is [not correct](https://www.instagram.com/p/CIuwO7eFuqh/?utm_source=ig_web_copy_link), sorry about that!
 
 ## A challenge to Marxist orthodoxy
 
@@ -61,14 +63,14 @@ After gathering enough public support, criticizing the Kinneys and RHAZ protesto
 
 In summary, the RHAZ is more <i>intuitively</i> viewed as a psychological issue about individuals than a socio-economic issue about class and race.
 
-## The neurotic class
+## The narcissist class
 
 &nbsp;
 Controversy acts like a sieve.
 
-Only a small percentage of overall protestors are left defending the RHAZ -- we might ask: what is special about this subset in particular? As it turns out, these are the most <i>neurotic</i> of all the protestors.
+Only a small percentage of overall protestors are left defending the RHAZ -- we might ask: what is special about this subset in particular? As it turns out, these are the most <i>narcissistic</i> of all the protestors.
 
-Neurosis, to me, is the willingness to challenge orthodoxy (and accept pain) as a <i>means of self-expression.</i>
+Narcissism, to me, is the willingness to challenge orthodoxy (and accept pain) as a <i>means of self-expression.</i>
 
 For these protestors, it is <i>more important</i> that they express themselves as revolutionaries than it is to follow the new orthodoxy, one which would make defending William X. Nietzche difficult. They continue to defend him, against intuition, even though it turns them into pariahs.
 
@@ -80,17 +82,17 @@ In addition to the pain of challenging orthodoxy, everyone under capitalism expe
 
 Capitalism offers an <i>alienated reality</i>, known as “the [Spectacle](https://en.wikipedia.org/wiki/The_Society_of_the_Spectacle)”, in lieu of actual reality.  We can just barely detect that something is amiss, that our experience is unintuitive, creating a pervasive feeling of alienation: that this is not our home, that something better exists, that we are being sold something.
 
-In order for neurotic individuals to tolerate this alienation, every so often they must <u>explode</u> with self-expression. The neurotic’s need for self-expression, this cathartic release, is so strong that it counteracts the pain of challenging orthodoxy.
+In order for narcissists to tolerate this alienation, every so often they must <u>explode</u> with self-expression. The narcissist's need for self-expression, this cathartic release, is so strong that it counteracts the pain of challenging orthodoxy.
 
 Now, imagine there was an <i>entire class</i> of people like this.  People whose <i>primary response</i> to alienation is to seek self-expression, stamping one’s self <i>upon</i> the alienated reality, instead of seeking to accept and internalize it.
 
 (And another class of people, the <i>ironic class</i>, who respond to alienated reality by seeking to <i>internalize</i> it… and yet a third class, the <i>schizoid class</i>, which neither needs to internalize reality nor demonstrate self-expression.)
 
-I propose that as an alternative to a Marxist model using economic classes like bourgeoisie and proletariat, that we develop a <i>psychological model</i> using psychological classes like the <i>neurotic</i> and <i>ironic</i> classes.
+I propose that as an alternative to a Marxist model using economic classes like bourgeoisie and proletariat, that we develop a <i>psychological model</i> using psychological classes like the <i>narcissistic</i> and <i>ironic</i> classes.
 
 We can understand capitalism and communism as <i>different psychologies</i> instead of different economic systems.  We could seek to explain capitalism by examining psychological classes in partnership and opposition to each other, instead of the forces of labor and material value.
 
-Using such a psychological model in a critical examination of history - asking which events and institutions are a result of the neurotic class, for instance - would be an interesting exercise: an alternative to historical materialism.
+Using such a psychological model in a critical examination of history - asking which events and institutions are a result of the narcissistic class, for instance - would be an interesting exercise: an alternative to historical materialism.
 
 I think we will find this psychological model more useful when examining the actions of individuals, like William X. Nietzche and the RHAZ protestors.
 
@@ -98,7 +100,7 @@ I think we will find this psychological model more useful when examining the act
 
 &nbsp;
 
-While the neurotic finds catharsis in self-expression, the ironic finds catharsis in validating their intuition: in <i>connecting</i> to reality which, due to its alienated nature, requires <i>sublimation</i> to accept. In other words, the ironic individual must be able to swallow the “un-reality” of capitalism, and is able to do so most effectively through a steady diet of <i>irony.</i>
+While the narcissist finds catharsis in self-expression, the ironic finds catharsis in validating their intuition: in <i>connecting</i> to reality which, due to its alienated nature, requires <i>sublimation</i> to accept. In other words, the ironic individual must be able to swallow the “un-reality” of capitalism, and is able to do so most effectively through a steady diet of <i>irony.</i>
 
 &nbsp;
 
@@ -124,7 +126,7 @@ Through constant consumption of irony, like memes, we keep primed our ability to
 
 We are willing to work ourselves to death, <i>as long as we do it ironically.</i>
 
-When we look at the RHAZ protestors and deride them, we are not doing so as neutral observers: we are doing it as members of the ironic class. We feel stress from the “un-reality” the protestors create from their actions not matching our expectations. In order to internalize this new reality, to sublimate it, we <i>look for irony</i> -- for example, that the protestors are all white.
+When we look at the RHAZ protestors and deride them, we are not doing so as neutral observers: we are doing it as members of the ironic class. We feel stress from the “un-reality” the protestors create from their actions not matching our expectations. In order to internalize this new reality, to sublimate it, we <i>look for irony</i> -- for example, that the protestors are mostly white.
 
 ## Weaponized irony
 
@@ -142,9 +144,11 @@ Reduced to a tasteless aesthetic of over-indulgence -- Chanel takeout containers
 
 All of this is completely intentional, by the way.  The bourgeoisie has <i>purposely</i> hidden itself behind a shroud of irony, making it harder to spot and destroy.
 
-Capitalism has evolved.  It is no longer the proletariat vs. the bourgeoisie; it has split the proletariat psychologically and pitted the neurotic against the ironic for control of an empty orthodoxy. While we are fighting about bathroom laws, the bourgeoisie continue to extract as much wealth as they can. A captain of industry, Elon Musk, [spoon-feeds us irony](https://twitter.com/elonmusk/status/1338365886542049282) from his Twitter page. Bread and circuses!
+On a quick tangent, [here is a video](https://www.instagram.com/tv/CIw5CNkhJ9Y/?utm_source=ig_web_copy_link) of Nietzche's fellow sovereign citizen, Emperor Omari Jibri, playing "Bad and Boujee".
 
-This ironic acceptance of un-reality and desire for ironic experiences prevents the ironic class from revolutionary action. In order to dismantle capitalism, <u>we must stop consuming irony.</u>
+Capitalism has evolved.  It is no longer the proletariat vs. the bourgeoisie; it has split the proletariat psychologically and pitted the narcissistic against the ironic for control of an empty orthodoxy. While we are fighting about bathroom laws, the bourgeoisie continue to extract as much wealth as they can. A captain of industry, Elon Musk, [spoon-feeds us irony](https://twitter.com/elonmusk/status/1338365886542049282) from his Twitter page. Bread and circuses!
+
+This ironic acceptance of un-reality and desire for ironic experiences prevents the working class from revolutionary action. In order to dismantle capitalism, <u>we must stop being ironic.</u>
 
 We must stop being sarcastic or reductive, stop making meta-jokes and, for the love of God, stop turning everything into a meme.
 
