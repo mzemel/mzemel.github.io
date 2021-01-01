@@ -69,7 +69,7 @@ Adrenaline stimulates the body, but we also have mechanisms (and incentives) for
 
 Your body uses many of these negative feedback loops. When blood sugar gets too high, insulin is released to sequester the sugar. When blood pressure spikes, a hormone is released to expand vessels and increase your blood flow (this is what happens when your dad takes Viagra.)
 
-You’ll find negative feedback loops at levels from the cell, to the organ, to the body. Our brains have negative feedback loops, like our circadian rhythm which creates a steady firing when it’s time to sleep.6 This is why if you’re driving at night, playing steady music on your car stereo can make you feel even <i>more</i> tired.
+You’ll find negative feedback loops at levels from the cell, to the organ, to the body. Our brains have negative feedback loops, like our circadian rhythm which creates a steady firing when it’s time to sleep.<sup>6</sup> This is why if you’re driving at night, playing steady music on your car stereo can make you feel even <i>more</i> tired.
 
 Consuming 20% of our body’s total energy, it is vitally important that our brains use negative feedback loops to maintain homeostasis.
 
@@ -101,13 +101,13 @@ These patterns exist as <i>dedicated neural circuits</i> which channel raw senso
 <img src="assets/img/learning/rorschach.jpg" style="display:block;margin-left:auto;margin-right:auto;width:75%;height:75%;" />
 <p style="text-align:center;font-size:medium;">A simple pattern: my parents fighting.</p>
 
-Patterns that have been useful are reinforced, others are left to wither and decay. Concepts like “race”, “religion”, and “politics” are patterns, albeit very high-level ones. Visual patterns are most common, but we also form auditory patterns, olfactory patterns, etc.
+Patterns that have been useful are reinforced, others are left to wither and decay. Concepts like “race”, “religion”, and “politics” are patterns, albeit very high-level ones. Visual patterns are the most common, but we also form auditory patterns, olfactory patterns, etc.
 
 <img src="assets/img/learning/niko.png" style="display:block;margin-left:auto;margin-right:auto;width:50%;height:50%;" />
 
-Some patterns are innate. A cardboard dummy representing a right-oriented bird (hawk) provokes an escape response in newborn thrushes, but a left-oriented bird (goose) does not.9
+Some patterns are innate. A cardboard dummy representing a right-oriented bird (hawk) provokes an escape response in newborn thrushes, but a left-oriented bird (goose) does not.<sup>9</sup>
 
-The brain wants optimization.  When learning, we try to extend existing patterns rather than create entirely new ones. To Hegel, we synthesize; to Kant, we practice deontology, constantly amending and extending maxims - for example, saying lying is wrong <i>except</i> when it’s to protect Anne Frank or something.
+The brain wants optimization.  When learning, we try to <i>extend</i> existing patterns rather than create entirely new ones. To Hegel, we synthesize; to Kant, we practice deontology, constantly amending and extending maxims - for example, saying lying is wrong <i>except</i> when it’s to protect Anne Frank or something.
 
 What we experience as equilibrium may seem strange to us - being slightly anxious or excited can actually <i>be</i> our baseline. Bored animals make easy prey, anyway: boredom lowers your baseline activity level, making it harder to quickly respond to dangerous situations. To fight this, we idly stoke our anxiety, replaying past trauma for calibration - to maintain an elevated level of activity.
 
@@ -123,11 +123,11 @@ How does it work?
 <p style="text-align:right;font-size:medium;">-- Carl Jung, Man and his Symbols</p>
 <br />
 
-<img src="assets/img/learning/circle_1.png" style="display:block;margin-left:auto;margin-right:auto;width:25%;height:25%;" />
+<img src="assets/img/learning/circle_1.png" style="display:block;margin-left:auto;margin-right:auto;width:40%;height:40%;" />
 <br />
 You probably saw a circle at first.  Why is that?
 
-According to Hebbian theory, over time we’ve built close physical connections between our neurons. They’ve become so closely enmeshed that the firing in one triggers a firing in the other.10 In the case of the semi-circle, our brains contain a Hebbian circuit <i>dedicated to perceiving circles.</i> Stimulate enough of the neurons involved, and the rest will follow.
+According to Hebbian theory, over time we’ve built close physical connections between our neurons. They’ve become so closely enmeshed that the firing in one triggers a firing in the other.<sup>10</sup> In the case of the semi-circle, our brains contain a Hebbian circuit <i>dedicated to perceiving circles.</i> Stimulate enough of the neurons involved, and the rest will follow.
 
 <img src="assets/img/learning/circle_2.png" style="display:block;margin-left:auto;margin-right:auto;" />
 <p style="text-align:center;font-size:medium;">a) our Hebbian circuit for a “circle”; b) enough nodes fire and so, c) all nodes fire</p>
