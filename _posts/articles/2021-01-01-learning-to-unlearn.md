@@ -14,7 +14,7 @@ category: articles
 
 ## Why is unlearning racism so hard?
 
-We all agree that racism is bad.  We read and discuss books like <i>White Fragility</i>, <i>How to be Anti-Racist</i>, and <i>Me and White Supremacy</i>, but in our daily lives we’re betrayed: we avoid certain neighborhoods, we send our kids to certain schools, and we frequently assume that all Black people think a certain way (ask a Black conservative.) We date each other, watch movies about ourselves, segregate our social circles, and generally keep a racist system afloat.
+Everyone agrees that racism is bad.  On the left, we read and discuss books like <i>White Fragility</i>, <i>How to be Anti-Racist</i>, and <i>Me and White Supremacy</i>, but in our daily lives we’re betrayed: we avoid certain neighborhoods, we send our kids to certain schools, and we frequently assume that all Black people think a certain way (ask a Black conservative.) We date each other, watch movies about ourselves, segregate our social circles, and generally keep a racist system afloat.
 
 Why do we see such a disconnect between our actions and intent?
 
@@ -145,7 +145,7 @@ The first circuits the brain turns to are the ones that have been successful in 
 
 If a stimulus is ‘understood’, all circuits that participated and were found to be useful are strengthened, or <i>reinforced.</i>  Circuits that participated but were <i>not</i> found to be useful are not reinforced. In fact, they’re slightly penalized for having fired (expended resources) without being reimbursed, so these circuits slightly <i>atrophy.</i>
 
-In the semi-circle example above, the ‘circle’ circuit is not reinforced, our ability to detect a circle slightly atrophies, and we continue the search until we can find a circuit to understand it. Artificially, we can keep this search alive by idly staring at objects that no longer <i>should</i> be interesting. We can disassociate them, invent fantasies, imagine them in new places, and picture ourselves interacting with them in strange ways.
+In the semi-circle example above, the ‘circle’ circuit is not reinforced, our ability to detect a circle slightly atrophies, and we continue the search until we can find a circuit to explain it. Artificially, we can keep this search alive by idly staring at objects that no longer <i>should</i> be interesting. We can disassociate them, invent fantasies, imagine them in new places, and picture ourselves interacting with them in strange ways.
 
 If a stimulus cannot be explained by any circuits, then a new one must be created. This is an expensive process but is the first step of learning, which I will talk about more shortly.
 
@@ -309,7 +309,7 @@ If you’re exposing yourself to Black skin color within an environment of guilt
 
 White people working towards Black liberation should be engaged in <i>unabashed celebration</i> of Black people and culture. Consume so much Black media that the symbol of Black skin becomes like the yellow triangle: ubiquitous, and therefore meaningless. Watch Black comedy, listen to Black podcasts, watch Black movies <i>besides</i> Hidden Figures and Twelve Years a Slave. Watch The Boondocks, Insecure, Dear White People, and Sorry to Bother You. Spend less time posting about White supremacy to your White Instagram followers, and get together to watch a Black movie instead.
 
-By intentionally culturing positive connotations with symbols like Black skin, Black dress, Black hair, Black food, eventually the idea of Blackness as anything negative will fade. Black neighborhoods will seem less scary, Black candidates will shine brighter, and we’ll stop participating in identity politics to the point where we can take action along class lines, together.
+By intentionally cultivating positive connotations with symbols like Black skin, Black dress, Black hair, Black food, eventually the idea of Blackness as anything negative will fade. Black neighborhoods will seem less scary, Black candidates will shine brighter, and we’ll stop participating in identity politics to the point where we can take action along class lines, together.
 
 
 # Citations
