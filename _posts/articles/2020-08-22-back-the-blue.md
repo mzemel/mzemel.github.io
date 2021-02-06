@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Back the Blue: A psychological profile of the right"
+title: "Back the Blue"
 tags: ["philosophy"]
 header:
   overlay_image: /assets/img/blm/fireworks.jpg

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Superman vs. Superego: A response to On the Genealogy of Morals"
+title: "Superman vs. Superego"
 tags: ["philosophy"]
 header:
   overlay_image: /assets/img/wanderer.jpeg

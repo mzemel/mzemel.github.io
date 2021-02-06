@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "The Red House on Mississippi:<br/><br/>Narcissism and irony under capitalism"
+title: "The Red House on Mississippi"
 tags: ["philosophy"]
 header:
   overlay_image: /assets/img/stop.png
