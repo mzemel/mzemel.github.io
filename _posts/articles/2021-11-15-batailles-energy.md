@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Bataille's Energy"
+title: "The Energy of Georges Bataille"
 tags: ["philosophy"]
 keywords: philosophy
 lang: en
@@ -9,11 +9,13 @@ category: articles
 
 &nbsp;
 
+<img src="assets/img/acephale.png" />
+
 ## I. Continuity: the totality of being
 
 <b><i>What is life?</i></b>
 
-Life, writes Bataille, is a ‘door into existence’ which reveals a simple truth—that ‘existence is movement’. A flow of energy radiating from the sun (‘the source of life’s exuberant development’) circulates wildly across the surface of the globe, and connects each living being <i>intimately</i> to one another (‘the tiger and his prey’), and to existence itself (‘from outside to inside, from inside to outside’), in a single, immortal <i>totality of being.</i> ‘Life is a door into existence: life may be doomed but the continuity of existence is not.’
+Life, writes Bataille, is a ‘door into existence’ which reveals one simple truth—that ‘existence is movement’. A flow of energy radiating from the sun (‘the source of life’s exuberant development’) circulates wildly across the surface of the globe, and connects each living being <i>intimately</i> to one another (‘the tiger and his prey’), and to existence itself (‘from outside to inside, from inside to outside’), in a single, immortal <i>totality of being.</i> ‘Life is a door into existence: life may be doomed but the continuity of existence is not.’
 
 <b><i>Relations of immanence</i></b>
 
@@ -21,7 +23,7 @@ In ‘conflagrations befitting the solar origins of its movement’, a play of e
 
 <b><i>Excess</i></b>
 
-A ‘superabundance of energy on the surface of the globe’ creates a biological <i>pressure</i>, which acts on living beings and challenges them to survive (to seek ‘elements around it which are immanent,’ and to establish ‘relatively stable relations of immanence.’) Across the planet—‘for living matter in general, energy is always in excess’—each being ‘receives this energy and accumulates it,’ and in turn produces an excess of its own. ‘As a rule an organism has at its disposal greater energy resources than are necessary for the operations that sustain life.’
+A ‘superabundance of energy on the surface of the globe’ creates <i>pressure</i> that acts on living beings, challenging them to survive (to seek ‘elements around it which are immanent,’ and to establish ‘relatively stable relations of immanence.’) Across the planet—‘for living matter in general, energy is always in excess’—each being ‘receives this energy and accumulates it,’ and in turn produces an excess of its own. ‘As a rule an organism has at its disposal greater energy resources than are necessary for the operations that sustain life.’
 
 <b><i>Growth</i></b>
 
@@ -73,7 +75,7 @@ The human being, unique among organisms, is a subject in a world of objects. The
 
 <b><i>Selfhood</i></b>
 
-To the discontinuous being, continuous existence ‘is truly alien to ordinary reflection in that it includes at the same time objective reality and the subject who perceives the objective reality. Neither the object nor the subject can form by themselves a totality that involves the whole.’ Perceiving of totality, ‘which exceeds on all sides the reduced world of thoughts, I know that it is made up of distances and opposites’––but complete understanding fails in that ‘the intellect, with its first impulse it <i>abstracts</i>, separating the object of reflection from the concrete totality of the real.’ In limbo ‘between continuous and discontinuous existence, what is at play is the stability of self-consciousness, and thus of selfhood.’
+To the discontinuous being, continuous existence ‘is truly alien to ordinary reflection in that it includes at the same time objective reality and the subject who perceives the objective reality. Neither the object nor the subject can form by themselves a totality that involves the whole.’ Perceiving of totality, ‘which exceeds on all sides the reduced world of thoughts, I know that it is made up of distances and opposites’—but complete understanding fails in that ‘the intellect, with its first impulse it <i>abstracts</i>, separating the object of reflection from the concrete totality of the real.’ In limbo ‘between continuous and discontinuous existence, what is at play is the stability of self-consciousness, and thus of selfhood.’
 
 <b><i>Stability</i></b>
 
