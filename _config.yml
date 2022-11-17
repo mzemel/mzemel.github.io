@@ -49,8 +49,17 @@ author:
   linkedin: "michael-zemel"
   instagram: "mzemel"
   github: "mzemel"
+  twitter: "https://twitter.com/drunkonhemlock"
 image: /assets/img/face.png
 defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      lang: "en"
+      category: games
+      author_profile: true
+      share: true
   -
     scope:
       type: "posts"
