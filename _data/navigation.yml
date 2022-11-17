@@ -1,4 +1,6 @@
 main:
+  - title: "Games"
+    url: /games
   - title: "Monarchs"
     url: /monarchs
   - title: "Articles"
