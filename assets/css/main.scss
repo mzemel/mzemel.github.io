@@ -1,0 +1,579 @@
+---
+# Casablanca Noir Theme
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+// Import the dark skin as base, then minimal-mistakes
+@import "minimal-mistakes/skins/dark";
+@import "minimal-mistakes";
+
+// ============================================================
+// CASABLANCA NOIR THEME OVERRIDES
+// Inspired by the film noir aesthetic of Casablanca (1942)
+// Deep blacks, warm sepia, amber/gold accents, classic elegance
+// ============================================================
+
+// --- Google Fonts: classic serif for headings ---
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+// --- Color Variables ---
+$noir-black: #0a0a0a;
+$noir-charcoal: #141210;
+$noir-dark-brown: #1e1a16;
+$noir-warm-gray: #2a2520;
+$noir-medium-gray: #3d352b;
+$noir-border: #4a4035;
+$noir-muted: #8a7e6e;
+$noir-cream: #e8dcc8;
+$noir-light-cream: #f0e6d4;
+$noir-gold: #c4a35a;
+$noir-amber: #d4a855;
+$noir-warm-white: #ddd0bc;
+$noir-sepia-light: #bfae94;
+
+// --- Base Page ---
+html {
+  background-color: $noir-black;
+}
+
+body {
+  background-color: $noir-charcoal;
+  color: $noir-cream;
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+// --- Typography ---
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.archive__item-title,
+.site__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: $noir-light-cream;
+  letter-spacing: 0.02em;
+}
+
+h1, .page__title {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h2 {
+  font-weight: 700;
+  border-bottom: 1px solid $noir-medium-gray;
+  padding-bottom: 0.3em;
+}
+
+p, li, td, th, dd, dt, figcaption, .page__content {
+  color: $noir-cream;
+  line-height: 1.75;
+}
+
+// --- Links ---
+a {
+  color: $noir-gold;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: $noir-amber;
+    text-shadow: 0 0 8px rgba($noir-gold, 0.3);
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: darken($noir-gold, 8%);
+  }
+}
+
+// --- Masthead / Navigation Bar ---
+.masthead {
+  background-color: $noir-black;
+  border-bottom: 2px solid $noir-gold;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+
+  a {
+    color: $noir-cream;
+  }
+}
+
+.greedy-nav {
+  background: $noir-black;
+
+  a {
+    color: $noir-cream;
+    font-family: 'Playfair Display', Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.8em;
+    font-weight: 700;
+
+    &:hover {
+      color: $noir-gold;
+    }
+  }
+
+  .site-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 900;
+    font-size: 1.1em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $noir-gold;
+  }
+
+  button {
+    background-color: $noir-dark-brown;
+    color: $noir-cream;
+  }
+
+  .visible-links a:before {
+    background: $noir-gold;
+  }
+
+  .hidden-links {
+    background: $noir-dark-brown;
+    border: 1px solid $noir-border;
+
+    a {
+      color: $noir-cream;
+
+      &:hover {
+        color: $noir-gold;
+        background: $noir-warm-gray;
+      }
+    }
+  }
+}
+
+// --- Page Content Area ---
+.page__content {
+  color: $noir-cream;
+
+  strong {
+    color: $noir-light-cream;
+  }
+
+  em {
+    color: $noir-sepia-light;
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+// --- Sidebar / Author Profile ---
+.sidebar {
+  background-color: transparent;
+}
+
+.author__avatar {
+  img {
+    border-radius: 0;
+    border: 2px solid $noir-gold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    filter: sepia(15%) contrast(1.05);
+  }
+}
+
+.author__name {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: $noir-light-cream;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.author__bio {
+  color: $noir-sepia-light;
+  font-style: italic;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.author__urls-wrapper {
+  .btn--inverse {
+    background-color: $noir-warm-gray;
+    color: $noir-cream;
+    border: 1px solid $noir-border;
+
+    &:hover {
+      background-color: $noir-medium-gray;
+      color: $noir-gold;
+    }
+  }
+}
+
+.author__urls {
+  background-color: $noir-dark-brown;
+  border: 1px solid $noir-border;
+
+  a {
+    color: $noir-sepia-light;
+
+    &:hover {
+      color: $noir-gold;
+    }
+  }
+}
+
+// --- Page Header / Banner Images ---
+.page__hero--overlay {
+  background-color: $noir-black;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba($noir-black, 0.3) 0%,
+      rgba($noir-black, 0.7) 100%
+    );
+  }
+}
+
+.page__hero-image {
+  filter: sepia(30%) contrast(1.1) brightness(0.8);
+}
+
+// Apply sepia/noir filter to header images
+.page__hero--overlay,
+[style*="background-image"] {
+  position: relative;
+}
+
+// --- Archive / Post List ---
+.archive__item {
+  border-bottom: 1px solid $noir-medium-gray;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.archive__item-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+
+  a {
+    color: $noir-light-cream;
+
+    &:hover {
+      color: $noir-gold;
+    }
+  }
+}
+
+.archive__item-excerpt {
+  color: $noir-sepia-light;
+  font-size: 0.9em;
+}
+
+// --- Pagination ---
+.pagination--pager {
+  background-color: $noir-warm-gray;
+  border: 1px solid $noir-border;
+  color: $noir-cream;
+  font-family: 'Playfair Display', Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  &:hover {
+    background-color: $noir-medium-gray;
+    color: $noir-gold;
+    border-color: $noir-gold;
+  }
+
+  &.disabled {
+    color: $noir-muted;
+    background-color: $noir-dark-brown;
+  }
+}
+
+// --- Buttons ---
+.btn {
+  font-family: 'Playfair Display', Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 0;
+}
+
+.btn--primary {
+  background-color: $noir-gold;
+  color: $noir-black;
+
+  &:hover {
+    background-color: $noir-amber;
+  }
+}
+
+// --- Footer ---
+.page__footer {
+  background-color: $noir-black;
+  border-top: 2px solid $noir-gold;
+  color: $noir-muted;
+
+  a {
+    color: $noir-gold;
+
+    &:hover {
+      color: $noir-amber;
+    }
+  }
+
+  footer {
+    color: $noir-muted;
+  }
+}
+
+// --- Code Blocks ---
+code {
+  background-color: $noir-warm-gray;
+  color: $noir-amber;
+  border-radius: 0;
+  border: 1px solid $noir-medium-gray;
+  font-size: 0.85em;
+}
+
+pre {
+  background-color: $noir-dark-brown;
+  border: 1px solid $noir-medium-gray;
+  border-radius: 0;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+// --- Blockquotes ---
+blockquote {
+  border-left: 3px solid $noir-gold;
+  color: $noir-sepia-light;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  background-color: rgba($noir-warm-gray, 0.3);
+  padding: 0.5em 1em;
+  margin: 1.5em 0;
+}
+
+// --- Tables ---
+table {
+  border-color: $noir-medium-gray;
+}
+
+th {
+  background-color: $noir-warm-gray;
+  color: $noir-light-cream;
+  font-family: 'Playfair Display', Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+td {
+  border-color: $noir-medium-gray;
+  background-color: $noir-dark-brown;
+}
+
+// --- Horizontal Rules ---
+hr {
+  border-color: $noir-medium-gray;
+}
+
+// --- Selection ---
+::selection {
+  background: $noir-gold;
+  color: $noir-black;
+}
+
+::-moz-selection {
+  background: $noir-gold;
+  color: $noir-black;
+}
+
+// --- Images inside content ---
+.page__content {
+  img {
+    border: 2px solid $noir-medium-gray;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    filter: sepia(8%) contrast(1.02);
+  }
+}
+
+// --- Taxonomy / Category labels ---
+.taxonomy__section {
+  border-bottom: 1px solid $noir-medium-gray;
+}
+
+.page__taxonomy-item {
+  background-color: $noir-warm-gray;
+  color: $noir-cream;
+  border: 1px solid $noir-border;
+  border-radius: 0;
+
+  &:hover {
+    background-color: $noir-medium-gray;
+    color: $noir-gold;
+  }
+}
+
+// --- Notices ---
+.notice {
+  background-color: $noir-warm-gray;
+  color: $noir-cream;
+  border-left: 3px solid $noir-gold;
+}
+
+// --- Search ---
+.search-content {
+  background-color: $noir-charcoal;
+
+  .search-input {
+    background-color: $noir-dark-brown;
+    color: $noir-cream;
+    border: 1px solid $noir-border;
+
+    &:focus {
+      border-color: $noir-gold;
+    }
+  }
+}
+
+// --- Subtle Film Grain Overlay (noir texture) ---
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+// --- Vignette effect on the page ---
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 60%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+}
+
+// --- Scrollbar styling (webkit) ---
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $noir-charcoal;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $noir-medium-gray;
+  border: 1px solid $noir-border;
+
+  &:hover {
+    background: $noir-gold;
+  }
+}
+
+// --- Initial Content (home layout) ---
+.page__hero,
+.page__hero--overlay {
+  .page__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  }
+}
+
+// --- Category pages ---
+.taxonomy__index {
+  a {
+    color: $noir-gold;
+  }
+}
+
+// --- TOC ---
+.toc {
+  background-color: $noir-dark-brown;
+  border: 1px solid $noir-medium-gray;
+
+  .nav__title {
+    background: $noir-warm-gray;
+    color: $noir-cream;
+    font-family: 'Playfair Display', Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  a {
+    color: $noir-sepia-light;
+
+    &:hover {
+      color: $noir-gold;
+    }
+  }
+}
+
+// --- Social share buttons ---
+.page__share-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $noir-sepia-light;
+}
+
+// --- Page meta (date, read time) ---
+.page__meta {
+  color: $noir-muted;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// --- Related posts ---
+.page__related {
+  border-top: 2px solid $noir-medium-gray;
+
+  .page__related-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $noir-gold;
+  }
+}
+
+// --- Input fields ---
+input, textarea, select {
+  background-color: $noir-dark-brown;
+  color: $noir-cream;
+  border: 1px solid $noir-border;
+
+  &:focus {
+    border-color: $noir-gold;
+    outline-color: $noir-gold;
+  }
+}
+
+// --- Ensure iframes (YouTube embeds) look integrated ---
+iframe {
+  border: 2px solid $noir-medium-gray;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
