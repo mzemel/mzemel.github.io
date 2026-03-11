@@ -1,0 +1,22 @@
+{% capture tocWorkspace %}
+  {% assign minHeader = include.h_min | default: 2 %}
+  {% assign maxHeader = include.h_max | default: 3 %}
+  {% assign nodes = include.html | split: '<h' %}
+  <ul class="toc-list">
+  {% for node in nodes %}
+    {% if node == "" %}{% continue %}{% endif %}
+    {% assign headerLevel = node | replace: '"', '' | slice: 0, 1 | times: 1 %}
+    {% if headerLevel < minHeader or headerLevel > maxHeader %}{% continue %}{% endif %}
+    {% assign _idStart = node | split: 'id="' %}
+    {% if _idStart.size < 2 %}{% continue %}{% endif %}
+    {% assign _idEnd = _idStart[1] | split: '"' %}
+    {% assign thisId = _idEnd[0] %}
+    {% assign _titleStart = node | split: '>' %}
+    {% assign _titleEnd = _titleStart[1] | split: '</' %}
+    {% assign thisTitle = _titleEnd[0] | strip_html | strip %}
+    {% if thisTitle == "" %}{% continue %}{% endif %}
+    <li class="toc-entry toc-h{{ headerLevel }}"><a href="#{{ thisId }}">{{ thisTitle }}</a></li>
+  {% endfor %}
+  </ul>
+{% endcapture %}
+{{ tocWorkspace }}

@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  {% if paginator.posts %}
+    <ul class="post-list">
+      {% for post in paginator.posts %}
+      <li class="post-item">
+        <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        {% if post.excerpt %}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li class="post-item">
+        <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        {% if post.excerpt %}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if paginator.total_pages > 1 %}
+  <nav class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-link">&larr; Newer</a>
+    {% else %}
+      <span class="pagination-link disabled">&larr; Newer</span>
+    {% endif %}
+
+    <span class="pagination-info">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-link">Older &rarr;</a>
+    {% else %}
+      <span class="pagination-link disabled">Older &rarr;</span>
+    {% endif %}
+  </nav>
+  {% endif %}
+
+</div>

@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<article class="page-single">
+
+  {% if page.header.overlay_image %}
+    <div class="page-hero">
+      <img src="{{ page.header.overlay_image | relative_url }}" alt="{{ page.title }}">
+      {% if page.header.caption %}
+        <span class="hero-caption">{{ page.header.caption }}</span>
+      {% endif %}
+    </div>
+  {% elsif page.header.image %}
+    <div class="page-hero">
+      <img src="{{ page.header.image | relative_url }}" alt="{{ page.title }}">
+    </div>
+  {% endif %}
+
+  <header class="page-header">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.date and page.layout == 'single' and page.category %}
+      <time class="page-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.tags.size > 0 %}
+        <span class="page-tags">
+          {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </span>
+      {% endif %}
+    {% endif %}
+  </header>
+
+  {% if page.toc %}
+  <nav class="toc">
+    <h3 class="toc-title">Contents</h3>
+    {% include toc.html html=content %}
+  </nav>
+  {% endif %}
+
+  <div class="page-content">
+    {{ content }}
+  </div>
+
+</article>

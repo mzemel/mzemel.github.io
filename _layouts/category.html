@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="category-page">
+
+  {% if page.header.image %}
+    <div class="page-hero">
+      <img src="{{ page.header.image | relative_url }}" alt="{{ page.title }}">
+    </div>
+  {% endif %}
+
+  <header class="page-header">
+    <h1 class="page-title">{{ page.title }}</h1>
+  </header>
+
+  <ul class="post-list">
+    {% assign category_posts = site.categories[page.taxonomy] %}
+    {% for post in category_posts %}
+    <li class="post-item">
+      <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+      {% if post.excerpt %}
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+
+</div>

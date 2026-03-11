@@ -1,579 +1,650 @@
 ---
-# Casablanca Noir Theme
-# Only the main Sass file needs front matter (the dashes are enough)
+# Minimalist theme
 ---
 
-@charset "utf-8";
-
-// Import the dark skin as base, then minimal-mistakes
-@import "minimal-mistakes/skins/dark";
-@import "minimal-mistakes";
-
 // ============================================================
-// CASABLANCA NOIR THEME OVERRIDES
-// Inspired by the film noir aesthetic of Casablanca (1942)
-// Deep blacks, warm sepia, amber/gold accents, classic elegance
+// A quiet, minimalist theme.
+// EB Garamond for headings. System sans-serif for body.
+// Restrained palette. Generous whitespace.
 // ============================================================
 
-// --- Google Fonts: classic serif for headings ---
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+// --- Palette ---
+$bg:          #fafaf8;
+$text:        #2e2e2e;
+$heading:     #1a1a1a;
+$muted:       #7a7a7a;
+$faint:       #aaa;
+$link:        #3d5a80;
+$link-hover:  #264060;
+$border:      #e2e0db;
+$border-dark: #ccc;
+$code-bg:     #f3f2ee;
+$sidebar-bg:  transparent;
 
-// --- Color Variables ---
-$noir-black: #0a0a0a;
-$noir-charcoal: #141210;
-$noir-dark-brown: #1e1a16;
-$noir-warm-gray: #2a2520;
-$noir-medium-gray: #3d352b;
-$noir-border: #4a4035;
-$noir-muted: #8a7e6e;
-$noir-cream: #e8dcc8;
-$noir-light-cream: #f0e6d4;
-$noir-gold: #c4a35a;
-$noir-amber: #d4a855;
-$noir-warm-white: #ddd0bc;
-$noir-sepia-light: #bfae94;
+// --- Typography ---
+$serif: 'EB Garamond', 'Georgia', serif;
+$sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+$mono:  'SF Mono', 'Fira Code', 'Fira Mono', 'Menlo', monospace;
 
-// --- Base Page ---
+// --- Sizes ---
+$content-width: 680px;
+$sidebar-width: 200px;
+$gap: 48px;
+$nav-height: 56px;
+
+// ============================================================
+// Reset & base
+// ============================================================
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
-  background-color: $noir-black;
+  font-size: 17px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background-color: $noir-charcoal;
-  color: $noir-cream;
-  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  font-family: $sans;
+  color: $text;
+  background: $bg;
+  line-height: 1.72;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-// --- Typography ---
-h1, h2, h3, h4, h5, h6,
-.page__title,
-.archive__item-title,
-.site__title {
-  font-family: 'Playfair Display', Georgia, serif;
-  color: $noir-light-cream;
-  letter-spacing: 0.02em;
+// ============================================================
+// Typography
+// ============================================================
+h1, h2, h3, h4, h5, h6 {
+  font-family: $serif;
+  color: $heading;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
 }
 
-h1, .page__title {
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+h1 { font-size: 2rem;   font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; }
+h3 { font-size: 1.2rem; }
+h4 { font-size: 1.05rem; }
+
+p {
+  margin-bottom: 1.25em;
 }
 
-h2 {
-  font-weight: 700;
-  border-bottom: 1px solid $noir-medium-gray;
-  padding-bottom: 0.3em;
+strong {
+  font-weight: 600;
+  color: $heading;
 }
 
-p, li, td, th, dd, dt, figcaption, .page__content {
-  color: $noir-cream;
-  line-height: 1.75;
+em {
+  font-style: italic;
 }
 
-// --- Links ---
 a {
-  color: $noir-gold;
+  color: $link;
   text-decoration: none;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  transition: color 0.15s ease;
 
-  &:hover,
-  &:focus {
-    color: $noir-amber;
-    text-shadow: 0 0 8px rgba($noir-gold, 0.3);
-    text-decoration: none;
-  }
-
-  &:visited {
-    color: darken($noir-gold, 8%);
+  &:hover, &:focus {
+    color: $link-hover;
   }
 }
 
-// --- Masthead / Navigation Bar ---
-.masthead {
-  background-color: $noir-black;
-  border-bottom: 2px solid $noir-gold;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+blockquote {
+  border-left: 3px solid $border-dark;
+  padding: 0.1em 1.2em;
+  margin: 1.6em 0;
+  color: $muted;
+  font-style: italic;
+  font-family: $serif;
+  font-size: 1.05rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $border;
+  margin: 2.5em 0;
+}
+
+ul, ol {
+  padding-left: 1.4em;
+  margin-bottom: 1.25em;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+code {
+  font-family: $mono;
+  font-size: 0.85em;
+  background: $code-bg;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  background: $code-bg;
+  border: 1px solid $border;
+  border-radius: 3px;
+  padding: 1em 1.2em;
+  overflow-x: auto;
+  margin: 1.6em 0;
+  line-height: 1.5;
+
+  code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.84em;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.6em 0;
+  font-size: 0.92em;
+}
+
+th, td {
+  padding: 0.6em 0.8em;
+  border-bottom: 1px solid $border;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  color: $heading;
+}
+
+iframe {
+  max-width: 100%;
+  margin: 1em 0;
+}
+
+// ============================================================
+// Site header
+// ============================================================
+.site-header {
+  border-bottom: 1px solid $border;
+  background: $bg;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: $content-width + $sidebar-width + $gap;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: $nav-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-title {
+  font-family: $serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: $heading;
+  letter-spacing: 0.01em;
+
+  &:hover {
+    color: $link;
+  }
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.6em;
 
   a {
-    color: $noir-cream;
-  }
-}
-
-.greedy-nav {
-  background: $noir-black;
-
-  a {
-    color: $noir-cream;
-    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: $muted;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-size: 0.8em;
-    font-weight: 700;
+    letter-spacing: 0.06em;
+    transition: color 0.15s ease;
 
-    &:hover {
-      color: $noir-gold;
-    }
-  }
-
-  .site-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 900;
-    font-size: 1.1em;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: $noir-gold;
-  }
-
-  button {
-    background-color: $noir-dark-brown;
-    color: $noir-cream;
-  }
-
-  .visible-links a:before {
-    background: $noir-gold;
-  }
-
-  .hidden-links {
-    background: $noir-dark-brown;
-    border: 1px solid $noir-border;
-
-    a {
-      color: $noir-cream;
-
-      &:hover {
-        color: $noir-gold;
-        background: $noir-warm-gray;
-      }
+    &:hover, &.active {
+      color: $heading;
     }
   }
 }
 
-// --- Page Content Area ---
-.page__content {
-  color: $noir-cream;
+// ============================================================
+// Layout
+// ============================================================
+.site-main {
+  min-height: calc(100vh - #{$nav-height} - 80px);
+}
 
-  strong {
-    color: $noir-light-cream;
-  }
+.container {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 2.5em 24px 4em;
 
-  em {
-    color: $noir-sepia-light;
-    font-family: 'Playfair Display', Georgia, serif;
+  &.with-sidebar {
+    max-width: $content-width + $sidebar-width + $gap;
+    display: grid;
+    grid-template-columns: $sidebar-width 1fr;
+    gap: $gap;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2em;
+    }
   }
 }
 
-// --- Sidebar / Author Profile ---
+.content {
+  min-width: 0;
+}
+
+// ============================================================
+// Sidebar / Author profile
+// ============================================================
 .sidebar {
-  background-color: transparent;
+  padding-top: 0.5em;
+
+  @media (max-width: 768px) {
+    border-bottom: 1px solid $border;
+    padding-bottom: 2em;
+  }
 }
 
 .author__avatar {
+  margin-bottom: 1em;
+
   img {
-    border-radius: 0;
-    border: 2px solid $noir-gold;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    filter: sepia(15%) contrast(1.05);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
   }
 }
 
+.author__content {
+  margin-bottom: 1em;
+}
+
 .author__name {
-  font-family: 'Playfair Display', Georgia, serif;
-  color: $noir-light-cream;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-family: $serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $heading;
+  margin: 0 0 0.2em;
+
+  img {
+    display: none; // hide the verified badge
+  }
 }
 
 .author__bio {
-  color: $noir-sepia-light;
-  font-style: italic;
-  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.82rem;
+  color: $muted;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .author__urls-wrapper {
-  .btn--inverse {
-    background-color: $noir-warm-gray;
-    color: $noir-cream;
-    border: 1px solid $noir-border;
+  margin-top: 0.8em;
 
-    &:hover {
-      background-color: $noir-medium-gray;
-      color: $noir-gold;
-    }
+  button {
+    display: none; // hide follow button
   }
 }
 
 .author__urls {
-  background-color: $noir-dark-brown;
-  border: 1px solid $noir-border;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8rem;
+
+  li {
+    margin-bottom: 0.35em;
+  }
 
   a {
-    color: $noir-sepia-light;
+    color: $muted;
+    transition: color 0.15s ease;
 
     &:hover {
-      color: $noir-gold;
+      color: $link;
+    }
+
+    i {
+      width: 1.2em;
+      text-align: center;
+      margin-right: 0.3em;
+      font-size: 0.9em;
+      color: $faint;
     }
   }
-}
 
-// --- Page Header / Banner Images ---
-.page__hero--overlay {
-  background-color: $noir-black;
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      to bottom,
-      rgba($noir-black, 0.3) 0%,
-      rgba($noir-black, 0.7) 100%
-    );
+  .social-icons {
+    list-style: none;
+    padding: 0;
   }
 }
 
-.page__hero-image {
-  filter: sepia(30%) contrast(1.1) brightness(0.8);
+// ============================================================
+// Post list (home & category pages)
+// ============================================================
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-// Apply sepia/noir filter to header images
-.page__hero--overlay,
-[style*="background-image"] {
-  position: relative;
-}
+.post-item {
+  padding: 1.4em 0;
+  border-bottom: 1px solid $border;
 
-// --- Archive / Post List ---
-.archive__item {
-  border-bottom: 1px solid $noir-medium-gray;
-  padding-bottom: 1.5em;
-  margin-bottom: 1.5em;
+  &:first-child {
+    padding-top: 0;
+  }
 
   &:last-child {
     border-bottom: none;
   }
 }
 
-.archive__item-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 700;
+.post-date {
+  display: block;
+  font-size: 0.78rem;
+  color: $faint;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.02em;
+}
+
+.post-title {
+  font-family: $serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 0.3em;
 
   a {
-    color: $noir-light-cream;
+    color: $heading;
 
     &:hover {
-      color: $noir-gold;
+      color: $link;
     }
   }
 }
 
-.archive__item-excerpt {
-  color: $noir-sepia-light;
-  font-size: 0.9em;
+.post-excerpt {
+  color: $muted;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
 }
 
-// --- Pagination ---
-.pagination--pager {
-  background-color: $noir-warm-gray;
-  border: 1px solid $noir-border;
-  color: $noir-cream;
-  font-family: 'Playfair Display', Georgia, serif;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+// ============================================================
+// Pagination
+// ============================================================
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  padding: 2.5em 0 1em;
+  font-size: 0.85rem;
+}
+
+.pagination-link {
+  color: $link;
+  font-weight: 500;
 
   &:hover {
-    background-color: $noir-medium-gray;
-    color: $noir-gold;
-    border-color: $noir-gold;
+    color: $link-hover;
   }
 
   &.disabled {
-    color: $noir-muted;
-    background-color: $noir-dark-brown;
+    color: $border;
+    pointer-events: none;
   }
 }
 
-// --- Buttons ---
-.btn {
-  font-family: 'Playfair Display', Georgia, serif;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  border-radius: 0;
+.pagination-info {
+  color: $faint;
+  font-variant-numeric: tabular-nums;
 }
 
-.btn--primary {
-  background-color: $noir-gold;
-  color: $noir-black;
+// ============================================================
+// Single page / post
+// ============================================================
+.page-header {
+  margin-bottom: 2em;
+}
 
-  &:hover {
-    background-color: $noir-amber;
+.page-title {
+  font-family: $serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: $heading;
+  line-height: 1.25;
+  margin: 0 0 0.4em;
+  letter-spacing: -0.01em;
+}
+
+.page-date {
+  display: inline-block;
+  font-size: 0.82rem;
+  color: $muted;
+  margin-bottom: 0.5em;
+}
+
+.page-tags {
+  display: inline-block;
+  margin-left: 0.8em;
+
+  .tag {
+    font-size: 0.75rem;
+    color: $faint;
+    background: $code-bg;
+    padding: 0.15em 0.6em;
+    border-radius: 2px;
+    margin-right: 0.3em;
+    letter-spacing: 0.02em;
   }
 }
 
-// --- Footer ---
-.page__footer {
-  background-color: $noir-black;
-  border-top: 2px solid $noir-gold;
-  color: $noir-muted;
+.page-hero {
+  margin-bottom: 2em;
 
-  a {
-    color: $noir-gold;
-
-    &:hover {
-      color: $noir-amber;
-    }
-  }
-
-  footer {
-    color: $noir-muted;
-  }
-}
-
-// --- Code Blocks ---
-code {
-  background-color: $noir-warm-gray;
-  color: $noir-amber;
-  border-radius: 0;
-  border: 1px solid $noir-medium-gray;
-  font-size: 0.85em;
-}
-
-pre {
-  background-color: $noir-dark-brown;
-  border: 1px solid $noir-medium-gray;
-  border-radius: 0;
-  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-// --- Blockquotes ---
-blockquote {
-  border-left: 3px solid $noir-gold;
-  color: $noir-sepia-light;
-  font-family: 'Playfair Display', Georgia, serif;
-  font-style: italic;
-  background-color: rgba($noir-warm-gray, 0.3);
-  padding: 0.5em 1em;
-  margin: 1.5em 0;
-}
-
-// --- Tables ---
-table {
-  border-color: $noir-medium-gray;
-}
-
-th {
-  background-color: $noir-warm-gray;
-  color: $noir-light-cream;
-  font-family: 'Playfair Display', Georgia, serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-td {
-  border-color: $noir-medium-gray;
-  background-color: $noir-dark-brown;
-}
-
-// --- Horizontal Rules ---
-hr {
-  border-color: $noir-medium-gray;
-}
-
-// --- Selection ---
-::selection {
-  background: $noir-gold;
-  color: $noir-black;
-}
-
-::-moz-selection {
-  background: $noir-gold;
-  color: $noir-black;
-}
-
-// --- Images inside content ---
-.page__content {
   img {
-    border: 2px solid $noir-medium-gray;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    filter: sepia(8%) contrast(1.02);
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+
+  .hero-caption {
+    display: block;
+    text-align: right;
+    font-size: 0.75rem;
+    color: $faint;
+    margin-top: 0.4em;
+    font-style: italic;
   }
 }
 
-// --- Taxonomy / Category labels ---
-.taxonomy__section {
-  border-bottom: 1px solid $noir-medium-gray;
-}
-
-.page__taxonomy-item {
-  background-color: $noir-warm-gray;
-  color: $noir-cream;
-  border: 1px solid $noir-border;
-  border-radius: 0;
-
-  &:hover {
-    background-color: $noir-medium-gray;
-    color: $noir-gold;
+.page-content {
+  h2 {
+    margin-top: 2.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid $border;
   }
-}
 
-// --- Notices ---
-.notice {
-  background-color: $noir-warm-gray;
-  color: $noir-cream;
-  border-left: 3px solid $noir-gold;
-}
-
-// --- Search ---
-.search-content {
-  background-color: $noir-charcoal;
-
-  .search-input {
-    background-color: $noir-dark-brown;
-    color: $noir-cream;
-    border: 1px solid $noir-border;
-
-    &:focus {
-      border-color: $noir-gold;
-    }
+  h3 {
+    margin-top: 2em;
   }
-}
 
-// --- Subtle Film Grain Overlay (noir texture) ---
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.015;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-}
-
-// --- Vignette effect on the page ---
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9998;
-  background: radial-gradient(
-    ellipse at center,
-    transparent 60%,
-    rgba(0, 0, 0, 0.25) 100%
-  );
-}
-
-// --- Scrollbar styling (webkit) ---
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: $noir-charcoal;
-}
-
-::-webkit-scrollbar-thumb {
-  background: $noir-medium-gray;
-  border: 1px solid $noir-border;
-
-  &:hover {
-    background: $noir-gold;
-  }
-}
-
-// --- Initial Content (home layout) ---
-.page__hero,
-.page__hero--overlay {
-  .page__title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-  }
-}
-
-// --- Category pages ---
-.taxonomy__index {
-  a {
-    color: $noir-gold;
-  }
-}
-
-// --- TOC ---
-.toc {
-  background-color: $noir-dark-brown;
-  border: 1px solid $noir-medium-gray;
-
-  .nav__title {
-    background: $noir-warm-gray;
-    color: $noir-cream;
-    font-family: 'Playfair Display', Georgia, serif;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+  img {
+    margin: 1.5em auto;
   }
 
   a {
-    color: $noir-sepia-light;
+    text-decoration: underline;
+    text-decoration-color: rgba($link, 0.3);
+    text-underline-offset: 2px;
 
     &:hover {
-      color: $noir-gold;
+      text-decoration-color: $link;
     }
   }
 }
 
-// --- Social share buttons ---
-.page__share-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: $noir-sepia-light;
-}
+// ============================================================
+// Table of Contents
+// ============================================================
+.toc {
+  margin-bottom: 2em;
+  padding: 1em 1.2em;
+  background: $code-bg;
+  border-radius: 3px;
 
-// --- Page meta (date, read time) ---
-.page__meta {
-  color: $noir-muted;
-  font-family: 'Libre Baskerville', Georgia, serif;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-// --- Related posts ---
-.page__related {
-  border-top: 2px solid $noir-medium-gray;
-
-  .page__related-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: $noir-gold;
+  .toc-title {
+    font-family: $serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $heading;
+    margin: 0 0 0.6em;
   }
 }
 
-// --- Input fields ---
-input, textarea, select {
-  background-color: $noir-dark-brown;
-  color: $noir-cream;
-  border: 1px solid $noir-border;
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.85rem;
 
-  &:focus {
-    border-color: $noir-gold;
-    outline-color: $noir-gold;
+  li {
+    margin-bottom: 0.3em;
+  }
+
+  a {
+    color: $muted;
+
+    &:hover {
+      color: $link;
+    }
+  }
+
+  .toc-h3 {
+    padding-left: 1em;
   }
 }
 
-// --- Ensure iframes (YouTube embeds) look integrated ---
-iframe {
-  border: 2px solid $noir-medium-gray;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+// ============================================================
+// Category page
+// ============================================================
+.category-page {
+  .page-header {
+    margin-bottom: 1em;
+  }
+}
+
+// ============================================================
+// Footer
+// ============================================================
+.site-footer {
+  border-top: 1px solid $border;
+  margin-top: 2em;
+}
+
+.footer-inner {
+  max-width: $content-width + $sidebar-width + $gap;
+  margin: 0 auto;
+  padding: 1.6em 24px;
+  font-size: 0.78rem;
+  color: $faint;
+}
+
+// ============================================================
+// Selection
+// ============================================================
+::selection {
+  background: rgba($link, 0.15);
+  color: $heading;
+}
+
+// ============================================================
+// Mobile
+// ============================================================
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .site-nav {
+    gap: 1em;
+
+    a {
+      font-size: 0.75rem;
+    }
+  }
+
+  .page-title {
+    font-size: 1.6rem;
+  }
+
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+  .header-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 16px;
+    gap: 8px;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+// ============================================================
+// Print
+// ============================================================
+@media print {
+  .site-header, .site-footer, .sidebar, .pagination {
+    display: none;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
 }
