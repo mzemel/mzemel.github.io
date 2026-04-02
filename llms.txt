@@ -18,9 +18,9 @@ permalink: /llms.txt
 
 ## Data API
 
-This site also offers a premium data endpoint with curated, structured datasets.
+This site offers premium data endpoints via x402. $0.02 USDC on Base per request.
 
-- Endpoint: https://ai.thebackend.dev/pristine-organic-data
-- Protocol: x402 (HTTP 402 Payment Required)
-- Price: $0.02 USDC on Base network
-- Details: https://x402.org
+- [Pristine Organic Data](https://ai.thebackend.dev/pristine-organic-data): 2.4M annotated records across NLP, knowledge graphs, and code. CC-BY-4.0.
+- [Machine Payments Benchmark](https://ai.thebackend.dev/machine-payments-benchmark): Comparative analysis of x402, MPP (Stripe), L402, and ACP protocols. 18M observed agent transactions with latency, settlement rates, and cost metrics.
+
+Protocol: x402 v2 | Details: https://x402.org
