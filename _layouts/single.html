@@ -2,6 +2,32 @@
 layout: default
 ---
 
+{% if page.date %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}"
+  },
+  "description": {{ page.excerpt | strip_html | truncatewords: 50 | jsonify }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | prepend: site.baseurl | prepend: site.url }}"
+  }
+}
+</script>
+{% endif %}
+
 <article class="page-single">
 
   {% if page.header.overlay_image %}

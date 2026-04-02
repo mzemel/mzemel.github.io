@@ -5,6 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncatewords: 50 }}">
+  <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | prepend: site.url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | truncatewords: 50 }}">
+  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+  <meta property="og:image" content="{{ site.url }}/assets/img/face.png">
+  {% if page.date %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "description": "{{ site.description | strip_html | strip_newlines | truncatewords: 50 }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author.name }}",
+      "url": "{{ site.url }}",
+      "sameAs": [
+        "https://github.com/{{ site.author.github }}",
+        "https://www.linkedin.com/in/{{ site.author.linkedin }}",
+        "https://www.instagram.com/{{ site.author.instagram }}"
+      ]
+    }
+  }
+  </script>
+
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">

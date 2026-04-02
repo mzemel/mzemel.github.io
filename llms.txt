@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# thebackend.dev
+
+> Personal site of Michael Zemel — software engineer. Articles on software engineering, ETL, project management, game theory, Solidity, and more. Projects spanning React, iOS, deep learning, JRuby, and Diplomacy AI.
+
+## Articles
+
+{% for post in site.posts %}{% if post.categories contains 'articles' %}- [{{ post.title }}](https://thebackend.dev{{ post.url }}): {{ post.excerpt | strip_html | truncatewords: 20 }}
+{% endif %}{% endfor %}
+
+## Projects
+
+{% for post in site.posts %}{% if post.categories contains 'projects' %}- [{{ post.title }}](https://thebackend.dev{{ post.url }}): {{ post.excerpt | strip_html | truncatewords: 20 }}
+{% endif %}{% endfor %}
+
+## Data API
+
+This site also offers a premium data endpoint with curated, structured datasets.
+
+- Endpoint: https://ai.thebackend.dev/pristine-organic-data
+- Protocol: x402 (HTTP 402 Payment Required)
+- Price: $0.02 USDC on Base network
+- Details: https://x402.org
