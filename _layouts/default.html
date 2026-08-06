@@ -74,6 +74,13 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <span>&copy; {{ 'now' | date: '%Y' }} {{ site.author.name }}</span>
+      {% if site.data.subdomains %}
+      <div class="subdomain-directory">
+        {% for sub in site.data.subdomains %}
+        <a href="https://{{ sub.domain }}">{{ sub.title }}</a>{% unless forloop.last %} &middot; {% endunless %}
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
   </footer>
 

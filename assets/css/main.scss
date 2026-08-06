@@ -578,6 +578,20 @@ iframe {
   color: $faint;
 }
 
+.subdomain-directory {
+  margin-top: 0.6em;
+  font-size: 0.75rem;
+
+  a {
+    color: $faint;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: $muted;
+    }
+  }
+}
+
 // ============================================================
 // Selection
 // ============================================================
