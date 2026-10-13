@@ -316,7 +316,7 @@ By intentionally cultivating positive connotations with symbols like Black skin,
 
 1. <a href="https://thebackend.dev/the-red-house-on-mississippi">The Red House on Mississippi</a>
 2. <a href="https://www.reddit.com/r/PhilosophyMemes/comments/ipbu16/cool_move_by_chad_thundercock/">r/philosophymemes</a>, Reddit
-3. <a href="https://thebackend.dev/back-the-blue">Back the Blue</a>
+3. Back the Blue (unpublished)
 4. <a href="https://en.wikipedia.org/wiki/James%E2%80%93Lange_theory">James-Lange Theory</a>, Wikipedia
 5. <a href="https://bio.libretexts.org/Bookshelves/Human_Biology/Book%3A_Human_Biology_(Wakim_and_Grewal)/10%3A_Introduction_to_the_Human_Body/10.7%3A_Homeostasis_and_Feedback">Biology LibreTexts</a>, UC Davis
 6. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3859310/">A molecular mechanism for circadian clock negative feedback</a>. Duong HA, Robles MS, Knutti D, Weitz CJ. <i>Science.</i>
