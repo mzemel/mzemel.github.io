@@ -1,4 +1,5 @@
 ---
+published: false
 layout: single
 title: "Brown Bear, Brown Bear: A critical analysis"
 tags: ["philosophy"]
